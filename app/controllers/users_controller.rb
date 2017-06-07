@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @user = User.all
+    @rooms = Room.all
     render "/users/index", layout: false
   end
 
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
+  
   end
 
   def edit
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
 
   end
 
-  def destroy 
+  def destroy
 
   end
 end
