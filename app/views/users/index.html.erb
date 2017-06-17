@@ -50,7 +50,7 @@ body, html {
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url(<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>);
+    background-image: url(<%= asset_path "tomb_of_gods.jpg", alt: "Tokyo Logo" %>);
     min-height: 400px;
 }
 
@@ -174,8 +174,8 @@ body, html {
     </div>
 
     <div class="w3-col m3 w3-padding right">
-      <img src="<%= asset_path "outlaw_cactus.jpg", alt: "Tokyo Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Check Availability", western_path %>
+      <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      <%=link_to "Check Availability", tomb_path("#home") %>
     </div>
 
     <!-- <div class="w3-col m3">
