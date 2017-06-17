@@ -12,4 +12,9 @@ class RoomController < ApplicationController
     p 'This is the Western route'
     render "/rooms/western"
   end
+
+  def tomb
+    p 'This is the Tomb of the Gods route'
+    render "/rooms/tomb"
+  end
 end

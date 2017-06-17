@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
    get '/tokyo' => 'room#tokyo'
    get '/western' => 'room#western'
+   get '/tomb' => 'room#tomb'
    get '/rooms' => 'room#index'
 end
