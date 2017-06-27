@@ -1,5 +1,5 @@
-![Alt Text](https://github.com/atokatly/labyrinth/blob/master/app/assets/images/labyrinth_logo.png)
-# Labyrinth Adventure Escape Rooms
+![Alt Text](https://github.com/atokatly/labyrinth/blob/master/app/assets/images/portal_logo.png)
+# Portal Escape Rooms
 This is an in-progress contracted website for an upcomming Escape Room company. 
 ## Getting Started
 
