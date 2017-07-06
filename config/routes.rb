@@ -8,4 +8,5 @@ Rails.application.routes.draw do
    get '/western' => 'room#western'
    get '/tomb' => 'room#tomb'
    get '/rooms' => 'room#index'
+   get '/faq' => 'faq#index'
 end
