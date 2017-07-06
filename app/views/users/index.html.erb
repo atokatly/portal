@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <style>
@@ -76,7 +77,7 @@ body, html {
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ESCAPE ROOMS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-
+    <a href="/faq" class="w3-bar-item w3-button w3-hide-small"><i class="fa glyphicon glyphicon-question-sign">FAQ</i></a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
@@ -105,8 +106,8 @@ body, html {
   <p>Creating intricate and exciting escape rooms seemed like an easy way to do what we love. Our escape rooms will make you feel like part of an adventure. They are both challenging and imersive, but, most of all they are a ton of fun! (placeholder)</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <!-- <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333"> -->
+      <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br> -->
+      <img src="<%= asset_path "storefront.jpg", alt: "Storefront" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
     </div>
 
     <!-- Hide this text on small devices -->
@@ -179,7 +180,7 @@ body, html {
       <%=link_to "Check Availability", tomb_path("#home") %>
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "nautilus.jpg", alt: "Nautilus Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
       Coming Soon
     </div>
