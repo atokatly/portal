@@ -4,8 +4,30 @@
 
 $(document).on('ready', function() {
   console.log("I'm listening!");
-
+  carouselClick();
 });
+// assumes current image layout for carousel 
+var roomArray = ["/western","/tokyo","/","/tomb"]
+var carouselClick = function() {
+  $(".carousel-images").on('click', function(event){
+    console.log("that's me!")
+    var clicked = this;
+    var div = $(clicked).parent();
+    var anchor = $(div).siblings("a.roomButton");
+    var array = $(clicked).attr("class");
+    array = array.split(" ");
+    if (array.includes("right")){
+      var currentImage = roomArray.pop();
+      roomArray.unshift(currentImage);
+      // console.log(roomArray[0]);
+      $(anchor).attr("href", roomArray[0]);
+    } else if (array.includes("left")){
+      var removedImage = roomArray.splice(0,1);
+      roomArray.push(removedImage);
+      $(anchor).attr("href", roomArray[0]);
+    }
+  })
+}
 
 /*
 * Cloud 9 Carousel 2.0.4
