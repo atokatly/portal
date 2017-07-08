@@ -3,14 +3,13 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on('ready', function() {
-  console.log("I'm listening!");
   carouselClick();
 });
-// assumes current image layout for carousel 
+// Assumes current image layout for carousel
 var roomArray = ["/western","/tokyo","/","/tomb"]
+// Toggles the link of the "Reserve now" button as images are rotated on carousel
 var carouselClick = function() {
   $(".carousel-images").on('click', function(event){
-    console.log("that's me!")
     var clicked = this;
     var div = $(clicked).parent();
     var anchor = $(div).siblings("a.roomButton");
@@ -26,9 +25,13 @@ var carouselClick = function() {
       roomArray.push(removedImage);
       $(anchor).attr("href", roomArray[0]);
     }
+    // if ($(anchor).attr("href") === ""){
+    //   
+    // }
   })
 }
 
+// Carousel Functionality
 /*
 * Cloud 9 Carousel 2.0.4
 *   3D perspective carousel plugin for jQuery/Zepto with a focus on slick
