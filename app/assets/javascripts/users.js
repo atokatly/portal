@@ -18,16 +18,24 @@ var carouselClick = function() {
     if (array.includes("right")){
       var currentImage = roomArray.pop();
       roomArray.unshift(currentImage);
-      // console.log(roomArray[0]);
-      $(anchor).attr("href", roomArray[0]);
+      if (roomArray[0] === "/"){
+        // console.log("true");
+        $(anchor).hide();
+      } else {
+        $(anchor).show();
+        $(anchor).attr("href", roomArray[0]);
+      }
     } else if (array.includes("left")){
       var removedImage = roomArray.splice(0,1);
-      roomArray.push(removedImage);
-      $(anchor).attr("href", roomArray[0]);
+      roomArray.push(removedImage[0]);
+      if (roomArray[0] === "/"){
+        // console.log("very true");
+        $(anchor).hide();
+      } else {
+        $(anchor).show();
+        $(anchor).attr("href", roomArray[0]);
+      }
     }
-    // if ($(anchor).attr("href") === ""){
-    //   
-    // }
   })
 }
 
