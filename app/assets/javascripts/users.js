@@ -4,6 +4,7 @@
 
 $(document).on('ready', function() {
   carouselClick();
+  activeImage();
 });
 // Assumes current image layout for carousel
 var roomArray = ["/western","/tokyo","/","/tomb"]
@@ -37,6 +38,12 @@ var carouselClick = function() {
       }
     }
   })
+}
+
+var activeImage = function(){
+  $(".carousel-images").on('click', function(event){
+
+});
 }
 
 // Carousel Functionality
