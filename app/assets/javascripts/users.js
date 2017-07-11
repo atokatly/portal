@@ -39,11 +39,31 @@ var carouselClick = function() {
     }
   })
 }
-
+// Click of an image to rotate carousel
 var activeImage = function(){
-  $(".carousel-images").on('click', function(event){
-
-});
+  $("#showcase").on('click', ".cloud9-item", function(event){
+    console.log("image clicked");
+    var click = this;
+    var image = $(click).children();
+    image = $(image).siblings(".reflected")
+    var buttonLink = $(image[0]).attr("link");
+    var buttonContainer = $(click).parent().parent().siblings("em");
+    var button = $(buttonContainer[0]).children("a.roomButton");
+    $(button).attr("href", buttonLink);
+    if (buttonLink === "/western") {
+      $(button).show();
+      roomArray = ["/western","/tokyo","/","/tomb"];
+    } else if (buttonLink === "/tokyo"){
+      $(button).show();
+      roomArray = ["/tokyo","/","/tomb","/western"];
+    } else if (buttonLink === "/tomb"){
+      $(button).show();
+      roomArray = ["/tomb","/western","/tokyo","/"];
+    } else {
+      $(button).hide();
+      roomArray = ["/","/tomb","/western","/tokyo"];
+    }
+  });
 }
 
 // Carousel Functionality
