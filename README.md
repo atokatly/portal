@@ -25,4 +25,4 @@ You will also need to bundle your gems if you wish to look at the project on loc
 
 ![Alt Text](https://github.com/atokatly/labyrinth/blob/master/app/assets/images/Screen%20Shot%202017-05-30%20at%2010.01.38%20AM.png)
 
-## Website Launch Expected June 2017. 
+## Website Launch Expected Summer 2017. 
