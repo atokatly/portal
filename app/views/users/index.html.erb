@@ -23,7 +23,7 @@ body, html {
   margin: 0 auto;
   text-align: center;
   width: 768px;
-  min-width: 320px; 
+  min-width: 320px;
 }
 #item-title {
   font-family: "Lato", sans-serif;
@@ -87,6 +87,15 @@ a.roomButton {
   -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  min-width: 10%;
+  width: 100px;
+  margin-top: 10px;
 }
 
 a.roomButton:hover {
@@ -312,22 +321,22 @@ only screen and (min-device-pixel-ratio : 1.5) {
   <div ng-controller="RoomController as room" class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
     <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "outlaw_color.jpg", alt: "Tokyo Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Check Availability", western_path("#home") %>
+      <%=link_to "Reserve Now", western_path("#home"), class: "roomButton" %>
     </div>
 
     <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Check Availability", tokyo_path("#home") %>
+      <%=link_to "Reserve Now", tokyo_path("#home"), class: "roomButton" %>
     </div>
 
     <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Check Availability", tomb_path("#home") %>
+      <%=link_to "Reserve Now", tomb_path("#home"), class: "roomButton" %>
     </div>
 
     <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "nautilus.jpg", alt: "Nautilus Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      Coming Soon
+      <a href="" class="roomButton noselect">Coming Soon</a>
     </div>
   </div>
 <!--
