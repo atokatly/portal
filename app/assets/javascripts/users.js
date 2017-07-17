@@ -42,7 +42,6 @@ var carouselClick = function() {
 // Click of an image to rotate carousel
 var activeImage = function(){
   $("#showcase").on('click', ".cloud9-item", function(event){
-    console.log("image clicked");
     var click = this;
     var image = $(click).children();
     image = $(image).siblings(".reflected")
