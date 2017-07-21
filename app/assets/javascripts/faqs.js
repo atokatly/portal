@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
 	var MqM= 768,
 		MqL = 1024;
 
-		hideText();
+		initialHide();
 
 	var faqsSections = $('.cd-faq-group'),
 		faqTrigger = $('.cd-faq-trigger'),
@@ -149,7 +149,11 @@ jQuery(document).ready(function($){
 });
 
 var hideText = function(){
-	console.log("I ran hide text");
+	var text = $(".cd-faq-content").children("p");
+	$(text).hide(400);
+}
+
+var initialHide = function(){
 	var text = $(".cd-faq-content").children("p");
 	$(text).hide();
 }
