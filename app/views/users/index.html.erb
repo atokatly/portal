@@ -161,10 +161,10 @@ a.roomButton:hover {
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#escape-rooms" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ESCAPE ROOMS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="/faq" class="word w3-bar-item w3-button w3-hide-small"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="/faq" class="word w3-bar-item w3-button"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
-    </a>
+    </a> -->
   </div>
 
   <!-- Navbar on small screens -->
@@ -172,7 +172,9 @@ a.roomButton:hover {
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
     <a href="#escape-rooms" class="w3-bar-item w3-button" onclick="toggleFunction()">ESCAPE ROOMS</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    <!-- <a href="/faq" class="w3-bar-item w3-button" onclick="toggleFunction()">FAQs</a> -->
+
+    <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
   </div>
 </div>
 
@@ -240,22 +242,22 @@ a.roomButton:hover {
   <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
     <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "outlaw_color.jpg", alt: "Tokyo Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Reserve Now", western_path("#home"), class: "roomButton" %>
+      <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Reserve Now", tokyo_path("#home"), class: "roomButton" %>
+      <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="w3-col m3 w3-padding">
       <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Reserve Now", tomb_path("#home"), class: "roomButton" %>
+      <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="w3-col m3 w3-padding noselect">
       <img src="<%= asset_path "nautilus.jpg", alt: "Nautilus Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <a href="" class="roomButton noselect">Coming Soon</a>
+      <a class="roomButton noselect">Coming Soon</a>
     </div>
   </div>
 <!--
@@ -277,7 +279,7 @@ a.roomButton:hover {
     </div>
     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
   </div> -->
-  <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF"></script>
+  <!-- <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF"></script> -->
 </div>
 
 <!-- Modal for full size images on click-->
