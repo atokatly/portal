@@ -189,7 +189,8 @@ a.roomButton:hover {
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT US</h3>
   <p class="w3-center"><em>We love puzzles</em></p>
-  <p>Creating intricate and exciting escape rooms seemed like an easy way to do what we love. Our escape rooms will make you feel like part of an adventure. They are both challenging and imersive, but, most of all they are a ton of fun! (placeholder)</p>
+  <p>Creating intricate and exciting escape rooms seemed like an easy way to do what we love. Our escape rooms will make you feel like part of an adventure. They are both challenging and imersive, but, most of all they are a ton of fun!</p>
+  <p>What's an escape room? Escape rooms are essentially giant puzzles that you and your team must solve in a 1 hour time limit in order to escape from your room.</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br> -->
@@ -197,10 +198,10 @@ a.roomButton:hover {
     </div>
 
     <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-col m6 w3-padding-large">
+      <p>What kinds of rooms do we have? You might find yourself tracking down a <a href="/western" data-turbolinks="false">Western Outlaw</a>, navigating a dangerous <a href="/tomb" data-turbolinks="false">Aztec Tomb</a>, or even as part of a <a href="/tokyo" data-turbolinks="false">Tokyo Heist</a> in a skyscraper!</p>
+      <p>If you aren't familiar with escape rooms, take a look at our FAQ page to learn more about the rules.<p>
+      <p>We are located on Main Street in Springfield, next door to McKenzie Glass.</p>
     </div>
   </div>
 </div>
@@ -313,22 +314,30 @@ a.roomButton:hover {
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 2237 Main Street, Springfield, OR 97477<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 541-123-4567<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: t3productions@gmail.com<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: info@portalescaperooms.net<br>
       </div>
       <p>Leave a note or tell us how we did:</p>
-      <form action="/action_page.php" target="_blank">
+      <form action="https://formspree.io/info@portalescaperooms.net" method="post" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          <div class="w3-half mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="w3-input w3-border mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" placeholder="Name" required name="Name" id="Name">
+            <!-- <label class="mdl-textfield__label" for="Name">Name...</label> -->
+            <!-- <span class="mdl-textfield__error">Letters and spaces only</span> -->
           </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          <div class="w3-half mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="w3-input w3-border mdl-textfield__input" name="_replyto" type="text" placeholder="Email" required name="Email" id="Email">
+            <!-- <label class="mdl-textfield__label" for="Email">Email...</label> -->
+          </div>
+          <div class="w3-half mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="w3-input w3-border mdl-textfield__input" name="_subject" placeholder="Subject" />
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
+        <input class="w3-input w3-border mdl-textfield__input" name="body" type="text" placeholder="Message" required name="Message" id="note">
+        <!-- <label class="mdl-textfield__label" for="note">Enter note</label> -->
+        <p>
+          <button class="w3-button w3-black w3-right w3-section mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button> </p>
       </form>
     </div>
   </div>
