@@ -221,7 +221,7 @@ a.roomButton:hover {
   <div id="showcase" class="noselect w3-center hidden-xs">
     <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="The Outlaw of El Paso">
     <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="Tokyo Heist">
-    <img class="cloud9-item" src="<%= asset_path "nautilus.jpg", alt: "Nautilus Logo" %>" style="width:20%" alt="The Nautilus (Coming Soon)">
+    <img class="cloud9-item" src="<%= asset_path "nautilus.jpg", alt: "Nautilus Logo" %>" style="width:20%" link="" alt="The Nautilus (Coming Soon)">
     <img class="cloud9-item" src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Tomb of the Gods">
     <!-- <img class="cloud9-item" src="images/5.png" alt="Item #5">
     <img class="cloud9-item" src="images/6.png" alt="Item #6"> -->
@@ -230,35 +230,36 @@ a.roomButton:hover {
   <!-- <p id="item-title">&nbsp;</p> -->
   <p id="item-title" class="hidden-xs"href="">&nbsp;</p>
   <a class="roomButton hidden-xs" href="/western">Reserve Now</a>
-  <div id="nav" class="noselect hidden-xs hidden-sm hidden-md hidden-lg">
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
+    <div class="w3-col m3 w3-padding">
+      <img src="<%= asset_path "outlaw_color.jpg", alt: "Tokyo Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+      <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
+    </div>
+
+    <div class="w3-col m3 w3-padding">
+      <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+      <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
+    </div>
+
+    <div class="w3-col m3 w3-padding">
+      <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+      <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
+    </div>
+
+    <div class="w3-col m3 w3-padding noselect">
+      <img src="<%= asset_path "nautilus.jpg", alt: "Nautilus Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+      <a class="roomButton noselect">Coming Soon</a>
+    </div>
+  </div>
+  <div id="nav" class="noselect hidden-xs">
     <button class="left carousel-images">
       ←
     </button>
     <button class="right carousel-images">
       →
     </button>
-  </div>
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
-    <div class="w3-col m3 w3-padding">
-      <img src="<%= asset_path "outlaw_color.jpg", alt: "Tokyo Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
-    </div>
-
-    <div class="w3-col m3 w3-padding">
-      <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
-    </div>
-
-    <div class="w3-col m3 w3-padding">
-      <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
-    </div>
-
-    <div class="w3-col m3 w3-padding noselect">
-      <img src="<%= asset_path "nautilus.jpg", alt: "Nautilus Logo" %>" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-      <a class="roomButton noselect">Coming Soon</a>
-    </div>
   </div>
 <!--
   <div class="w3-row-padding w3-center w3-section">
