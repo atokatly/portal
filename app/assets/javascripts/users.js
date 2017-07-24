@@ -8,7 +8,7 @@ $(document).on('ready', function() {
 });
 // Assumes current image layout for carousel
 var roomArray = ["/western","/tokyo","/","/tomb"]
-// Toggles the link of the "Reserve now" button as images are rotated on carousel
+// Toggles the link of the "Reserve now" button as images are rotated on carousel using arrow buttons
 var carouselClick = function() {
   $(".carousel-images").on('click', function(event){
     var clicked = this;
@@ -64,7 +64,6 @@ var activeImage = function(){
     }
   });
 }
-
 // Carousel Functionality
 /*
 * Cloud 9 Carousel 2.0.4
