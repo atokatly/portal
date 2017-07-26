@@ -79,7 +79,7 @@
   -------------------------------- */
   header {
     position: relative;
-    height: 180px;
+    height: 150px;
     line-height: 180px;
     text-align: center;
     background-color: #0A5CAD;
@@ -472,6 +472,11 @@
       display: block;
     }
   }
+
+	.logo {
+		display: block;
+ 		text-align: left;
+	}
 </style>
 </head>
 <body>
@@ -479,11 +484,12 @@
 	<h1>Portal FAQs</h1>
 </header>
 <div class="w3-top navBar">
-  <div class="w3-bar" id="myNavbar">
+  <div class="w3-bar" id="myNavbar" style="width:180px; text-align:right;" >
     <!-- <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a> -->
-    <a href="/" class="w3-bar-item w3-button">Home</a>
+		<a href="/" class="w3-bar-item w3-button logo"><img src="<%= asset_path "portal_logo_fill.png"%>" style="width:100%" alt="Portal Logo">
+    <!-- <a href="/" class="w3-bar-item w3-button">Home</a> -->
   </div>
 
   <!-- Navbar on small screens -->
