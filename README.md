@@ -1,6 +1,6 @@
 ![Alt Text](https://github.com/atokatly/portal/blob/master/app/assets/images/portal_logo_fill.png)
 # Portal Escape Rooms
-This is an in-progress contracted website for an upcomming Escape Room company. 
+This is an in-progress website for an upcomming Escape Room company. 
 ## Getting Started
 
 If you want to view this project simply clone the repo.
