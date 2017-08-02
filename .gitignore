@@ -21,3 +21,8 @@
 
 # Bower packages
 /vendor/assets/components/*
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
