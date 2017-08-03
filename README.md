@@ -1,6 +1,6 @@
 ![Alt Text](https://github.com/atokatly/portal/blob/master/app/assets/images/portal_logo_fill.png)
 # Portal Escape Rooms
-This is an in-progress website for an upcomming Escape Room company. 
+This is an in-progress website for an upcomming Escape Room company. [Prototype available on Amazon Elastic Beanstalk](http://production.4p9t8gfbsk.us-west-2.elasticbeanstalk.com) 
 ## Getting Started
 
 If you want to view this project simply clone the repo.
