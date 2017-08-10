@@ -20,12 +20,9 @@ var carouselClick = function() {
       var currentImage = roomArray.pop();
       roomArray.unshift(currentImage);
       if (roomArray[0] === "/"){
-        // console.log("true");
-        $(anchor).show();
         $(anchor).html("Coming Soon");
         $(anchor).attr("href", "javascript:void(0);");
       } else {
-        $(anchor).show();
         $(anchor).html("Reserve Now");
         $(anchor).attr("href", roomArray[0]);
       }
@@ -34,11 +31,9 @@ var carouselClick = function() {
       roomArray.push(removedImage[0]);
       if (roomArray[0] === "/"){
         // console.log("very true");
-        $(anchor).show();
         $(anchor).html("Coming Soon");
         $(anchor).attr("href", "javascript:void(0);");
       } else {
-        $(anchor).show();
         $(anchor).html("Reserve Now");
         $(anchor).attr("href", roomArray[0]);
       }
@@ -56,22 +51,18 @@ var activeImage = function(){
     var button = $(buttonContainer[0]).children("a.roomButton");
     $(button).attr("href", buttonLink);
     if (buttonLink === "/western") {
-      $(button).show();
       $(button).removeClass("noselect");
       $(button).html("Reserve Now");
       roomArray = ["/western","/tokyo","/","/tomb"];
     } else if (buttonLink === "/tokyo"){
-      $(button).show();
       $(button).removeClass("noselect");
       $(button).html("Reserve Now");
       roomArray = ["/tokyo","/","/tomb","/western"];
     } else if (buttonLink === "/tomb"){
-      $(button).show();
       $(button).removeClass("noselect");
       $(button).html("Reserve Now");
       roomArray = ["/tomb","/western","/tokyo","/"];
     } else {
-      $(button).show();
       $(button).attr("href", "javascript:void(0);")
       $(button).html("Coming Soon");
       $(button).addClass("noselect");
