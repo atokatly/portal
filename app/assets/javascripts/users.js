@@ -51,15 +51,24 @@ var activeImage = function(){
     $(button).attr("href", buttonLink);
     if (buttonLink === "/western") {
       $(button).show();
+      $(button).removeClass("noselect");
+      $(button).html("Reserve Now");
       roomArray = ["/western","/tokyo","/","/tomb"];
     } else if (buttonLink === "/tokyo"){
       $(button).show();
+      $(button).removeClass("noselect");
+      $(button).html("Reserve Now");
       roomArray = ["/tokyo","/","/tomb","/western"];
     } else if (buttonLink === "/tomb"){
       $(button).show();
+      $(button).removeClass("noselect");
+      $(button).html("Reserve Now");
       roomArray = ["/tomb","/western","/tokyo","/"];
     } else {
-      $(button).hide();
+      $(button).show();
+      $(button).attr("href", "javascript:void(0);")
+      $(button).html("Coming Soon");
+      $(button).addClass("noselect");
       roomArray = ["/","/tomb","/western","/tokyo"];
     }
   });
