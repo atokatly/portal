@@ -21,9 +21,12 @@ var carouselClick = function() {
       roomArray.unshift(currentImage);
       if (roomArray[0] === "/"){
         // console.log("true");
-        $(anchor).hide();
+        $(anchor).show();
+        $(anchor).html("Coming Soon");
+        $(anchor).attr("href", "javascript:void(0);");
       } else {
         $(anchor).show();
+        $(anchor).html("Reserve Now");
         $(anchor).attr("href", roomArray[0]);
       }
     } else if (array.includes("left")){
@@ -31,9 +34,12 @@ var carouselClick = function() {
       roomArray.push(removedImage[0]);
       if (roomArray[0] === "/"){
         // console.log("very true");
-        $(anchor).hide();
+        $(anchor).show();
+        $(anchor).html("Coming Soon");
+        $(anchor).attr("href", "javascript:void(0);");
       } else {
         $(anchor).show();
+        $(anchor).html("Reserve Now");
         $(anchor).attr("href", roomArray[0]);
       }
     }
