@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<script type="text/javascript">
+var bookeo_startMobileLabel="View Availability";
+</script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -50,10 +53,39 @@ body, html {
         background-attachment: scroll;
     }
 }
-#bookeoStartMobile {
-           width: 350px !important;
-           background-color: blue !important;
+div#bookeo_position {
+  background-color: #777;
+  margin: 0 auto;
+  display: block;
+  text-align: center !important;;
+  font-family: "Lato", sans-serif;
+  border: solid 2px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  min-width: 10%;
+  width: auto !important;;
+  margin-top: 10px;
+  height: auto !important;;
+
        }
+        div#bookeoStartMobile{
+         width: auto !important;
+         padding-bottom: 35px !important;
+       }
+       div#bookeo:hover{
+         background-color: #FF2600 !important;
+       }
+
 </style>
 <body>
 
