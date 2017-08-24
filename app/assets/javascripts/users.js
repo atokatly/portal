@@ -5,6 +5,7 @@
 $(document).on('ready', function() {
   carouselClick();
   activeImage();
+  // drawImage();
 });
 // Assumes current image layout for carousel
 var roomArray = ["/western","/tokyo","/","/tomb"]
@@ -538,3 +539,124 @@ $.fn.unreflect = function() {
 }
 
 })(window.jQuery || window.Zepto);
+// var drawImage = function(){
+//
+//   var signaturePad = new SignaturePad(document.getElementById('signature-pad'), {
+//     backgroundColor: 'rgba(255, 255, 255, 0)',
+//     penColor: 'rgb(0, 0, 0)'
+//   });
+//   var saveButton = document.getElementById('save');
+//   var cancelButton = document.getElementById('clear');
+//
+//   saveButton.addEventListener('click', function (event) {
+//     var data = signaturePad.toDataURL('image/png');
+//
+//   // Send data to server instead...
+//   //data_uri = data; //"data:image/png;base64,iVBORw0K..."
+//   encoded_image = data.split(",")[1]
+//   decoded_image = Base64.decode64(encoded_image)
+//   // File.open("signature.png", "wb") { |f| f.write(decoded_image) }
+//     // window.open(data);
+//     console.log(data);
+//     console.log(encoded_image);
+//     console.log(decoded_image);
+//   });
+//
+//   cancelButton.addEventListener('click', function (event) {
+//     signaturePad.clear();
+//   });
+// }
+
+function myMap()
+{
+  myCenter=new google.maps.LatLng(44.045605, -122.992466);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: true,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+// window.onscroll = function() {myFunction()};
+// function myFunction() {
+//     var navbar = document.getElementById("myNavbar");
+//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//         navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+//     } else {
+//         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+//     }
+// }
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+// Carousel
+$(function() {
+  var showcase = $("#showcase"), title = $('#item-title')
+  showcase.Cloud9Carousel( {
+    yOrigin: 42,
+    yRadius: 48,
+    mirror: {
+      gap: 12,
+      height: 0.2
+    },
+    buttonLeft: $("#nav > .left"),
+    buttonRight: $("#nav > .right"),
+    autoPlay: 0,
+    bringToFront: true,
+    onRendered: rendered,
+    onLoaded: function() {
+      showcase.css( 'visibility', 'visible' )
+      showcase.css( 'display', 'none' )
+      showcase.fadeIn( 1500 )
+    }
+  })
+  function rendered( carousel ) {
+    title.text( carousel.nearestItem().element.alt )
+    // Fade in based on proximity of the item
+    var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+    title.css('opacity', 0.5 + (0.5 * c))
+  }
+  //
+  // Simulate physical button click effect
+  //
+  $('#nav > button').click( function( e ) {
+    var b = $(e.target).addClass( 'down' )
+    setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+  })
+  $(document).keydown( function( e ) {
+    //
+    // More codes: http://www.javascripter.net/faq/keycodes.htm
+    //
+    switch( e.keyCode ) {
+      /* left arrow */
+      case 37:
+        $('#nav > .left').click()
+        break
+      /* right arrow */
+      case 39:
+        $('#nav > .right').click()
+    }
+  })
+})
