@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  require "base64"
+
   def index
     @user = User.all
     @rooms = Room.all
@@ -14,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  
+
   end
 
   def edit
@@ -27,5 +30,9 @@ class UsersController < ApplicationController
 
   def destroy
 
+  end
+
+  def agreement
+    @user = User.new
   end
 end
