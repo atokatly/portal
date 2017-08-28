@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <meta name="keywords" content="escape room, escape rooms, eugene escape rooms, springfield escape rooms, eugene entertainment, springfield entertainment, entertainment, eugene, springfield, escape, room, escape room in eugene oregon, escape room in springfield oregon, portal escape rooms"> -->
+<!-- <meta name="description" content="This is an example of a meta description. This will often show up in search results."> -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -108,7 +109,14 @@ a.roomButton:hover {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -128,15 +136,10 @@ a.roomButton:hover {
    }
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "final-logo.png", alt: "Portal Logo"%>);
+    background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
     min-height: 100%;
     object-fit: contain;
 }
-
-/*div.bgimg-1 {
-  height: auto;
-  width: auto;
-}*/
 
 /* Second image (Portfolio) */
 .bgimg-2 {
@@ -152,14 +155,6 @@ a.roomButton:hover {
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
-.iframe {
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
@@ -214,7 +209,7 @@ button.w3-button {
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min home-background" id="home">
+<div class="bgimg-1 w3-display-container home-background" id="home">
   <!-- <img class="iframe" src="<%= asset_path "logo-animated.gif", alt: "Outlaw Logo"%>" style="width:100%" ></img> -->
   <!-- <div class="home-background w3-display-container"> -->
     <div class="w3-display-middle" style="white-space:nowrap;">
@@ -259,7 +254,7 @@ button.w3-button {
   <div id="showcase" class="noselect w3-center hidden-xs">
     <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="The Outlaw of El Paso">
     <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="Tokyo Heist">
-    <img class="cloud9-item" src="<%= asset_path "coming-soon.png", alt: "Coming Soon" %>" style="width:20%" link="" alt="New Rooms Coming Soon">
+    <img class="cloud9-item" src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:20%" link="" alt="New Rooms Coming Soon">
     <img class="cloud9-item" src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Tomb of the Gods">
   </div>
 
@@ -285,7 +280,7 @@ button.w3-button {
     </div>
 
     <div class="w3-col m3 w3-padding noselect">
-      <img src="<%= asset_path "coming-soon.png", alt: "Coming Soon" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+      <img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
       <a class="roomButton noselect">Coming Soon</a>
     </div>
   </div>
@@ -317,8 +312,8 @@ button.w3-button {
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">Let us know how we did</h3>
-  <p class="w3-center"><em>We'd love your feedback!</em></p>
+  <h3 class="w3-center">Questions or feedback?</h3>
+  <p class="w3-center"><em>Send us an email. We'd love to hear from you!</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
@@ -331,14 +326,14 @@ button.w3-button {
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 541-123-4567<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: info@portalescaperooms.net<br>
       </div>
-      <p>Leave a note or tell us how we did:</p>
+      <p>Send us an email below:</p>
       <form action="https://formspree.io/info@portalescaperooms.net" method="post" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="w3-input w3-border mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" placeholder="Name" required name="Name" id="Name">
           </div>
           <div class="w3-half mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="w3-input w3-border mdl-textfield__input" name="_replyto" type="text" placeholder="Email" required name="Email" id="Email">
+            <input class="w3-input w3-border mdl-textfield__input" name="_replyto" type="text" placeholder="Your Email" required name="Email" id="Email">
           </div>
           <div class="w3-half mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="w3-input w3-border mdl-textfield__input" name="_subject" placeholder="Subject" />
