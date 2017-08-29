@@ -113,8 +113,7 @@ a.roomButton:hover {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    /*background-size: 400px;*/
-    width: 60%;
+    background-size: 70%;
 
 }
 
@@ -140,7 +139,6 @@ a.roomButton:hover {
 .bgimg-1 {
     background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
     min-height: 100%;
-    /*object-fit: contain;*/
 }
 
 /* Second image (Portfolio) */
@@ -162,6 +160,10 @@ a.roomButton:hover {
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
         background-attachment: scroll;
+    }
+
+    .bgimg-1 {
+      background-size: auto;
     }
 }
 
