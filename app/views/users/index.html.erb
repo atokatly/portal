@@ -113,7 +113,7 @@ a.roomButton:hover {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: 65%;
 
 }
 
@@ -163,8 +163,18 @@ a.roomButton:hover {
     }
 
     .bgimg-1 {
-      background-size: auto;
+      background-size: 130%;
     }
+}
+
+@media only screen and (orientation:landscape)
+and (max-device-width: 1024px){
+  .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
+      background-attachment: scroll;
+  }
+  .bgimg-1 {
+    background-size: 65%;
+  }
 }
 
 .home-background{
@@ -191,22 +201,23 @@ button.w3-button {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button" data-turbolinks="false">HOME</a>
+    <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-th"></i> ESCAPE ROOMS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="/faq" class="word w3-bar-item w3-button" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right w3-hover-red">
       <!-- <i class="fa fa-search"></i> -->Open 9/30/2017
     </a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="/" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ABOUT</a>
     <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ESCAPE ROOMS</a>
     <a href="#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">CONTACT</a>
-    <a href="/faq" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">FAQs</a>
+    <a href="" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Grand Opening 9/30/2017</a>
 
     <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
   </div>
