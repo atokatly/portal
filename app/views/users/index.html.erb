@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <meta name="keywords" content="escape room, escape rooms, eugene escape rooms, springfield escape rooms, eugene entertainment, springfield entertainment, entertainment, eugene, springfield, escape, room, escape room in eugene oregon, escape room in springfield oregon, portal escape rooms"> -->
-<!-- <meta name="description" content="This is an example of a meta description. This will often show up in search results."> -->
+<meta name="description" content="Portal Escape Rooms offers an immersive escape room experience. We’re proud to serve as the premier escape room in the Eugene/Springfield area. Book today!      ">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -113,7 +113,9 @@ a.roomButton:hover {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    /*background-size: 400px;*/
+    width: 60%;
+
 }
 
 .bgimg-2, .bgimg-3 {
@@ -138,18 +140,18 @@ a.roomButton:hover {
 .bgimg-1 {
     background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
     min-height: 100%;
-    object-fit: contain;
+    /*object-fit: contain;*/
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url(<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo" %>);
+    background-image: url(<%= asset_path "outlaw-no-text.jpg", alt: "Outlaw Logo" %>);
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url(<%= asset_path "tomb_of_gods.jpg", alt: "Tokyo Logo" %>);
+    background-image: url(<%= asset_path "tomb-no-text.jpg", alt: "Tokyo Logo" %>);
     min-height: 400px;
 }
 
@@ -193,7 +195,7 @@ button.w3-button {
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="/faq" class="word w3-bar-item w3-button" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <!-- <i class="fa fa-search"></i> -->Grand Opening September 30, 2017
+      <!-- <i class="fa fa-search"></i> -->Open 9/30/2017
     </a>
   </div>
 
