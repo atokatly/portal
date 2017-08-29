@@ -17,7 +17,7 @@ var carouselClick = function() {
     var anchor = $(div).siblings("a.roomButton");
     var array = $(clicked).attr("class");
     array = array.split(" ");
-    if (array.includes("right")){
+    if ((array.indexOf("right") > -1)){
       var currentImage = roomArray.pop();
       roomArray.unshift(currentImage);
       if (roomArray[0] === "/"){
@@ -27,7 +27,7 @@ var carouselClick = function() {
         $(anchor).html("Reserve Now");
         $(anchor).attr("href", roomArray[0]);
       }
-    } else if (array.includes("left")){
+    } else if ((array.indexOf("left") > -1)){
       var removedImage = roomArray.splice(0,1);
       roomArray.push(removedImage[0]);
       if (roomArray[0] === "/"){
