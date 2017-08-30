@@ -19,54 +19,16 @@ body, html {
     line-height: 1.8;
 }
 
-#showcase {
-  height: 360px;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  width: 768px;
-  min-width: 320px;
-}
-#item-title {
-  font-family: "Lato", sans-serif;
-  color: #777;
-  font-size: 29px;
-  letter-spacing: 0.13em;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-#nav {
-  text-align: center;
-}
-#nav > button {
-  width: 64px;
-  height: 36px;
-  color: #666;
-  font: bold 16px arial;
-  text-align: center;
-  margin: 5px;
-  text-shadow: 0px 1px 0px #f5f5f5;
-  background: #f6f6f6;
-  border: solid 2px rgba(0, 0, 0, 0.4);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}
-#nav > button:active,
-#nav > button.down {
-  background: #dfdfdf;
-  border: solid 2px rgba(0, 0, 0, 0.6);
-  box-shadow: none;
+footer {
+  background-color: #0A5CAD;
+  color: #ffffff;
 }
 
-#nav >button:hover {
-  background-color: #777;
+button.w3-button {
+  background-color: #0A5CAD;
+  color: #ffffff;
 }
+
 /*Keeps navbar in front of carousel*/
 .navBar {
   z-index: 101;
@@ -167,14 +129,73 @@ a.roomButton:hover {
   padding: 12px 18px 12px 0px !important;
 }
 
+.home-background{
+  background-color: #221F80;
+  width: 100%;
+}
+
 .email-half{
   float: left;
   padding: 0px 8px 0px 8px;
   width: 100%
 }
 
+.mobile-rooms {
+  width: 49%;
+  float: left;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
+
+#showcase {
+  height: 360px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 768px;
+  min-width: 320px;
+}
+#item-title {
+  font-family: "Lato", sans-serif;
+  color: #777;
+  font-size: 29px;
+  letter-spacing: 0.13em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#nav {
+  text-align: center;
+}
+#nav > button {
+  width: 64px;
+  height: 36px;
+  color: #666;
+  font: bold 16px arial;
+  text-align: center;
+  margin: 5px;
+  text-shadow: 0px 1px 0px #f5f5f5;
+  background: #f6f6f6;
+  border: solid 2px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+#nav > button:active,
+#nav > button.down {
+  background: #dfdfdf;
+  border: solid 2px rgba(0, 0, 0, 0.6);
+  box-shadow: none;
+}
+
+#nav >button:hover {
+  background-color: #777;
+}
 
 @media (min-width: 601px) {
   .email-half {
@@ -193,6 +214,7 @@ a.roomButton:hover {
     }
 }
 
+/*styles for landscape mode on mobile devices*/
 @media only screen and (orientation:landscape)
 and (max-device-width: 1024px){
   .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
@@ -201,23 +223,11 @@ and (max-device-width: 1024px){
   .bgimg-1 {
     background-size: 65%;
   }
-}
 
-.home-background{
-  background-color: #221F80;
-  width: 100%;
+  .mobile-rooms {
+    width: 24.9999%;
+  }
 }
-
-footer {
-  background-color: #0A5CAD;
-  color: #ffffff;
-}
-
-button.w3-button {
-  background-color: #0A5CAD;
-  color: #ffffff;
-}
-
 </style>
 <body>
 
@@ -322,23 +332,23 @@ button.w3-button {
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
-    <div class="w3-col m3 w3-padding">
-      <img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+    <div class="mobile-rooms w3-padding">
+      <a href="/western"><img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
-    <div class="w3-col m3 w3-padding">
-      <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+    <div class="mobile-rooms w3-padding">
+      <a href="/tokyo"><img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
-    <div class="w3-col m3 w3-padding">
-      <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+    <div class="mobile-rooms w3-padding">
+      <a href="/tomb"><img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
-    <div class="w3-col m3 w3-padding noselect">
-      <img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+    <div class="mobile-rooms w3-padding noselect">
+      <img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:100%" class="w3-hover-opacity">
       <a class="roomButton noselect">Coming Soon</a>
     </div>
   </div>
