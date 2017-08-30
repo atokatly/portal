@@ -48,6 +48,40 @@ body, html {
     min-height: 100%;
 }
 
+main section {
+ padding: 2em 0;
+}
+
+ main section:first-of-type {
+   padding-top: 0;
+ }
+
+.cell{
+ display: block;
+ width: 25%;
+ float: left;
+ height: 0;
+ padding-bottom: 33.33%;
+ background-color: #c8c8c8;
+ margin: 0;
+ border: solid white 3px;
+}
+
+.cells {
+ margin: 0 auto;
+ padding: 0;
+ overflow: auto;
+ width: 100%;
+}
+
+.container {
+   margin: 0 auto;
+   overflow: auto;
+   width: 100%;
+   max-width: 400px;
+   padding: 0 1em;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
@@ -143,8 +177,22 @@ west justice!</p>
 <p class="w3-center">Good luck,<p>
 
 <p class="w3-center">Deputy Jones</p>
-      <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&type=41563ULCWY715D38220314&waitMobile=true"></script>
+      <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&waitMobile=true"></script>
     </div>
+    <main role="main" class="container">
+      <section>
+        <ul class="cells">
+          <li class="cell"><img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+          <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %></li>
+          <li class="cell"><img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+          <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %></li>
+          <li class="cell"><img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+          <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %></li>
+          <li class="cell"><img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
+          <a class="roomButton noselect">Coming Soon</a></li>
+        </ul>
+      </section>
+    </main>
   <script>
   function toggleFunction() {
       var x = document.getElementById("navDemo");

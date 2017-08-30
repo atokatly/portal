@@ -10,4 +10,5 @@ Rails.application.routes.draw do
    get '/rooms' => 'room#index'
    get '/faq' => 'faq#index'
    get '/agreement' => 'users#agreement'
+   get '/book' => 'room#book'
 end
