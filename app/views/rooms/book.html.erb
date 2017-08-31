@@ -17,7 +17,7 @@ var bookeo_startMobileLabel="View Availability";
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
-    height: 90%;
+    height: 100%;
     color: #777;
     line-height: 1.8;
 }
@@ -43,43 +43,66 @@ body, html {
 }
 
 /* First image (Logo. Full height) */
-.bgimg-1 {
+/*.bgimg-1 {
     background-image: url(<%= asset_path "outlaw-no-text.jpg", alt: "Outlaw Logo" %>);
     min-height: 100%;
+}*/
+
+.room-posters {
+  width: 18%;
+  display: inline-block;
+  padding-top: 50px;
+  background-size: contain;
 }
 
-main section {
- padding: 2em 0;
+/*.posters-div{
+  width: 100%;
+  text-align: center;
+  min-width: 550px;
+}*/
+
+.wrap > h1 {
+     margin: 26px auto;
+   }
+
+.navBar {
+  z-index: 101;
+  position: fixed;
 }
 
- main section:first-of-type {
-   padding-top: 0;
- }
-
-.cell{
- display: block;
- width: 25%;
- float: left;
- height: 0;
- padding-bottom: 33.33%;
- background-color: #c8c8c8;
- margin: 0;
- border: solid white 3px;
+a.roomButton {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+  background-color: #777;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  width: 10%;
+  font-family: "Lato", sans-serif;
+  border: solid 2px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  min-width: 7%;
+  width: 100px;
+  margin-top: 10px;
 }
 
-.cells {
- margin: 0 auto;
- padding: 0;
- overflow: auto;
- width: 100%;
-}
-
-.container {
-   margin: 0 auto;
-   overflow: auto;
-   width: 100%;
-   max-width: 400px;
-   padding: 0 1em;
+a.roomButton:hover {
+  background-color: #777 !important;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -90,6 +113,20 @@ main section {
     .bgimg-1 {
         background-attachment: scroll;
     }
+    .room-posters {
+      width: 30%;
+    }
+    .roomButton {
+      width: 85% !important;
+      font-size: 10px;
+    }
+}
+
+@media only screen and (orientation:landscape)
+and (max-device-width: 1024px){
+  .room-posters {
+    width: 18%;
+  }
 }
 div#bookeo_position {
   background-color: #777;
@@ -115,19 +152,19 @@ div#bookeo_position {
   margin-top: 10px;
   height: auto !important;;
 
-       }
-        div#bookeoStartMobile{
-         width: auto !important;
-         padding-bottom: 35px !important;
-       }
-       div#bookeo:hover{
-         background-color: #FF2600 !important;
-       }
+  }
+  div#bookeoStartMobile{
+    width: auto !important;
+    padding-bottom: 35px !important;
+  }
+  div#bookeo:hover{
+    background-color: #FF2600 !important;
+  }
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top navBar">
   <div class="w3-bar w3-card-2 w3-animate-top w3-white" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
@@ -146,7 +183,7 @@ div#bookeo_position {
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<!-- <div class="w3-row w3-center w3-dark-grey w3-padding-32">
    <div class="w3-quarter w3-section">
      <span class="w3-large">Room Participants</span><br>
      <span class="w3-large">4-8</span>
@@ -163,36 +200,60 @@ div#bookeo_position {
      <span class="w3-large">Successful Escapes</span><br>
      <span class="w3-large">150</span>
    </div>
- </div>
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">The Outlaw of El Paso</h3>
-  <!-- <p class="w3-center"><em>A notorious outlaw on the run... Can you and your team track him down?</em></p> -->
-  <p>The most dangerous outlaw in the country rode into town last night.
-Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
-nearby bank vault was recently robbed! I believe there’s a connection between these
-events. Sheriff Dubell is out of town, so it’s up to you to track down the two men and the
-missing gold. The law is in your hands now partner, saddle up and deliver some wild
-west justice!</p>
+ </div> -->
 
-<p class="w3-center">Good luck,<p>
-
-<p class="w3-center">Deputy Jones</p>
-      <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&waitMobile=true"></script>
-    </div>
-    <main role="main" class="container">
-      <section>
-        <ul class="cells">
-          <li class="cell"><img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
-          <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %></li>
-          <li class="cell"><img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
-          <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %></li>
-          <li class="cell"><img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
-          <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %></li>
-          <li class="cell"><img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:80%" onclick="onClick(this)" class="w3-hover-opacity">
-          <a class="roomButton noselect">Coming Soon</a></li>
-        </ul>
-      </section>
-    </main>
+  <div class="wrap">
+    <div class="w3-center hidden-lg">
+      <div class="room-posters">
+        <img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/western">
+        <a class="roomButton noselect" link="/western">Learn more</a>
+      </div>
+      <div class="room-posters">
+        <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/tokyo">
+        <a class="roomButton noselect" link="/tokyo">Learn more</a>
+      </div>
+      <div class="room-posters">
+        <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/tomb">
+        <a class="roomButton noselect" link="/tomb">Learn more</a>
+      </div>
+      <!-- <div class="room-posters">
+        <img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:75%" class="w3-hover-opacity posters" link="/">
+        <a class="roomButton noselect" link="/">Learn more</a>
+      </div>
+    </div> -->
+  </div>
+  <div class="w3-content w3-container w3-padding-4" id="about">
+    <h3 class="w3-center selected title" link="/western">The Outlaw of El Paso</h3>
+    <h3 class="w3-center hidden title" link="/tokyo">Tokyo Heist</h3>
+    <h3 class="w3-center hidden title" link="/tomb">Tomb of the Gods</h3>
+    <h3 class="w3-center hidden title" link="/">Coming Soon</h3>
+    <!-- <p class="w3-center"><em>A notorious outlaw on the run... Can you and your team track him down?</em></p> -->
+    <p class="selected content" link="/western">The most dangerous outlaw in the country rode into town last night.
+    Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
+    nearby bank vault was recently robbed! I believe there’s a connection between these
+    events. Sheriff Dubell is out of town, so it’s up to you to track down the two men and the
+    missing gold. The law is in your hands now partner, saddle up and deliver some wild
+    west justice!</p>
+    <p class="hidden content" link="/tokyo">Our target is Haruto Nakamura, one of the wealthiest company owners in the
+    city. His recent business dealings have disrupted our operations in the black market. It’s
+    nothing personal, but we can’t tolerate any more interferences. Boss has selected you
+    to handle this job, I’ll be on the line to help you through it. He wants this to be done
+    quickly and without error. I should remind you, Boss doesn’t accept failure. If this job
+    goes sour, there’ll be hell to pay for all of us.</p>
+    <p class="hidden content" link="/tomb">An ancient Aztec temple has been discovered deep in the jungles of Mexico.
+    Nakamura Industries, a rapidly growing natural resource company, has contracted an
+    expedition to explore the site. Heinrich Wolff, a world renowned and beloved
+    archeologist is leading the mission. It’s been a week since our last communication from
+    the team. Something odd is going on in that jungle and we are sending you in to resolve
+    the mystery. Find Wolff, but be careful! Who knows what lies inside those ancient and
+    forgotten walls.</p>
+    <p class="hidden content" link="/">New rooms are coming soon! We are constantly coming up with new concepts to build on the current experience. Be sure to check our website regularly for updates!</p>
+    <p class="w3-center">Good luck,<p>
+    <p class="w3-center selected name" link="/western">Deputy Jones</p>
+    <p class="w3-center hidden name" link="/tokyo">Takeru Okada</p>
+    <p class="w3-center hidden name" link="/tomb">Anna Robin</p>
+    <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&waitMobile=true"></script>
+  </div>
   <script>
   function toggleFunction() {
       var x = document.getElementById("navDemo");
