@@ -212,12 +212,6 @@ a.roomButton:hover {
   }
 }
 
-/*@media (min-width: 844px) {
-  .mobile-rooms {
-    width: 24.99%;
-  }
-}*/
-
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
@@ -275,22 +269,16 @@ and (max-device-width: 1024px){
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container home-background" id="home">
-  <!-- <img class="iframe" src="<%= asset_path "logo-animated.gif", alt: "Outlaw Logo"%>" style="width:100%" ></img> -->
-  <!-- <div class="home-background w3-display-container"> -->
+<div class="bgimg-1 w3-display-container home-background" id="home">>
     <div class="w3-display-middle" style="white-space:nowrap;">
 
     </div>
-  <!-- </div> -->
 </div>
 <!-- <a href="/book" class="w3-bar-item w3-button book-now" data-turbolinks="false"><button>Book now</button></a> -->
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center" style="color: #221F80;"><strong>About Portal Escape Rooms</strong></h3>
-  <!-- <p class="w3-left"><em>We love puzzles</em></p> -->
-  <!-- <p style="text-align: center; font-size: 20px; color: #221F80;"><strong>What’s an escape room?</strong></p>
-  <p>An escape room is a 60 minute cooperative experience for families, friends, and colleagues. These interactive puzzles require teamwork and critical thinking, so choose your team wisely! Escape rooms are exciting, unforgettable experiences!</p> -->
+  <h3 class="w3-center" style="color: #0A5CAD;"><strong>About Portal Escape Rooms</strong></h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center padding-large hidden-xs hidden-sm">
       <img src="<%= asset_path "storefront.jpg", alt: "Storefront" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
@@ -298,26 +286,22 @@ and (max-device-width: 1024px){
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-padding-large side-content hidden-xs hidden-sm">
-      <p style="text-align: center; font-size: 20px; color: #221F80;"><strong>What’s an escape room?<strong></p>
+      <p style="text-align: center; font-size: 20px; color: #696969;"><strong>What’s an escape room?<strong></p>
       <p>An escape room is a 60 minute cooperative experience for families, friends, and colleagues. These interactive puzzles require teamwork and critical thinking, so choose your team wisely! Escape rooms are exciting, unforgettable experiences!</p>
-      <p style="text-align: center; font-size: 20px; color: #221F80;"><strong>What makes us unique?</strong></p>
+      <p style="text-align: center; font-size: 20px; color: #696969;"><strong>What makes us unique?</strong></p>
       <p>We refuse to create the typical escape room experience. We spare no expense in creating immersive rooms for our players with unique themes and original puzzles. We’re confident that we deliver the best escape room experience in the Eugene/Springfield area.</p>
-      <!-- <p style="text-align: center; font-size: 20px; color: #221F80;"><strong>Who are we?</strong></p>
-      <p>We are three brothers, born and raised in Eugene Oregon, with a passion for entertainment. Portal Escape Rooms is a dream project for us. We recognized the cohesive community in our town, and agreed this was the perfect place to start our company. Our goal, now and forever, will always be premier entertainment. There’s nothing like your first escape room, and we want players to experience something new and exciting each time they visit.</p> -->
     </div>
   </div>
-  <p class="hidden-md hidden-lg" style="text-align: center; font-size: 20px; color: #221F80;"><strong>What’s an escape room?<strong></p>
+  <p class="hidden-md hidden-lg" style="text-align: center; font-size: 20px; color: #696969;"><strong>What’s an escape room?<strong></p>
   <p class="hidden-md hidden-lg">An escape room is a 60 minute cooperative experience for families, friends, and colleagues. These interactive puzzles require teamwork and critical thinking, so choose your team wisely! Escape rooms are exciting, unforgettable experiences!</p>
   <div class="w3-row">
     <div class="w3-center padding-large hidden-md hidden-lg">
       <img src="<%= asset_path "storefront.jpg", alt: "Storefront" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="350" height="233">
     </div>
   </div>
-  <!-- <p class="hidden-md hidden-lg" style="text-align: center; font-size: 20px; color: #221F80;"><strong>What’s an escape room?<strong></p>
-  <p class="hidden-md hidden-lg">An escape room is a 60 minute cooperative experience for families, friends, and colleagues. These interactive puzzles require teamwork and critical thinking, so choose your team wisely! Escape rooms are exciting, unforgettable experiences!</p> -->
-  <p class="hidden-md hidden-lg" style="text-align: center; font-size: 20px; color: #221F80;"><strong>What makes us unique?</strong></p>
+  <p class="hidden-md hidden-lg" style="text-align: center; font-size: 20px; color: #696969;"><strong>What makes us unique?</strong></p>
   <p class="hidden-md hidden-lg">We refused to create the typical escape room experience. We spared no expense in creating immersive rooms for our players with unique themes and original puzzles. We’re confident that we can deliver the best escape room experience in the Eugene/Springfield area.</p>
-  <p style="text-align: center; font-size: 20px; color: #221F80;"><strong>Who are we?</strong></p>
+  <p style="text-align: center; font-size: 20px; color: #696969;"><strong>Who are we?</strong></p>
   <p>We are three brothers, born and raised in Eugene Oregon, with a passion for entertainment. Portal Escape Rooms is a dream project for us. We recognized the cohesive community in our town, and agreed this was the perfect place to start our company. Our goal, now and forever, will always be premier entertainment. There’s nothing like your first escape room, and we want players to experience something new and exciting each time they visit.</p>
 </div>
 
@@ -406,7 +390,7 @@ and (max-device-width: 1024px){
     <div class="w3-col m8 w3-panel">
       <div class="w3-medium w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-large"></i> 2237 Main Street, Springfield, OR 97477<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-large"></i> 541-123-4567<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-large"></i> 541-780-6180<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-large"></i> info@portalescaperooms.net<br>
       </div>
       <p>Send us an email below:</p>

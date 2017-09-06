@@ -17,7 +17,7 @@ var bookeo_startMobileLabel="View Availability";
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
-    height: 90%;
+    height: 91%;
     color: #777;
     line-height: 1.8;
 }
@@ -56,6 +56,21 @@ body, html {
     .bgimg-1 {
         background-attachment: scroll;
     }
+    .w3-third {
+      width: 32%;
+    }
+
+    .w3-large {
+      font-size: 15px !important;
+    }
+}
+
+/*styles for landscape mode on mobile devices*/
+@media only screen and (orientation:landscape)
+and (max-device-width: 1024px){
+  .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
+      background-attachment: scroll;
+  }
 }
 div#bookeo_position {
   background-color: #777;
@@ -113,22 +128,22 @@ div#bookeo_position {
 
 <!-- Container (About Section) -->
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-   <div class="w3-quarter w3-section">
-     <span class="w3-large">Room Participants</span><br>
+   <div class="w3-third w3-section">
+     <span class="w3-large">Participants</span><br>
      <span class="w3-large">4-8</span>
    </div>
-   <div class="w3-quarter w3-section">
+   <div class="w3-third w3-section">
      <span class="w3-large">Difficulty</span><br>
-     <span class="w3-large">Beginner/Intermediate</span>
+     <span class="w3-large">Beginner</span>
    </div>
-   <div class="w3-quarter w3-section">
+   <div class="w3-third w3-section">
      <span class="w3-large">Duration</span><br>
      <span class="w3-large">1 Hour</span>
    </div>
-   <div class="w3-quarter w3-section">
+   <!-- <div class="w3-quarter w3-section">
      <span class="w3-large">Successful Escapes</span><br>
      <span class="w3-large">150</span>
-   </div>
+   </div> -->
  </div>
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">The Outlaw of El Paso</h3>
