@@ -483,6 +483,7 @@
 
 	.cd-faq {
 		margin-top: auto;
+		margin-bottom: auto;
 	}
 
 </style>
@@ -528,7 +529,7 @@
 			<li>
 				<a class="cd-faq-trigger" href="#0">Can I have more than 8 people in a room?</a>
 				<div class="cd-faq-content">
-					<p class="">We recommend at least 4-8 players for a room. Email us at info@portalescaperooms.net or call us at <strong>541-780-6180</strong> to arrange for group sizes greater than 8.</p>
+					<p class="">We recommend at least 4-8 players for a room. Email us at <strong>info@portalescaperooms.net</strong> or call us at <strong>541-780-6180</strong> to arrange for group sizes greater than 8.</p>
 				</div> <!-- cd-faq-content -->
 			</li>
 
@@ -596,6 +597,20 @@
 		</ul> <!-- cd-faq-group -->
 	</div> <!-- cd-faq-items -->
 	<a href="#0" class="cd-close-panel">Close</a>
-</section> <!-- cd-faq -->
+</section>
+<div class="w3-top navBar">
+  <div class="w3-bar" id="myNavbar" style="width:180px;" >
+    <!-- <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a> -->
+		<a href="waiver.pages" class="w3-bar-item w3-button logo" data-turbolinks="false" download><img src="<%= asset_path "final-logo.png"%>" style="width:100%" alt="Portal Logo">Download Waiver</a>
+    <!-- <a href="/" class="w3-bar-item w3-button">Home</a> -->
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+
+  </div>
+</div> <!-- cd-faq -->
 </body>
 </html>
