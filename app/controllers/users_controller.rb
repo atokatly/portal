@@ -31,8 +31,4 @@ class UsersController < ApplicationController
   def destroy
 
   end
-
-  def agreement
-    @user = User.new
-  end
 end
