@@ -9,6 +9,5 @@ Rails.application.routes.draw do
    get '/tomb' => 'room#tomb'
    get '/rooms' => 'room#index'
    get '/faq' => 'faq#index'
-   get '/agreement' => 'users#agreement'
    get '/book' => 'room#book'
 end
