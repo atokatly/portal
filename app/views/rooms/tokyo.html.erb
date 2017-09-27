@@ -33,7 +33,10 @@ body, html {
     color: #777;
     line-height: 1.8;
 }
-
+footer {
+  background-color: #0A5CAD;
+  color: #ffffff;
+}
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
@@ -115,10 +118,14 @@ div#bookeo_position {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-card-2 w3-animate-top w3-white" id="myNavbar">
-    <!-- <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
-    </a> -->
-    <a href="/" class="w3-bar-item w3-button" data-turbolinks="false">HOME</a>
+    </a>
+    <a href="/" class="w3-bar-item w3-button" data-turbolinks="false">Home</a>
+    <a href="/#about" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-user"></i> About</a>
+    <a href="/#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+    <a href="/#teams" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+    <a href="/#contact" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
     <!-- <a href="#about" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-user"></i> ABOUT</a> -->
     <!-- <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ESCAPE ROOMS</a> -->
     <a href="/faq" class="word w3-bar-item w3-button" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQs</i></a>
@@ -127,6 +134,12 @@ div#bookeo_position {
       <i class="fa fa-search"></i>
     </a> -->
   </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <a href="/tokyo" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tokyo Heist</a>
+  <a href="/western" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">The Outlaw of El Paso</a>
+  <a href="/tomb" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tomb of the Gods</a>
 </div>
 
   <!-- Navbar on small screens -->
@@ -150,7 +163,7 @@ div#bookeo_position {
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
    <div class="w3-third w3-section">
      <span class="w3-large">Participants</span><br>
-     <span class="w3-large">4-8</span>
+     <span class="w3-large">2-8</span>
    </div>
    <div class="w3-third w3-section">
      <span class="w3-large">Difficulty</span><br>
@@ -193,6 +206,18 @@ goes sour, there’ll be hell to pay for all of us.</p>
   <!-- </div> -->
   <!-- <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF"></script> -->
 <!-- </div> -->
+<footer class="w3-center w3-padding-64  ">
+  <a href="#home" class="w3-button w3-light-grey" data-turbolinks="false"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/portalescape/" style="color: #ffffff !important;"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-tripadvisor w3-hover-opacity"></i>
+    <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.yelp.com/biz/portal-escape-rooms-springfield" style="color: #ffffff !important;"><i class="fa fa-yelp w3-hover-opacity"></i></a>
+  </div>
+</footer>
 <script>
 function toggleFunction() {
     var x = document.getElementById("navDemo");

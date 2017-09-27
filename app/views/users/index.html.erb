@@ -92,7 +92,7 @@ a.roomButton:hover {
 
 }
 
-.bgimg-2, .bgimg-3 {
+.bgimg-2, .bgimg-3, .bgimg-4 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,8 +124,13 @@ a.roomButton:hover {
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url(<%= asset_path "tomb-no-text.jpg", alt: "Tokyo Logo" %>);
+    background-image: url(<%= asset_path "tomb-no-text.jpg", alt: "Tomb Logo" %>);
     min-height: 400px;
+}
+
+.bgimg-4 {
+  background-image: url(<%= asset_path "tokyo-no-text.jpg", alt: "Tokyo Logo" %>);
+  min-height: 400px;
 }
 
 .book-now {
@@ -227,7 +232,7 @@ a.roomButton:hover {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, #showcase {
         background-attachment: scroll;
     }
 
@@ -259,13 +264,14 @@ and (max-device-width: 1024px){
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-th"></i> ESCAPE ROOMS</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-user"></i> About</a>
+    <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+    <a href="#teams" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
     <a href="/faq" class="word w3-bar-item w3-button" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right w3-hover-red">
-      <!-- <i class="fa fa-search"></i> -->Grand Opening 10/2/2017
+    <a href="/book" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hover-red">
+      <i class="fa fa-book"></i> Book Now
     </a>
   </div>
 
@@ -274,8 +280,9 @@ and (max-device-width: 1024px){
     <a href="/" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ABOUT</a>
     <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ESCAPE ROOMS</a>
+    <a href="#teams" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">TEAM BUILDING - LARGE GROUPS</a>
     <a href="#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">CONTACT</a>
-    <a href="" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Grand Opening 10/2/2017</a>
+    <!-- <a href="/book" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">RESERVE NOW</a> -->
 
     <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
   </div>
@@ -382,6 +389,30 @@ and (max-device-width: 1024px){
   </div>
 </div>
 
+<div id="" class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">Business Hours and Private Events</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-16" id="teams">
+  <h3 class="w3-center" style="color: #0A5CAD;"><strong>Private Events and Team Building</strong></h3>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-padding-large side-content">
+      <p>Have a large party or team building event you would like to plan?</p> <p>We will work with your team or group to set aside time for private events upon request.</p> <p>Please give us a call at <strong style="color: #0A5CAD">541-780-6180</strong> or email us at <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> and we will schedule a time that best fits your needs.</p><p>Ask us about our multi-room package deals for groups larger than 20.</p>
+    </div>
+    <div class="w3-col m6 w3-center padding-medium">
+      <!-- <img src="<%= asset_path "storefront.jpg", alt: "Storefront" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="500" height="333"> -->
+      <h3 style="color: #0A5CAD;">Business Hours</h3>
+      <p>Monday - Thursday: 4PM - 10PM</p>
+      <p>Friday: 12PM - 10PM</p>
+      <p>Saturday: 12PM - 10PM</p>
+      <p>Sunday: 12PM - 8PM</p>
+      <p>Email us at <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> for extra availability.</p>
+    </div>
+  </div>
+</div>
+
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
@@ -401,7 +432,7 @@ and (max-device-width: 1024px){
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-medium w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-large"></i> 2237 Main Street, Springfield, OR 97477<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-large"></i> 2237 Main St #2, Springfield, OR 97477<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-large"></i> 541-780-6180<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-large"></i> info@portalescaperooms.net<br>
       </div>

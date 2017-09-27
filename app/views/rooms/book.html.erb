@@ -33,7 +33,10 @@ body, html {
     color: #777;
     line-height: 1.8;
 }
-
+footer {
+  background-color: #0A5CAD;
+  color: #ffffff;
+}
 /* Create a Parallax Effect */
 .bgimg-1{
     background-attachment: fixed;
@@ -181,11 +184,26 @@ div#bookeo_position {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="/" class="w3-bar-item w3-button" data-turbolinks="false">HOME</a>
+    <a href="/" class="w3-bar-item w3-button" data-turbolinks="false">Home</a>
+    <a href="/#about" class="w3-bar-item w3-button hidden-xs hidden-sm" data-turbolinks="false" onclick="toggleFunction()"><i class="fa fa-user"></i>About</a>
+    <a href="/#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+    <a href="/#teams" class="w3-bar-item w3-button hidden-xs hidden-sm" data-turbolinks="false" onclick="toggleFunction()"><i class="fa fa-users"></i>Team Building - Large Groups</a>
+    <a href="/#contact" class="w3-bar-item w3-button hidden-xs hidden-sm" data-turbolinks="false" onclick="toggleFunction()"><i class="fa fa-envelope"></i>Contact</a>
     <!-- <a href="#about" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-user"></i> ABOUT</a>
     <a href="/" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ESCAPE ROOMS</a> -->
     <a href="/faq" class="word w3-bar-item w3-button" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQs</i></a>
+
   </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <a href="/western" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">The Outlaw of El Paso</a>
+  <a href="/western" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">The Outlaw of El Paso</a>
+  <a href="/tokyo" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tokyo Heist</a>
+  <a href="/tomb" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tomb of the Gods</a>
+  <a href="/#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">About</a>
+  <a href="/#teams" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Team Building - Large Groups</a>
+  <a href="/#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Contact</a>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
@@ -218,7 +236,7 @@ div#bookeo_position {
     <div class="w3-center">
       <div class="room-posters">
         <img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/western">
-        <a class="roomButton noselect" link="/western">Learn more</a>
+        <a class="roomButton noselect" link="/western" style="background-color: #777">Learn more</a>
       </div>
       <div class="room-posters">
         <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/tokyo">
@@ -262,10 +280,22 @@ div#bookeo_position {
     <p class="hidden content" link="/">New rooms are coming soon! We are constantly coming up with new concepts to build on the current experience. Be sure to check our website regularly for updates!</p>
     <p class="w3-center">Good luck,<p>
     <p class="w3-center selected name" link="/western">Deputy Jones</p>
-    <p class="w3-center hidden name" link="/tokyo">Takeru Okada</p>
+    <p class="w3-center hidden name" link="/tokyo">David Grey</p>
     <p class="w3-center hidden name" link="/tomb">Anna Robin</p>
     <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&waitMobile=true"></script>
   </div>
+  <footer class="w3-center w3-padding-64  ">
+    <a href="#home" class="w3-button w3-light-grey" data-turbolinks="false"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <a href="https://www.facebook.com/portalescape/" style="color: #ffffff !important;"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-tripadvisor w3-hover-opacity"></i>
+      <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <a href="https://www.yelp.com/biz/portal-escape-rooms-springfield" style="color: #ffffff !important;"><i class="fa fa-yelp w3-hover-opacity"></i></a>
+    </div>
+  </footer>
   <script>
   function toggleFunction() {
       var x = document.getElementById("navDemo");

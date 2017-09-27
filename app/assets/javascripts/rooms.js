@@ -5,6 +5,7 @@ $(document).on('ready', function() {
 
 var postersClick = function(){
   $(".posters").on("click", function(event){
+    $(".roomButton").css({backgroundColor: "white"});
     var content = [];
     var name = [];
     var title = [];
@@ -52,6 +53,8 @@ var postersClick = function(){
 }
 var learnMoreClick = function(){
   $(".roomButton").on("click", function(event){
+    $(".roomButton").css({backgroundColor: "white"});
+    this.style.backgroundColor = "#777";
     var content = [];
     var name = [];
     var title = [];
