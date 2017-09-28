@@ -15,7 +15,11 @@
 	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<title>FAQ</title>
 	<link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
   <style>
@@ -28,11 +32,16 @@
   *::after, *::before {
     content: '';
   }
-
+.fa {
+	font-size: 15px;
+}
+.w3-button-item{
+	font-size: 15px;
+}
   body {
-    font-size: 100%;
-    font-family: "Open Sans", sans-serif;
-    color: #4e5359;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+  	line-height: 1.8;
     background-color: #f3f3f5;
   }
   body::after {
@@ -122,6 +131,7 @@
     max-width: 1024px;
     margin: 2em auto;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+		padding-top: 50px;
   }
   .cd-faq:after {
     content: "";
@@ -470,7 +480,7 @@
 
   .cd-faq-content p {
     font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 14px;
     line-height: 1.4;
     color: #6c7d8e;
   }
@@ -497,28 +507,156 @@
 		margin-top: auto;
 		margin-bottom: auto;
 	}
-	
+
+	/* Create a Parallax Effect */
+	.bgimg-1{
+	    background-attachment: fixed;
+	    background-position: 5% 30%;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.left {
+	  background-position: left;
+	}
+
+	.right {
+	  background-position: right;
+	}
+
+	.center {
+	  background-position: center;
+	}
+
+	/* First image (Logo. Full height) */
+	.bgimg-1 {
+	    background-image: url(<%= asset_path "outlaw-no-text.jpg", alt: "Outlaw Logo" %>);
+	    min-height: 100%;
+	}
+
+	.w3-wide {letter-spacing: 10px;}
+	.w3-hover-opacity {cursor: pointer;}
+
+	/* Turn off parallax scrolling for tablets and phones */
+	@media only screen and (max-device-width: 1024px) {
+	    .bgimg-1 {
+	        background-attachment: scroll;
+	    }
+	    .w3-third {
+	      width: 32%;
+	    }
+
+	    .w3-large {
+	      font-size: 15px !important;
+	    }
+	}
+
+	/*styles for landscape mode on mobile devices*/
+	@media only screen and (orientation:landscape)
+	and (max-device-width: 1024px){
+	  .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
+	      background-attachment: scroll;
+	  }
+	  .w3-bar-item{
+	    width: auto !important;
+	  }
+	}
+	div#bookeo_position {
+	  background-color: #777;
+	  margin: 0 auto;
+	  display: block;
+	  text-align: center !important;;
+	  font-family: "Lato", sans-serif;
+	  border: solid 2px rgba(0, 0, 0, 0.4);
+	  -webkit-border-radius: 5px;
+	  -moz-border-radius: 5px;
+	  border-radius: 5px;
+	  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+	  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+	  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+	  background-color: Transparent;
+	  background-repeat:no-repeat;
+	  border: none;
+	  cursor:pointer;
+	  overflow: hidden;
+	  outline:none;
+	  min-width: 10%;
+	  width: auto !important;;
+	  margin-top: 10px;
+	  height: auto !important;;
+
+	       }
+	        div#bookeoStartMobile{
+	         width: auto !important;
+	         padding-bottom: 35px !important;
+	       }
+	       div#bookeo:hover{
+	         background-color: #FF2600 !important;
+	       }
+
 
 </style>
 </head>
 <body>
-<header>
+	<!-- Navbar on large desktop screens -->
+  <div class="w3-top navBar w3-white hidden-xs">
+    <div class="w3-bar w3-card-2 w3-white">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="/" class="w3-hide-small w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-home"></i>Home</a>
+      <a href="/#about" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-user"></i> About</a>
+      <a href="/#escape-rooms" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+      <a href="/#teams" class="w3-bar-item w3-button" style="width:20.15%" data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+      <a href="/#contact" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
+      <a href="/faq" class="word w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
+      <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width:13.15%">
+        <i class="fa fa-book"></i> Book Now
+      </a>
+    </div>
+  </div>
+  <!-- Navbar on small desktop and mobile -->
+  <div class="w3-top navBar w3-white hidden-sm hidden-md hidden-lg">
+    <div class="w3-top navBar w3-white">
+      <div class="w3-bar w3-card-2 w3-white">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" style="width: 13%" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">Home</a>
+        <!-- <a href="#about" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-user"></i> About</a> -->
+        <a href="/#escape-rooms" class="w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+        <a href="/#teams" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+        <!-- <a href="/#contact" class="w3-bar-item w3-button w3-hide-small "  data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a> -->
+        <!-- <a href="/faq" class="word w3-bar-item w3-button" style="width: 18%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign"></i>FAQ</a> -->
+        <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 30%">
+          <i class="fa fa-book"></i> Book Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <a href="/western" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">The Outlaw of El Paso</a>
+  <a href="/tokyo" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tokyo Heist</a>
+  <a href="/tomb" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tomb of the Gods</a>
+</div>
+<!-- <header>
 	<h1>Portal FAQs</h1>
 </header>
 <div class="w3-top navBar">
-  <div class="w3-bar" id="myNavbar" style="width:180px;" >
+  <div class="w3-bar" id="myNavbar" style="width:180px;" > -->
     <!-- <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a> -->
-		<a href="/" class="w3-bar-item w3-button logo" data-turbolinks="false"><img src="<%= asset_path "final-logo.png"%>" style="width:100%" alt="Portal Logo">Home</a>
+		<!-- <a href="/" class="w3-bar-item w3-button logo" data-turbolinks="false"><img src="<%= asset_path "final-logo.png"%>" style="width:100%" alt="Portal Logo">Home</a> -->
     <!-- <a href="/" class="w3-bar-item w3-button">Home</a> -->
-  </div>
+  <!--</div>-->
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
 
   </div>
-</div>
+</div> -->
 <section class="cd-faq">
 
 	<div class="cd-faq-items">
@@ -611,11 +749,8 @@
 	</div> <!-- cd-faq-items -->
 	<a href="#0" class="cd-close-panel">Close</a>
 </section>
-<div class="w3-top navBar">
+
   <div class="w3-bar" id="myNavbar" style="width:180px;" >
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
 		<a href="/public/waiver.pdf" class="w3-bar-item w3-button logo" data-turbolinks="false" ><img src="<%= asset_path "final-logo.png"%>" style="width:100%" alt="Portal Logo">View Waiver</a>
     <!-- <a href="/" class="w3-bar-item w3-button">Home</a> -->
   </div>
@@ -623,8 +758,7 @@
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
 
-  </div>
-</div> <!-- cd-faq -->
+  </div> <!-- cd-faq -->
 </body>
 </html>
 
