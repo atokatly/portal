@@ -177,11 +177,13 @@ a.roomButton:hover {
 #item-title {
   font-family: "Lato", sans-serif;
   color: #777;
-  font-size: 29px;
+  font-size: 22px;
   letter-spacing: 0.13em;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 #nav {
   text-align: center;
@@ -308,17 +310,14 @@ and (max-device-width: 1024px){
 
   <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
 </div>
-
-
 <!-- First Parallax Image with Logo Text -->
-<a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background" id="home">>
+<a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
     </div>
 </div></a>
 <!-- <a href="/book" class="w3-bar-item w3-button book-now" data-turbolinks="false"><button>Book now</button></a> -->
-
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-2" id="about">
+<div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center" style="color: #0A5CAD;"><strong>About Portal Escape Rooms</strong></h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center padding-large hidden-xs hidden-sm">
@@ -360,10 +359,10 @@ and (max-device-width: 1024px){
 
 
   <div id="showcase" class="noselect w3-center hidden-xs">
-    <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="The Outlaw of El Paso">
-    <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="Tokyo Heist">
+    <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
+    <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="You've been hired to pull off a heist against one of your bosses competitors. Get in, get the money, and get out. Failure is not an option.">
     <img class="cloud9-item" src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:20%" link="" alt="New Rooms Coming Soon">
-    <img class="cloud9-item" src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Tomb of the Gods">
+    <img class="cloud9-item" src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Navigate through the jungles of Mexico to an ancient Aztec tomb and discover what became of a missing team of explorers. Who knows what lies inside those forgotten walls...">
   </div>
 
   <!-- <p id="item-title">&nbsp;</p> -->
@@ -417,7 +416,7 @@ and (max-device-width: 1024px){
   </div>
 </div>
 
-<div class="w3-content w3-container w3-padding-16" id="teams">
+<div class="w3-content w3-container w3-padding-32" id="teams">
   <h3 class="w3-center" style="color: #0A5CAD;"><strong>Private Events and Team Building</strong></h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-padding-large side-content">
@@ -444,7 +443,7 @@ and (max-device-width: 1024px){
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">Questions or feedback?</h3>
+  <h3 class="w3-center" style="color: #0A5CAD;">Questions or feedback?</h3>
   <p class="w3-center"><em>Send us an email. We'd love to hear from you!</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
