@@ -59,8 +59,8 @@ footer {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "sneak-peek-western.jpg", alt: "Outlaw Logo" %>);
-    min-height: 100%;
+  background-image: url(<%= asset_path "sneak-peek-western.jpg", alt: "Tokyo Logo" %>);
+  min-height: 100%;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -126,9 +126,8 @@ div#bookeo_position {
        @media only screen and (orientation:portrait)
        and (max-device-width: 1024px){
          .bgimg-1{
-           /*background-position: right;*/
-           background-size: contain;
-           background-position: top;
+           background-position: right;
+           min-height: 400px;
          }
          body{
            height: 40%;
@@ -161,13 +160,13 @@ div#bookeo_position {
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" style="width: 13%" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
           <i class="fa fa-bars"></i>
         </a>
-        <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">Home</a>
+        <a href="/" class="w3-bar-item w3-button" data-turbolinks="false" style="width: 28%"><i class="fa fa-home"></i>Home</a>
         <!-- <a href="#about" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-user"></i> About</a> -->
-        <a href="/#escape-rooms" class="w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+        <a href="/#escape-rooms" class="w3-hide-small w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
         <a href="/#teams" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
         <!-- <a href="/#contact" class="w3-bar-item w3-button w3-hide-small "  data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a> -->
-        <a href="/faq" class="word w3-bar-item w3-button" style="width: 18%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
-        <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 30%">
+        <a href="/faq" class="word w3-bar-item w3-button" style="width: 25%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
+        <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 31%">
           <i class="fa fa-book"></i> Book Now
         </a>
       </div>
@@ -205,7 +204,7 @@ div#bookeo_position {
      <span class="w3-large">150</span>
    </div> -->
  </div>
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container w3-padding-16" id="about">
   <h3 class="w3-center">The Outlaw of El Paso</h3>
   <!-- <p class="w3-center"><em>A notorious outlaw on the run... Can you and your team track him down?</em></p> -->
   <p>The most dangerous outlaw in the country rode into town last night.
