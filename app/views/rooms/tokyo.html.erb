@@ -59,7 +59,7 @@ footer {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "tokyo-no-text.jpg", alt: "Tokyo Logo" %>);
+    background-image: url(<%= asset_path "tokyo-resize.jpg", alt: "Tokyo Logo" %>);
     min-height: 100%;
 }
 
@@ -94,7 +94,8 @@ and (max-device-width: 1024px){
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
   .bgimg-1{
-    /*background-position: center;*/
+    background-image: url(<%= asset_path "tokyo-resize.jpg", alt: "Tokyo Logo" %>);
+    background-position: 68% 50%;
     min-height: 400px;
   }
 }
