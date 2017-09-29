@@ -29,7 +29,7 @@ var bookeo_startMobileLabel="View Availability";
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
-    height: 91%;
+    height: 92.5%;
     color: #777;
     line-height: 1.8;
 }
@@ -59,7 +59,7 @@ footer {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "tomb-no-text.jpg", alt: "Tokyo Logo" %>);
+    background-image: url(<%= asset_path "aztec-resize.jpg", alt: "Tokyo Logo" %>);
     min-height: 100%;
 }
 
@@ -87,6 +87,18 @@ and (max-device-width: 1024px){
   }
   .w3-bar-item{
     width: auto !important;
+  }
+}
+@media only screen and (orientation:portrait)
+and (max-device-width: 1024px){
+  .bgimg-1{
+    /*background-position: right;*/
+    background-size: contain;
+    background-position: top;
+    background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Tokyo Logo" %>);
+  }
+  body{
+    height: 40%;
   }
 }
 div#bookeo_position {
@@ -185,7 +197,7 @@ div#bookeo_position {
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<div class="w3-row w3-center w3-dark-grey w3-padding-2">
    <div class="w3-third w3-section">
      <span class="w3-large">Participants</span><br>
      <span class="w3-large">2-8</span>

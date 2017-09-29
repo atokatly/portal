@@ -29,7 +29,7 @@ var bookeo_startMobileLabel="View Availability";
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
-    height: 91%;
+    height: 93%;
     color: #777;
     line-height: 1.8;
 }
@@ -40,7 +40,7 @@ footer {
 /* Create a Parallax Effect */
 .bgimg-1{
     background-attachment: fixed;
-    background-position: 5% 30%;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -59,7 +59,7 @@ footer {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "outlaw-no-text.jpg", alt: "Outlaw Logo" %>);
+    background-image: url(<%= asset_path "sneak-peek-western.jpg", alt: "Outlaw Logo" %>);
     min-height: 100%;
 }
 
@@ -122,6 +122,18 @@ div#bookeo_position {
        div#bookeo:hover{
          background-color: #FF2600 !important;
        }
+       /*styles for landscape mode on mobile devices*/
+       @media only screen and (orientation:portrait)
+       and (max-device-width: 1024px){
+         .bgimg-1{
+           /*background-position: right;*/
+           background-size: contain;
+           background-position: top;
+         }
+         body{
+           height: 40%;
+         }
+       }
 </style>
 <body>
 
@@ -175,7 +187,7 @@ div#bookeo_position {
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<div class="w3-row w3-center w3-dark-grey w3-padding-2">
    <div class="w3-third w3-section">
      <span class="w3-large">Participants</span><br>
      <span class="w3-large">2-8</span>
