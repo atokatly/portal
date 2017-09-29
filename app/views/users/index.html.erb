@@ -113,23 +113,23 @@ a.roomButton:hover {
 /* First image (Logo. Full height) */
 .bgimg-1 {
     background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
-    min-height: 100%;
+    min-height: 500px;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Outlaw Logo" %>);
+    background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>);
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url(<%= asset_path "tomb-no-text.jpg", alt: "Tomb Logo" %>);
+    background-image: url(<%= asset_path "sneak-peek-tokyo.jpg", alt: "Tokyo Sneak Peek" %>);
     min-height: 400px;
 }
 
 .bgimg-4 {
-  background-image: url(<%= asset_path "sneak-peek-western.jpg", alt: "Tokyo Logo" %>);
+  background-image: url(<%= asset_path "sneak-peek-western.jpg", alt: "Western Sneak Peek" %>);
   min-height: 400px;
 }
 
@@ -257,7 +257,7 @@ and (max-device-width: 1024px){
     width: 24.9999%;
   }
   .w3-bar-item{
-    width: auto !important;
+    width: 27%;
   }
 }
 
@@ -267,6 +267,12 @@ and (max-device-width: 1024px){
   .bgimg-4{
     background-position: right;
   }
+}
+
+.w3-show{
+  position: fixed;
+  z-index: 100;
+  /*border: 1px solid black;*/
 }
 </style>
 <body>
@@ -292,26 +298,26 @@ and (max-device-width: 1024px){
 <div class="w3-top navBar w3-white hidden-sm hidden-md hidden-lg">
   <div class="w3-top navBar w3-white">
     <div class="w3-bar w3-card-2 w3-white">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" style="width: 13%" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" style="width: 13%" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>
       </a>
-      <!-- <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">Home</a> -->
+      <a href="/" class="w3-bar-item w3-button" style="width: 28%" data-turbolinks="false"><i class="fa fa-home"></i> Home</a>
       <!-- <a href="#about" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-user"></i> About</a> -->
-      <a href="#escape-rooms" class="w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
-      <a href="#teams" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-hide-small "  data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
-      <a href="/faq" class="word w3-bar-item w3-button" style="width: 18%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
-      <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 30%">
+      <a href="#escape-rooms" class="w3-hide-small w3-hide-medium w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+      <a href="#teams" class="w3-bar-item w3-button w3-hide-small w3-hide-medium"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+      <!-- <a href="#contact" class="w3-bar-item w3-button w3-hide-small "  data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a> -->
+      <a href="/faq" class="word w3-bar-item w3-button" style="width: 20%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
+      <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 35%">
         <i class="fa fa-book"></i> Book Now
       </a>
     </div>
   </div>
 </div>
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large">
   <a href="/" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">HOME</a>
   <a href="#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ABOUT</a>
-  <!-- <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ESCAPE ROOMS</a> -->
+  <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ESCAPE ROOMS</a>
   <a href="#teams" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">TEAM BUILDING - LARGE GROUPS</a>
   <a href="#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">CONTACT</a>
   <!-- <a href="/book" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">RESERVE NOW</a> -->
@@ -325,7 +331,7 @@ and (max-device-width: 1024px){
 </div></a>
 <!-- <a href="/book" class="w3-bar-item w3-button book-now" data-turbolinks="false"><button>Book now</button></a> -->
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container w3-padding-32" id="about">
   <h3 class="w3-center" style="color: #0A5CAD;"><strong>About Portal Escape Rooms</strong></h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center padding-large hidden-xs hidden-sm">
@@ -428,7 +434,7 @@ and (max-device-width: 1024px){
   <h3 class="w3-center" style="color: #0A5CAD;"><strong>Private Events and Team Building</strong></h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-padding-large side-content">
-      <p>Have a large party or team building event you would like to plan?</p> <p>We will work with your team or group to set aside time for private events upon request.</p> <p>Please give us a call at <strong style="color: #0A5CAD">541-780-6180</strong> or email us at <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> and we will schedule a time that best fits your needs.</p><p>Ask us about our multi-room package deals for groups larger than 20.</p>
+      <p>Have a large party or team building event you would like to plan?</p> <p>We will work with your team or group to set aside time for private events upon request.</p> <p>Please give us a call at <strong style="color: #0A5CAD">541-780-6180</strong> or email us at <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> and we will schedule a time that best fits your needs.</p><p>Ask us about our multi-room package deals for groups larger than 15.</p>
     </div>
     <div class="w3-col m6 w3-center padding-medium">
       <!-- <img src="<%= asset_path "storefront.jpg", alt: "Storefront" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="500" height="333"> -->
@@ -443,14 +449,14 @@ and (max-device-width: 1024px){
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-3 w3-display-container">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
+<div class="w3-content w3-container w3-padding-32" id="contact">
   <h3 class="w3-center" style="color: #0A5CAD;">Questions or feedback?</h3>
   <p class="w3-center"><em>Send us an email. We'd love to hear from you!</em></p>
 

@@ -59,7 +59,7 @@ footer {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "tokyo-no-text.jpg", alt: "Tokyo Logo" %>);
+    background-image: url(<%= asset_path "tokyo-resize.jpg", alt: "Tokyo Logo" %>);
     min-height: 100%;
 }
 
@@ -86,7 +86,7 @@ and (max-device-width: 1024px){
       background-attachment: scroll;
   }
   .w3-bar-item{
-    width: auto !important;
+    width: 24%;
   }
 }
 
@@ -94,7 +94,8 @@ and (max-device-width: 1024px){
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
   .bgimg-1{
-    /*background-position: center;*/
+    background-image: url(<%= asset_path "tokyo-resize.jpg", alt: "Tokyo Logo" %>);
+    background-position: 68% 50%;
     min-height: 400px;
   }
 }
@@ -131,6 +132,14 @@ div#bookeo_position {
        div#bookeo:hover{
          background-color: #FF2600 !important;
        }
+       .w3-show{
+         position: fixed;
+         z-index: 100;
+         /*border: 1px solid black;*/
+       }
+       .navBar {
+         z-index: 101;
+       }
 
 </style>
 <body>
@@ -156,26 +165,30 @@ div#bookeo_position {
   <div class="w3-top navBar w3-white hidden-sm hidden-md hidden-lg">
     <div class="w3-top navBar w3-white">
       <div class="w3-bar w3-card-2 w3-white">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" style="width: 13%" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" style="width: 13%" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
           <i class="fa fa-bars"></i>
         </a>
         <a href="/" class="w3-bar-item w3-button" data-turbolinks="false" style="width: 28%"><i class="fa fa-home"></i>Home</a>
         <!-- <a href="#about" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-user"></i> About</a> -->
-        <a href="/#escape-rooms" class="w3-hide-small w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
-        <a href="/#teams" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+        <a href="/#escape-rooms" class="w3-hide-small w3-hide-medium w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+        <a href="/#teams" class="w3-bar-item w3-button w3-hide-small w3-hide-medium"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
         <!-- <a href="/#contact" class="w3-bar-item w3-button w3-hide-small "  data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a> -->
-        <a href="/faq" class="word w3-bar-item w3-button" style="width: 25%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
-        <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 31%">
+        <a href="/faq" class="word w3-bar-item w3-button" style="width: 20%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
+        <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 35%">
           <i class="fa fa-book"></i> Book Now
         </a>
       </div>
     </div>
   </div>
 
-<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large">
   <a href="/tokyo" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tokyo Heist</a>
   <a href="/western" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">The Outlaw of El Paso</a>
   <a href="/tomb" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tomb of the Gods</a>
+  <a href="/#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">About</a>
+  <a href="/#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Escape Rooms</a>
+  <a href="/#teams" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Team Building - Large Groups</a>
+  <a href="/#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Contact</a>
 </div>
 
   <!-- Navbar on small screens -->
