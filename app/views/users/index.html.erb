@@ -113,7 +113,7 @@ a.roomButton:hover {
 /* First image (Logo. Full height) */
 .bgimg-1 {
     background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
-    min-height: 100%;
+    min-height: 500px;
 }
 
 /* Second image (Portfolio) */
@@ -268,6 +268,12 @@ and (max-device-width: 1024px){
     background-position: right;
   }
 }
+
+.w3-show{
+  position: fixed;
+  z-index: 105;
+  border: 1px solid black;
+}
 </style>
 <body>
 
@@ -325,7 +331,7 @@ and (max-device-width: 1024px){
 </div></a>
 <!-- <a href="/book" class="w3-bar-item w3-button book-now" data-turbolinks="false"><button>Book now</button></a> -->
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container w3-padding-32" id="about">
   <h3 class="w3-center" style="color: #0A5CAD;"><strong>About Portal Escape Rooms</strong></h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center padding-large hidden-xs hidden-sm">
@@ -450,7 +456,7 @@ and (max-device-width: 1024px){
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
+<div class="w3-content w3-container w3-padding-32" id="contact">
   <h3 class="w3-center" style="color: #0A5CAD;">Questions or feedback?</h3>
   <p class="w3-center"><em>Send us an email. We'd love to hear from you!</em></p>
 
