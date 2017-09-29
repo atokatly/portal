@@ -113,7 +113,7 @@ a.roomButton:hover {
 /* First image (Logo. Full height) */
 .bgimg-1 {
     background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
-    min-height: 525px;
+    min-height: 550px;
 }
 
 /* Second image (Portfolio) */
@@ -251,6 +251,7 @@ and (max-device-width: 1024px){
   }
   .bgimg-1 {
     background-size: 65%;
+      min-height: 400px;
   }
 
   .mobile-rooms {
@@ -267,6 +268,9 @@ and (max-device-width: 1024px){
   .bgimg-4{
     background-position: right;
   }
+}
+.bgimg-1 {
+  min-height: 400px;
 }
 
 .w3-show{
