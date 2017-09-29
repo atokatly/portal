@@ -278,72 +278,6 @@ and (max-device-width: 1024px){
   z-index: 100;
   /*border: 1px solid black;*/
 }
-.button-left{
-  padding-top: 100px;
-  position: inherit;
-  padding-right: 200px !important;
-
-}
-.button-left > button {
-  width: 64px;
-  height: 36px;
-  color: #666;
-  font: bold 16px arial;
-  text-align: center;
-  margin: 5px;
-  text-shadow: 0px 1px 0px #f5f5f5;
-  background: #f6f6f6;
-  border: solid 2px rgba(0, 0, 0, 0.4);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}
-.button-left > button:active,
-.button-left > button.down {
-  background: #dfdfdf;
-  border: solid 2px rgba(0, 0, 0, 0.6);
-  box-shadow: none;
-}
-
-.button-left >button:hover {
-  background-color: #777;
-}
-.button-right{
-  padding-top: 100px;
-  position: inherit;
-}
-.button-right > button {
-  width: 64px;
-  height: 36px;
-  color: #666;
-  font: bold 16px arial;
-  text-align: center;
-  margin: 5px;
-  text-shadow: 0px 1px 0px #f5f5f5;
-  background: #f6f6f6;
-  border: solid 2px rgba(0, 0, 0, 0.4);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}
-.button-right > button:active,
-.button-right > button.down {
-  background: #dfdfdf;
-  border: solid 2px rgba(0, 0, 0, 0.6);
-  box-shadow: none;
-}
-
-.button-right >button:hover {
-  background-color: #777;
-}
 .escape-padding{
   padding-top: 41px;
   padding-bottom: 40px;
@@ -444,6 +378,9 @@ and (max-device-width: 1024px){
 <div class="wrap escape-padding" id="escape-rooms">
   <h3 class="w3-center hidden-xs" style="color: #0A5CAD;">Click the posters to learn more about each room and book your reservation using the button below.</h3>
   <h3 class="w3-center hidden-sm hidden-md hidden-lg" style="color: #0A5CAD;">Here are the current rooms in rotation.</h3>
+  <p class="w3-center"><em>
+
+
   <div id="showcase" class="noselect w3-center hidden-xs">
     <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
     <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="You've been hired to pull off a heist against one of your bosses competitors. Get in, get the money, and get out. Failure is not an option.">
