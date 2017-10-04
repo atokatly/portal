@@ -395,17 +395,17 @@ and (max-device-width: 1024px){
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
     <div class="mobile-rooms w3-padding">
-      <a href="/western"><img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <a href="/western" data-turbolinks="false"><img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="mobile-rooms w3-padding">
-      <a href="/tokyo"><img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <a href="/tokyo" data-turbolinks="false"><img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="mobile-rooms w3-padding">
-      <a href="/tomb"><img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <a href="/tomb" data-turbolinks="false"><img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
@@ -499,6 +499,9 @@ and (max-device-width: 1024px){
             <i class="fa fa-paper-plane"></i> SEND MESSAGE
           </button> </p>
       </form>
+    </div>
+    <div class="w3-center">
+      <span class="yelp-review w3-center" data-review-id="wnrVJ3mandd4MxKTQQ52Vw" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=80s5bwGsaSae1edPZduaJg" rel="nofollow noopener">Elaine P.</a>'s <a href="https://www.yelp.com/biz/portal-escape-rooms-springfield?hrid=wnrVJ3mandd4MxKTQQ52Vw" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/7kJTv-H7FwS1rq-89X2lhA" rel="nofollow noopener">Portal Escape Rooms</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
     </div>
   </div>
 </div>
