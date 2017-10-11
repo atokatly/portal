@@ -124,12 +124,12 @@ a.roomButton:hover {
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url(<%= asset_path "sneak-peek-tokyo.jpg", alt: "Tokyo Sneak Peek" %>);
+    background-image: url(<%= asset_path "sneak-peek-tokyo-2.jpg", alt: "Tokyo Sneak Peek" %>);
     min-height: 400px;
 }
 
 .bgimg-4 {
-  background-image: url(<%= asset_path "sneak-peek-western.jpg", alt: "Western Sneak Peek" %>);
+  background-image: url(<%= asset_path "sneak-peek-western-2.jpg", alt: "Western Sneak Peek" %>);
   min-height: 400px;
 }
 
@@ -266,7 +266,7 @@ and (max-device-width: 1024px){
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
   .bgimg-4{
-    background-position: right;
+    background-position: center;
   }
 }
 .bgimg-1 {
@@ -381,7 +381,7 @@ and (max-device-width: 1024px){
   <p class="w3-center"><em>
 
 
-  <div id="showcase" class="w3-center hidden-xs">
+  <div id="showcase" class="noselect w3-center hidden-xs">
     <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
     <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="You've been hired to pull off a heist against one of your bosses competitors. Get in, get the money, and get out. Failure is not an option.">
     <img class="cloud9-item" src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:20%" link="" alt="New Rooms Coming Soon">
