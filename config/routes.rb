@@ -10,4 +10,6 @@ Rails.application.routes.draw do
    get '/rooms' => 'room#index'
    get '/faq' => 'faq#index'
    get '/book' => 'room#book'
-end
+   get '/voucher' => 'room#voucher'
+   get '/redeem' => 'room#redeem'
+ end
