@@ -22,4 +22,14 @@ class RoomController < ApplicationController
     p 'This is the collective booking route'
     render "/rooms/book"
   end
+
+  def voucher
+    p 'This is the voucher purchase route'
+    render "/rooms/voucher"
+  end
+
+  def redeem
+    p 'This is the voucher redemption route'
+    render "/rooms/redeem"
+  end
 end
