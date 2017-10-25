@@ -32,4 +32,9 @@ class RoomController < ApplicationController
     p 'This is the voucher redemption route'
     render "/rooms/redeem"
   end
+
+  def gallery
+    p 'This is the gallery route'
+    render "/rooms/gallery"
+  end
 end
