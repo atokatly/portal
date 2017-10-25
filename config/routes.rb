@@ -12,4 +12,5 @@ Rails.application.routes.draw do
    get '/book' => 'room#book'
    get '/voucher' => 'room#voucher'
    get '/redeem' => 'room#redeem'
+   get '/gallery' => 'room#gallery'
  end
