@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
 <style>
@@ -282,6 +284,125 @@ and (max-device-width: 1024px){
   padding-top: 41px;
   padding-bottom: 40px;
 }
+
+h2 {
+  text-align: center;
+}
+.mdl-card + .mdl-card {
+  margin-top: 40px;
+}
+
+// Card styles
+
+.mdl-card--horizontal {
+  flex-direction: column;
+  height: 1vh; /* 1 */
+  padding-left: 150px;
+  width: 100%;
+
+  .mdl-card__media {
+    left: 0;
+    position: absolute;
+    width: 150px;
+  }
+
+  .mdl-card__supporting-text {
+    flex: 1 1 auto;
+    width: auto;
+    height: 100px !important;
+    text-align: center;
+    word-wrap: normal;
+  }
+}
+
+  /*.bgimg-1 {
+      display: inline-block;
+      background-position: center;
+      background-size: 100%;
+      text-align: center;
+      margin: auto;
+  }*/
+  /*.bgimg-1 {
+    background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
+    min-height: 100%;
+  }*/
+  .image {
+    width: 100%;
+    padding-bottom: 2px;
+  }
+  .image-table{
+    width: 20%;
+  }
+  .image-container {
+    display:block;
+    margin:auto;
+}
+  }
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    width: 100%;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  width: 100%;
+  padding: 16px;
+
+}
+.column-left{
+  float: left;
+  width: 33%;
+  padding-right: 5px;
+  padding-bottom: 15px;
+}
+.column-right{
+  float: right;
+  width: 33%;
+}
+.column-center{
+  display: inline-block;
+  width: 33%;
+}
+.card-div-left {
+  float: left;
+  width: 49%;
+  padding-right: 5px;
+}
+.card-div-right {
+  float: right;
+  width: 49%;
+  padding-left: 5px;
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.demo-card-square.mdl-card {
+  width: auto;
+  height: 360px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background: url() bottom right 15% no-repeat #46B6AC;
+  /*background-size: cover;*/
+}
+
+.review{
+  margin: auto;
+  width: 100%;
+}
+
+
 </style>
 <body>
 
@@ -292,10 +413,10 @@ and (max-device-width: 1024px){
       <i class="fa fa-bars"></i>
     </a>
     <a href="/" class="w3-hide-small w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-home"></i>Home</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-user"></i> About</a>
-    <a href="#escape-rooms" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
-    <a href="#teams" class="w3-bar-item w3-button" style="width:20.15%" data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
+    <a href="/#about" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-user"></i> About</a>
+    <a href="/#escape-rooms" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+    <a href="/#teams" class="w3-bar-item w3-button" style="width:20.15%" data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+    <a href="/#contact" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
     <a href="/faq" class="word w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
     <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width:13.15%" data-turbolinks="false">
       <i class="fa fa-book"></i> Book Now
@@ -311,8 +432,8 @@ and (max-device-width: 1024px){
       </a>
       <a href="/" class="w3-bar-item w3-button" style="width: 28%" data-turbolinks="false"><i class="fa fa-home"></i> Home</a>
       <!-- <a href="#about" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-user"></i> About</a> -->
-      <a href="#escape-rooms" class="w3-hide-small w3-hide-medium w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
-      <a href="#teams" class="w3-bar-item w3-button w3-hide-small w3-hide-medium"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+      <a href="/#escape-rooms" class="w3-hide-small w3-hide-medium w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+      <a href="/#teams" class="w3-bar-item w3-button w3-hide-small w3-hide-medium"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
       <!-- <a href="#contact" class="w3-bar-item w3-button w3-hide-small "  data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a> -->
       <a href="/faq" class="word w3-bar-item w3-button" style="width: 20%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
       <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 35%" data-turbolinks="false">
@@ -324,18 +445,18 @@ and (max-device-width: 1024px){
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large">
   <a href="/" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">HOME</a>
-  <a href="#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ABOUT</a>
-  <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ESCAPE ROOMS</a>
-  <a href="#teams" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">TEAM BUILDING - LARGE GROUPS</a>
-  <a href="#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">CONTACT</a>
+  <a href="/#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ABOUT</a>
+  <a href="/#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">ESCAPE ROOMS</a>
+  <a href="/#teams" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">TEAM BUILDING - LARGE GROUPS</a>
+  <a href="/#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">CONTACT</a>
   <!-- <a href="/book" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">RESERVE NOW</a> -->
 
   <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
 </div>
 <div class="w3-padding-48">
-  <p style="text-align: center;">If you want to treat your friends and family to an adventure at Portal, you can use the interface below to purchase e-gift cards!</p>
-  <p style="text-align: center;">We offer $60 Couples Gift Cards, $100 Gift Cards, and $210 Private Room Bookings.</p>
+  <p style="text-align: center; width: 100%;">If you want to treat your friends and family to an adventure at Portal, you can use the interface below to purchase e-gift cards!</p>
+  <p style="text-align: center; width: 100%;">We offer $60 Couples Gift Cards, $100 Gift Cards, and $200 Private Room Bookings.</p>
 </div>
-<div class="w3-padding-64">
+<div class="w3-padding-8">
 <script src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&startmode=buyvoucher"></script>
 </div>

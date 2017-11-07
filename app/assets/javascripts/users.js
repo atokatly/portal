@@ -6,6 +6,7 @@ $(document).on('ready', function() {
   carouselClick();
   activeImage();
   imageLink();
+  // reviewsDesktop();
   // drawImage();
 });
 // Assumes current image layout for carousel
@@ -72,6 +73,65 @@ var activeImage = function(){
     }
   });
 }
+
+// var reviewsDesktop = function(){
+//   $("a.review-btn").on('click', function(event){
+//     var array = $(this).attr("class").split(" ");
+//     var allImages = $(".reviews");
+//     var hiddenImages = $(".reviews.hidden");
+//     var text = $(".review-text");
+//     var hiddenText = $(".review-text.hidden");
+//     if(array.indexOf("r") > -1){
+//       $(allImages).addClass("hidden");
+//       $(hiddenImages).removeClass("hidden");
+//       $(text).addClass("hidden");
+//       $(hiddenText).removeClass("hidden");
+//     }
+//     else if(array.indexOf("l") > -1){
+//
+//     }
+//   });
+// }
+
+// var main = function() {
+//
+// 	var paused = false
+//
+// 	$('.arrowR').click(function() {
+// 		paused = true;
+// 		$('#slideshow > div:first')
+// 		.fadeOut(1000)
+// 		.next()
+// 		.fadeIn(1000)
+// 		.end()
+// 		.appendTo('#slideshow');
+// 	});
+//
+// 	$('.arrowL').click(function() {
+// 		paused = true;
+// 		$('#slideshow > div:last')
+// 		.fadeIn(1000)
+// 		.prependTo('#slideshow')
+// 		.next()
+// 		.fadeOut(1000)
+// 		.end();
+// 	});
+//
+//
+//
+// 	setInterval(function() {
+// 		if (paused === false) {
+// 			$('#slideshow > div:first')
+// 			.fadeOut(1000)
+// 			.next()
+// 			.fadeIn(1000)
+// 			.end()
+// 			.appendTo('#slideshow');
+// 		};
+// 	},  5000);
+//
+//
+// };
 
 var imageLink = function(){
   var image = roomArray[0];
