@@ -22,6 +22,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
 <style>
@@ -92,7 +95,7 @@ a.roomButton:hover {
 
 }
 
-.bgimg-2, .bgimg-3, .bgimg-4 {
+.bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -133,6 +136,11 @@ a.roomButton:hover {
   min-height: 400px;
 }
 
+.bgimg-5 {
+  background-image: url(<%= asset_path "sneak-peek-tokyo.jpg", alt: "Tokyo OG Sneak Peek" %>);
+  min-height: 400px;
+}
+
 .book-now {
   display: block;
   text-align: center;
@@ -161,6 +169,27 @@ a.roomButton:hover {
 .mobile-rooms {
   width: 49%;
   float: left;
+}
+
+.reviews{
+  display: inline-block;
+  width: 33.1%;
+  padding: 5px;
+}
+
+.review-div{
+  height: auto;
+  margin: auto;
+}
+
+.review-images{
+  width: 100%;
+}
+
+.review-text{
+  width: 33.1%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -234,7 +263,7 @@ a.roomButton:hover {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, #showcase {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, #showcase {
         background-attachment: scroll;
     }
 
@@ -246,7 +275,7 @@ a.roomButton:hover {
 /*styles for landscape mode on mobile devices*/
 @media only screen and (orientation:landscape)
 and (max-device-width: 1024px){
-  .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-5, #showcase {
       background-attachment: scroll;
   }
   .bgimg-1 {
@@ -265,8 +294,20 @@ and (max-device-width: 1024px){
 /*styles for landscape mode on mobile devices*/
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
-  .bgimg-4{
+  .bgimg-4, .bgimg-5{
     background-position: center;
+  }
+  .image {
+    width: 100% !important;
+  }
+  .prev, .next{
+    display: none;
+    position: absolute !important;
+    padding-bottom: 30px !important;
+    color: black !important;
+  }
+  .text{
+    position: absolute;
   }
 }
 .bgimg-1 {
@@ -282,6 +323,105 @@ and (max-device-width: 1024px){
   padding-top: 41px;
   padding-bottom: 40px;
 }
+
+/* Slideshow */
+.mySlides {
+  text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: inherit;
+  bottom: 8px;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center !important;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5000s;
+  animation-name: fade;
+  animation-duration: 5000s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 1}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 1}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
 </style>
 <body>
 
@@ -292,8 +432,8 @@ and (max-device-width: 1024px){
       <i class="fa fa-bars"></i>
     </a>
     <a href="/" class="w3-hide-small w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-home"></i>Home</a>
-    <a href="/gallery" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-camera"></i> Gallery</a>
     <a href="#escape-rooms" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+    <a href="/#reviews" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-star"></i> Reviews</a>
     <a href="#teams" class="w3-bar-item w3-button" style="width:20.15%" data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
     <a href="/faq" class="word w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
@@ -314,7 +454,7 @@ and (max-device-width: 1024px){
       <a href="#escape-rooms" class="w3-hide-small w3-hide-medium w3-bar-item w3-button" style="width: 37%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
       <a href="#teams" class="w3-bar-item w3-button w3-hide-small w3-hide-medium"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
       <!-- <a href="#contact" class="w3-bar-item w3-button w3-hide-small "  data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a> -->
-      <a href="/gallery" class="word w3-bar-item w3-button" style="width: 30%" data-turbolinks="false"><i class="fa fa-camera"></i> Gallery</a>
+      <a href="#reviews" class="word w3-bar-item w3-button" style="width: 32%" data-turbolinks="false"><i class="fa fa-star"></i> Reviews</a>
       <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 28%" data-turbolinks="false">
         <i class="fa fa-book"></i> Book
       </a>
@@ -391,7 +531,7 @@ and (max-device-width: 1024px){
 
   <!-- <p id="item-title">&nbsp;</p> -->
   <p id="item-title" class="hidden-xs"href="">&nbsp;</p>
-  <a class="roomButton hidden-xs" href="/western" data-turbolinks="false">Reserve Now</a>
+  <a style="vertical-align: center; width: 200px; height: 35px; color: black; background-color: #ff1744;" class="roomButton hidden-xs" href="/western" data-turbolinks="false">Reserve Now</a>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
@@ -425,6 +565,91 @@ and (max-device-width: 1024px){
   </div>
 </div>
 
+<div id="" class="bgimg-5 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">Reviews</span>
+  </div>
+</div>
+
+<div class="w3-padding-32 review-images" id="reviews">
+  <h3 class="w3-center" style="color: #0A5CAD;"><strong>Reviews</strong></h3>
+  <p class="w3-center"><em>A collection of reviews from some of our happy guests.</em></p>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext hidden-lg">1 / 5</div>
+  <%=image_tag("david-grey.jpg", :class => 'image', :style => "width: 55%;")%>
+  <div class="text">AMAZING ESCAPE ROOMS!! I’ve never heard of escape rooms with multiple rooms and it is so fun and exciting! The details and storylines are very well thought out and clever, totally immersive!<br><i>Shelby L.</i></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext hidden-lg">2 / 5</div>
+  <%=image_tag("large-grp.jpg", :class => 'image', :style => "width: 55%;")%>
+  <div class="text">This is a top of the line escape room! You feel truly immersed in the theme in every room. It was so fun! It's was like being on a movie set. Loved The Outlaw of El Paso escape room and can't wait to try the other rooms!<br><i>Twyla G.</i></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext hidden-lg">3 / 5</div>
+  <%=image_tag("wise-molars.jpg", :class => 'image', :style => "width: 55%;")%>
+  <div class="text">Had an amazing time being "transported" through the portal to the Wild, Wild West!! This was our 11th escape room and definitely the best one in Eugene/Springfield! <br><i>John P.</i></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext hidden-lg">4 / 5</div>
+  <%=image_tag("image5.jpg", :class => 'image', :style => "width: 55%;")%>
+  <div class="text">This is place is awesome! Great place for a 16th Birthday party for our daughter and her friends! Will definitely be going back with our friends! <br><i>Leslie V.</i></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext hidden-lg">5 / 5</div>
+  <%=image_tag("marathon.jpg", :class => 'image', :style => "width: 55%;")%>
+  <div class="text">Decided to do a marathon day of escape rooms. Portal has outdone themselves with their 3 rooms. They were challenging, well thought out, and featured amazing and authentic decor and puzzles. <br><i>Rick M.</i></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</div>
+
+</div>
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
