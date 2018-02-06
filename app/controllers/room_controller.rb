@@ -18,6 +18,11 @@ class RoomController < ApplicationController
     render "/rooms/tomb"
   end
 
+  def voyager
+    p 'This is the Project Voyager route'
+    render "/rooms/voyager"
+  end
+
   def book
     p 'This is the collective booking route'
     render "/rooms/book"
