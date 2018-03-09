@@ -12,6 +12,7 @@
   ga('send', 'pageview');
 
 </script>
+<script type="text/javascript"> (function() { var co=document.createElement("script"); co.type="text/javascript"; co.async=true; co.src="https://xola.com/checkout.js"; var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(co, s); })(); </script>
 <title>Portal Escape Rooms - Gift Cards</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +38,7 @@ body, html {
 footer {
   background-color: #0A5CAD;
   color: #ffffff;
+  height: 45%;
 }
 
 button.w3-button {
@@ -270,6 +272,12 @@ and (max-device-width: 1024px){
   .bgimg-4{
     background-position: center;
   }
+  .xola-custom{
+    width: 30% !important;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px !important;
+  }
 }
 .bgimg-1 {
   min-height: 400px;
@@ -401,6 +409,21 @@ img {
   margin: auto;
   width: 100%;
 }
+.xola-custom{
+ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #3093c7; background-image: -webkit-gradient(linear, left top, left bottom, from(#3093c7), to(#1c5a85));
+ background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: linear-gradient(to bottom, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+ display: inline-block !important;
+ cursor: pointer;
+ width: 30%;
+ text-align: center;
+ font-size: 20px;
+ float: left;
+}
 
 
 </style>
@@ -454,12 +477,26 @@ img {
   <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
 </div>
 <div class="w3-padding-48">
-  <p style="text-align: center; width: 100%;">If you want to treat your friends and family to an adventure at Portal, you can use the interface below to purchase e-gift cards!</p>
-  <p style="text-align: center; width: 100%;">We offer $60 Couples Gift Cards, $100-$180 in Portal Credits, and $200 Private Room Bookings.</p>
+  <p style="text-align: center; width: 100%;">If you want to treat your friends and family to an adventure at Portal, you can click the button below to purchase e-gift cards!</p>
+  <p style="text-align: center; width: 100%;">We offer the ability to purchase any amount of credits, private room reservations, or individual credits.</p>
+  <p style="text-align: center; width: 100%;">Purchasing these gift cards will send you and your gift recipient an email with their personal gift card code and necessary instructions for redemption.</p>
+  <p style="text-align: center; width: 100%;">You can redeem gift cards using the redeem gift card button below and enter your code during your online checkout.</p>
   <p style="text-align: center; width: 100%;">Our pricing is based on the number of participants or on a fixed private booking amount of $200 for up to 10 players.</p>
   <p style="text-align: center; width: 100%;">Ages 13+ $30/player & Ages under 13 $20/player.</p>
-
+  <div style="float: center; margin-right: 5%; margin-left: 15%; margin-bottom: 10%;" class="xola-gift xola-custom" data-button-id="5aa051fdcf8b9c340e8b45ca">Purchase Gift Cards</div>
+  <div style="margin-right: 15%; margin-left: 5%; margin-bottom: 10%; float: right;" class="xola-checkout xola-custom" data-button-id="5aa0512b332e7547058b45db">Redeem Gift Cards</div>
 </div>
 <div class="w3-padding-8">
-<script src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&startmode=buyvoucher"></script>
-</div>
+</div><br><br>
+<footer class="w3-center w3-padding-64  ">
+  <a href="#home" class="w3-button w3-light-grey" data-turbolinks="false"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/portalescape/" style="color: #ffffff !important;"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/portalescaperooms/" style="color: #ffffff !important;"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.tripadvisor.com/Attraction_Review-g52077-d12927500-Reviews-Portal_Escape_Rooms-Springfield_Oregon.html" style="color: #ffffff !important;"><i class="fa fa-tripadvisor w3-hover-opacity"></i></a>
+    <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+    <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
+    <a href="https://www.linkedin.com/company/portal-escape-rooms" style="color: #ffffff !important;"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://www.yelp.com/biz/portal-escape-rooms-springfield" style="color: #ffffff !important;"><i class="fa fa-yelp w3-hover-opacity"></i></a>
+  </div>
+</footer>
