@@ -27,6 +27,7 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
+<script type="text/javascript"> (function() { var co=document.createElement("script"); co.type="text/javascript"; co.async=true; co.src="https://xola.com/checkout.js"; var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(co, s); })(); </script>
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -322,6 +323,11 @@ and (max-device-width: 1024px){
   .text{
     position: absolute;
   }
+  .xola-custom{
+    width: 80% !important;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 .bgimg-1 {
   min-height: 400px;
@@ -435,6 +441,22 @@ and (max-device-width: 1024px){
   .prev, .next,.text {font-size: 11px}
 }
 
+.xola-custom{
+ border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #3093c7; background-image: -webkit-gradient(linear, left top, left bottom, from(#3093c7), to(#1c5a85));
+ background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+ background-image: linear-gradient(to bottom, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+ display: block !important;
+ cursor: pointer;
+}
+.xola-buttons-div {
+  width: 100%;
+  height: 30px;
+}
+
 </style>
 <body>
 
@@ -519,6 +541,8 @@ and (max-device-width: 1024px){
   <p class="hidden-md hidden-lg">We refused to create the typical escape room experience. We spared no expense in creating immersive rooms for our players with unique themes and original puzzles. We’re confident that we can deliver the best escape room experience in the Eugene/Springfield area.</p> -->
   <p style="text-align: center; font-size: 20px; color: #696969;"><strong>Who are we?</strong></p>
   <p>We are three brothers, born and raised in Eugene Oregon. We’re on the adventure of a lifetime to create fully immersive, extravagantly styled escape rooms. Ingenuity combined with determination fuels our passion. Our goal will always be premier entertainment.</p>
+  <div style="cursor: pointer; text-align: center; font-size: 20px; width:30%; margin: 0 auto;" class="xola-checkout xola-custom" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div>
+
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
@@ -682,23 +706,35 @@ function showSlides(n) {
   <h3 class="w3-center" style="color: #0A5CAD;"><strong>Private Events and Team Building</strong></h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-padding-large side-content">
-      <p>Have a large party or team building event you would like to plan? We can accommodate groups of 8-32 Participants into a given time slot.</p> <p>For groups larger than 32 please call us at 541-780-6180.</p>
-<p>For groups larger than 10, we will divide you into even teams</p>
-<p>We work with your schedule (10am - 4pm Monday - Friday)</p>
-<p>We can modifiy start times to accommodate your group</p>
-<p>Create exciting competitions between groups</p><p>Click the Book Corporate Team Building button, call us at <strong style="color: #0A5CAD">541-780-6180</strong> or email us at <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> to schedule your team building event.</p>
+      <p>Have a large party or team building event you would like to plan? We can accommodate groups of 6-32 Participants into a given Team Building time slot. Call us for larger groups.</p>
+      <p>For groups larger than 12, we will divide you into even teams and create exciting competitions between groups.</p>
+      <p>Undercover Boss perk included to allow management to watch their teams from our control room.</p>
+      <p>We can modifiy start times to accommodate your group.</p>
+      <p>You can book a team building event by clicking the button below. You can also call us at <strong style="color: #0A5CAD">541-780-6180</strong>, or email <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> to schedule your team building event.</p>
+      <div class="hidden-sm hidden-md hidden-lg">
+        <div style="text-align: center; font-size: 20px;" class="xola-checkout xola-custom" data-button-id="5aa1aacce01798133c8b4653">Book Team Building</div>
+      </div>
     </div>
     <div class="w3-col m6 w3-center padding-medium">
       <!-- <img src="<%= asset_path "storefront.jpg", alt: "Storefront" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="500" height="333"> -->
       <h3 style="color: #0A5CAD;">Team Building and Public Business Hours</h3>
-      <p>Monday - Friday Team Building: 10AM - 4PM</p>
+      <h4 style="color: #0A5CAD;">Team Building</h4>
+      <p>Monday - Thursday: 10AM - 4PM</p>
+      <h4 style="color: #0A5CAD;">Public Business Hours</h4>
       <p>Monday - Thursday: 4PM - 10PM (By Appointment Only)</p>
       <p>Friday: 12PM - 10PM</p>
       <p>Saturday: 12PM - 10PM</p>
       <p>Sunday: 12PM - 8PM</p>
-      <p>Email us at <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> for extra availability.</p>
-      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <p>Call us at <strong style="color: #0A5CAD">541-780-6180</strong> or Email us at <strong style="color: #0A5CAD">info@portalescaperooms.net</strong> for extra availability.</p>
+      <!-- <div class="xola-buttons-div">
+        <div style="float: left; ext-align: center; font-size: 20px;" class="xola-checkout xola-custom" data-button-id="5aa1aacce01798133c8b4653">Book Team Building</div>
+        <div style="float: right; text-align: center; font-size: 20px;" class="xola-gift xola-custom" data-button-id="5aa051fdcf8b9c340e8b45ca">Purchase Gift Cards</div>
+      </div> -->
+      <!-- <button type="button" class="btn btn-primary btn-lg">Large button</button> -->
     </div>
+  </div>
+  <div class="hidden-xs">
+    <div style="text-align: center; font-size: 20px;" class="xola-checkout xola-custom" data-button-id="5aa1aacce01798133c8b4653">Book Team Building</div>
   </div>
 </div>
 

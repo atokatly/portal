@@ -12,6 +12,7 @@
   ga('send', 'pageview');
 
 </script>
+<script type="text/javascript"> (function() { var co=document.createElement("script"); co.type="text/javascript"; co.async=true; co.src="https://xola.com/checkout.js"; var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(co, s); })(); </script>
 <script type="application/ld+json">
 {
   "@context": "http://schema.org/",
@@ -83,7 +84,7 @@ footer {
 /* First image (Logo. Full height) */
 .bgimg-1 {
   background-image: url(<%= asset_path "sneak-peek-western-2.jpg", alt: "Tokyo Logo" %>);
-  min-height: 100%;
+  min-height: 80%;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -157,11 +158,41 @@ div#bookeo_position {
          body{
            height: 40%;
          }
+         /*Styling for center of image on mobile  */
+         /* .xola-custom{
+           position: absolute;
+           display: block;
+           width: 65% !important;
+           text-align: center;
+           top: 30% !important;
+           left: 30% !important;
+           height: 8% !important;
+         } */
+         .xola-custom{
+           width: 75% !important;
+           margin: 0 auto;
+           height: 8% !important;
+         }
        }
        .w3-show{
          position: fixed;
          z-index: 100;
          /*border: 1px solid black;*/
+       }
+       .xola-custom{
+        border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+        background-color: #3093c7; background-image: -webkit-gradient(linear, left top, left bottom, from(#3093c7), to(#1c5a85));
+        background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: linear-gradient(to bottom, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        font-size: 20px;
+        width:30%;
+        margin: 0 auto;
        }
 </style>
 <body>
@@ -216,7 +247,7 @@ div#bookeo_position {
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
+  <div class="w3-display-middle">
   </div>
 </div>
 
@@ -240,6 +271,7 @@ div#bookeo_position {
    </div>
  </div>
 <div class="w3-content w3-container w3-padding-16" id="about">
+  <div class="xola-checkout xola-custom" data-button-id="5aa05154cf8b9ca80e8b45e0">Reserve Now - Pricing</div>
   <h3 class="w3-center">The Outlaw of El Paso</h3>
   <!-- <p class="w3-center"><em>A notorious outlaw on the run... Can you and your team track him down?</em></p> -->
   <p>The most dangerous outlaw in the country rode into town last night.
@@ -252,11 +284,10 @@ west justice!</p>
 <p class="w3-center">Good luck,<p>
 
 <p class="w3-center">Deputy Jones</p>
-<p style="text-align: center;">If you're ready to book, use our interface below. Be sure to select the amount of participants in your party for a room.</p>
+<!-- <p style="text-align: center;">If you're ready to book, use our interface below. Be sure to select the amount of participants in your party for a room.</p>
 <p style="text-align: center;">We also serve walk-in customers if slots are availabile.</p>
 <a href="/voucher" data-turbolinks="false"><button>Buy E-Gift Cards</button></a>
-<a href="/redeem" data-turbolinks="false"><button>Redeem E-Gift Card</button></a>
-      <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&type=41563ULCWY715D38220314&waitMobile=true"></script>
+<a href="/redeem" data-turbolinks="false"><button>Redeem E-Gift Card</button></a> -->
     </div>
     <footer class="w3-center w3-padding-64  ">
       <a href="#home" class="w3-button w3-light-grey" data-turbolinks="false"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
