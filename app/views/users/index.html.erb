@@ -303,6 +303,16 @@ and (max-device-width: 1024px){
   .w3-bar-item{
     width: 27%;
   }
+  .center-xola{
+    top: 85%;
+    height: 13% !important;
+    position: absolute;
+    display: block;
+    width: 40%;
+    left: 30%;
+    font-size: 16px !important;
+    text-align: center;
+  }
 }
 
 /*styles for landscape mode on mobile devices*/
@@ -324,9 +334,21 @@ and (max-device-width: 1024px){
     position: absolute;
   }
   .xola-custom{
-    width: 80% !important;
+    width: 60% !important;
     text-align: center;
     margin: 0 auto;
+    font-size: 16px !important;
+  }
+  .center-xola{
+    top: 80%;
+    /* width: 65% !important; */
+    font-size: 17px !important;
+    left: 20%;
+    position: absolute;
+    display: block;
+    width: 40%;
+    text-align: center;
+    height: 9% !important;
   }
 }
 .bgimg-1 {
@@ -456,6 +478,13 @@ and (max-device-width: 1024px){
   width: 100%;
   height: 30px;
 }
+.center-xola{
+  /* left: 1%;
+  top: 50%; */
+  /* left: 30% !important; */
+  height: 1px;
+  font-size: 1px;
+}
 
 </style>
 <body>
@@ -514,6 +543,7 @@ and (max-device-width: 1024px){
 </div>
 <!-- First Parallax Image with Logo Text -->
 <a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background" id="home">
+  <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div>
     <div class="w3-display-middle" style="white-space:nowrap;">
     </div>
 </div></a>
