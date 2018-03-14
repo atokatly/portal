@@ -167,7 +167,10 @@ a.roomButton:hover {
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
   .xola-custom{
-    width: 80% !important;
+    width: 30% !important;
+  }
+  .thirds {
+    width: 30% !important;
   }
 }
 
@@ -235,7 +238,7 @@ div#bookeo_position {
    background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
    background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
    background-image: linear-gradient(to bottom, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
-   display: block;
+   display: inline-block;
    float: center;
    cursor: pointer;
    text-align: center;
@@ -325,14 +328,17 @@ div#bookeo_position {
       <div class="room-posters">
         <img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/western">
         <a class="roomButton noselect" link="/western" style="background-color: #777">Learn more</a>
+        <!-- <p>2-10 Players - Intermediate Difficulty</p> -->
       </div>
       <div class="room-posters">
         <img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/tokyo">
         <a class="roomButton noselect" link="/tokyo">Learn more</a>
+        <!-- <p>2-8 Players - Advanced Difficulty</p> -->
       </div>
       <div class="room-posters">
         <img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:65%" class="w3-hover-opacity posters" link="/tomb">
         <a class="roomButton noselect" link="/tomb">Learn more</a>
+        <!-- <p>2-10 Players - Intermediate Difficulty</p> -->
       </div>
       <!-- <div class="room-posters">
         <img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:75%" class="w3-hover-opacity posters" link="/">
@@ -340,7 +346,37 @@ div#bookeo_position {
       </div>
     </div> -->
   </div>
-  <div class="w3-content w3-container" id="about" style="padding-bottom: 16px !important;">
+  <div class="w3-row w3-center w3-dark-grey w3-padding-8" style="margin: 0 auto !important; text-align: center; width: 100% !important;">
+     <div class="thirds w3-third w3-section" style="float: inherit !important; display: inline-block !important; width: 18%">
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Participants: 2-10</span><br>
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Difficulty: Intermediate</span><br>
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Rooms: 3</span>
+       <!-- <span class="w3-large"></span> -->
+     </div>
+     <div class="thirds w3-third w3-section" style="float: inherit !important; display: inline-block !important; width: 18%; float: center !important;">
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Participants: 2-8</span><br>
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Difficulty: Advanced</span><br>
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Rooms: 4</span>
+     </div>
+     <div class="thirds w3-third w3-section" style="float: inherit !important; display: inline-block !important; width: 18%;">
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Participants: 2-10</span><br>
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Difficulty: Intermediate</span><br>
+       <span class="w3-large" style="margin: 0 auto !important; padding-left: 5px; font-size: 17px !important;">Rooms: 3</span>
+     </div>
+     <!-- <div class="w3-quarter w3-section">
+       <span class="w3-large">Rooms</span><br>
+       <span class="w3-large">3</span>
+     </div> -->
+   </div>
+  <!-- <div style="display: inline-block !important; width: 100%; text-align: center;">
+    <p style="width: 28%; margin-left: 3%; float: left; margin: 0 auto;">2-10 Players - Intermediate Difficulty</p>
+    <p style="width: 28%; margin-left: 3%; margin: 0 auto;">2-8 Players - Advanced Difficulty</p>
+    <p style="width: 28%; float: right; margin: 0 auto;">2-10 Players - Intermediate Difficulty</p>
+  </div> -->
+  <div class="w3-content w3-container" id="about" style="padding-bottom: 16px !important; margin-top: 10px;">
+    <div style="float: left;" class="xola-checkout xola-custom" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Outlaw</div>
+    <div style="float: center; margin-left: 5%;"class="xola-checkout xola-custom" data-button-id="5aa1f362e0179876388b45e8">Book Tokyo</div>
+    <div style="float: right;"class="xola-checkout xola-custom" data-button-id="5aa1f3546864eab6128b45a8">Book Tomb</div>
     <h3 class="w3-center selected title" link="/western">The Outlaw of El Paso</h3>
     <h3 class="w3-center hidden title" link="/tokyo">Tokyo Heist</h3>
     <h3 class="w3-center hidden title" link="/tomb">Tomb of the Gods</h3>
@@ -370,7 +406,10 @@ div#bookeo_position {
     <p class="w3-center selected name" link="/western">Deputy Jones</p>
     <p class="w3-center hidden name" link="/tokyo">David Grey</p>
     <p class="w3-center hidden name" link="/tomb">Anna Robin</p>
-    <div class="xola-checkout xola-custom" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div>
+    <!-- <div class="xola-checkout xola-custom" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div> -->
+    <!-- <div style="float: left;" class="xola-checkout xola-custom" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Outlaw</div>
+    <div style="float: center; margin-left: 5%;"class="xola-checkout xola-custom" data-button-id="5aa1f362e0179876388b45e8">Book Tokyo</div>
+    <div style="float: right;"class="xola-checkout xola-custom" data-button-id="5aa1f3546864eab6128b45a8">Book Tomb</div> -->
     <!-- <div style="display: inline-block; float: right; cursor: pointer; text-align: center; font-size: 20px; width:30%; margin: 0 auto;" class="xola-gift xola-custom" data-button-id="5aa051fdcf8b9c340e8b45ca">Buy Gift Cards</div> -->
     <!-- <p style="text-align: center;">If you're ready to book, use our interface below. Be sure to select the amount of participants in your party for a room.</p>
     <p style="text-align: center;">We also serve walk-in customers if slots are availabile.</p> -->
