@@ -42,9 +42,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 var bookeo_startMobileLabel="Reserve - Pricing";
-</script>
+</script> -->
 <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
 <%= favicon_link_tag 'favicon.ico' %>
 <style>
@@ -116,7 +116,7 @@ and (max-device-width: 1024px){
     width: 24%;
   }
 }
-div#bookeo_position {
+/* div#bookeo_position {
   background-color: #777;
   margin: 0 auto;
   display: block;
@@ -140,14 +140,14 @@ div#bookeo_position {
   margin-top: 10px;
   height: auto !important;;
 
-       }
-        div#bookeoStartMobile{
+       } */
+        /* div#bookeoStartMobile{
          width: auto !important;
          padding-bottom: 35px !important;
        }
        div#bookeo:hover{
          background-color: #FF2600 !important;
-       }
+       } */
        /*styles for landscape mode on mobile devices*/
        @media only screen and (orientation:portrait)
        and (max-device-width: 1024px){
@@ -273,7 +273,9 @@ div#bookeo_position {
 <div class="w3-content w3-container w3-padding-16" id="about">
   <div class="xola-checkout xola-custom" data-button-id="5aa05154cf8b9ca80e8b45e0">Reserve Now - Pricing</div>
   <h3 class="w3-center">The Outlaw of El Paso</h3>
+  <p><strong style="color: #0A5CAD;">Details:</strong> This is an immersive escape room centered in the wild west! It will include full audio and video immersion throughout the experience. This will be a multi-room adventure, meaning you will have to solve puzzles in each room in order to unlock doors to advance to the next room in the adventure. Click the button above to schedule your adventure.</p><p><strong style="color: #0A5CAD;">Price:</strong> Private Reservation for up to 10 Players for a fixed $200 ($20/Player for a group of 10). <br>Individual Pricing available for smaller groups: $30/Adults(Ages 13+), $20/Children(12 & under). For groups of 7-10 players, choosing a private reservation is the most economical as it is a fixed $200 for up to 10 players.</p><p><strong style="color: #0A5CAD;">Options:</strong> Have a group of 11 or 12? You can add an additional 2 players to your group of 10 to bring the capacity to 12 players. $20 for each additional player.</p>
   <!-- <p class="w3-center"><em>A notorious outlaw on the run... Can you and your team track him down?</em></p> -->
+  <h3 class="w3-center">The Story</h3>
   <p>The most dangerous outlaw in the country rode into town last night.
 Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
 nearby bank vault was recently robbed! I believe there’s a connection between these
