@@ -34,8 +34,9 @@ class RoomController < ApplicationController
   end
 
   def redeem
-    p 'This is the voucher redemption route'
-    render "/rooms/redeem"
+    # p 'This is the voucher redemption route'
+    redirect_to "/voucher"
+    # render "/rooms/voucher"
   end
 
   def gallery
