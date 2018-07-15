@@ -487,6 +487,19 @@ and (max-device-width: 1024px){
   font-size: 1px;
 }
 
+.escape-room-content {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.escape-room-content img {
+    margin-right: 15px;
+    height: 100%;
+    float: left;
+}
+
 </style>
 <body>
 
@@ -588,58 +601,19 @@ and (max-device-width: 1024px){
     <span class="w3-xxlarge w3-text-white w3-wide">Portal Escape Rooms</span>
   </div>
 </div>
-
-<!-- Container (Portfolio Section) -->
-
-<!-- <div class="wrap escape-padding" id="escape-rooms">
-  <h3 class="w3-center hidden-xs" style="color: #0A5CAD;">Click the posters to learn about each room and book your reservation using the "Reserve Now" button below.</h3>
-  <h3 class="w3-center hidden-sm hidden-md hidden-lg" style="color: #0A5CAD;">Here are the current rooms in rotation.</h3>
-  <p class="w3-center"><em>
-
-    <div class="room-section">
-
-    </div> -->
-  <!-- <div id="showcase" class="noselect w3-center hidden-xs">
-    <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
-    <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="You've been hired to pull off a heist against one of your bosses competitors. Get in, get the money, and get out. Failure is not an option.">
-    <img class="cloud9-item" src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:20%" link="" alt="Adventure #4 is set to arrive soon, stay tuned for updates!">
-    <img class="cloud9-item" src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Navigate through the jungles of Mexico to an ancient Aztec tomb and discover what became of a missing team of explorers. Who knows what lies inside those forgotten walls...">
-  </div> -->
-
-  <!-- <p id="item-title">&nbsp;</p> -->
-  <!-- <p id="item-title" class="hidden-xs"href="">&nbsp;</p>
-  <a style="vertical-align: center; width: 200px; height: 35px; color: black; background-color: #ff1744;" class="roomButton hidden-xs" href="/western" data-turbolinks="false">Reserve Now</a> -->
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <!-- <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
-    <div class="mobile-rooms w3-padding">
-      <a href="/western" data-turbolinks="false"><img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
-      <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
-    </div>
-
-    <div class="mobile-rooms w3-padding">
-      <a href="/tokyo" data-turbolinks="false"><img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
-      <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
-    </div>
-
-    <div class="mobile-rooms w3-padding">
-      <a href="/tomb" data-turbolinks="false"><img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
-      <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
-    </div>
-
-    <div class="mobile-rooms w3-padding noselect">
-      <img src="<%= asset_path "coming-soon.jpg", alt: "Coming Soon" %>" style="width:100%" class="w3-hover-opacity">
-      <a class="roomButton noselect">Coming Soon</a>
-    </div>
-  </div> -->
-  <!-- <div id="nav" class="noselect hidden-xs">
-    <button class="left carousel-images">
-      ←
-    </button>
-    <button class="right carousel-images">
-      →
-    </button>
-  </div> -->
+<!-- <div height="500"> -->
+<!-- New Design Area -->
+  <!-- <div class="escape-room-content">
+      <img src="<%= asset_path "outlaw_final.jpg", alt: "Tomb" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
+      <h3 style="text-align: center; font-size: 18px;">The Outlaw of El Paso</h3>
+      <p>The most dangerous outlaw in the country rode into town last night.
+    Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
+    nearby bank vault was recently robbed! I believe there’s a connection between these
+    events. Sheriff Dubell is out of town, so it’s up to you to track down the two men and the
+    missing gold. The law is in your hands now partner, saddle up and deliver some wild
+    west justice!</p>
+    <div style="float: left;" class="xola-checkout xola-custom" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
+  </div>​ -->
 <!-- </div> -->
 
 
@@ -650,10 +624,10 @@ and (max-device-width: 1024px){
 
 
   <div id="showcase" class="noselect w3-center hidden-xs">
-    <img class="cloud9-item" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
-    <img class="cloud9-item" src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="You've been hired to pull off a heist against one of your bosses competitors. Get in, get the money, and get out. Failure is not an option.">
-    <img class="cloud9-item" src="<%= asset_path "coming-soon.jpg", alt: "Voyager Logo" %>" style="width:20%" link="" alt="Adventure #4 Coming July 2018.">
-    <img class="cloud9-item" src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Navigate through the jungles of Mexico to an ancient Aztec tomb and discover what became of a missing team of explorers. Who knows what lies inside those forgotten walls...">
+    <img class="cloud9-item" src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
+    <img class="cloud9-item" src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="You've been hired to pull off a heist against one of your bosses competitors. Get in, get the money, and get out. Failure is not an option.">
+    <img class="cloud9-item" src="<%= asset_path "voyager_final.jpg", alt: "Voyager Logo" %>" style="width:20%" link="" alt="The Voyager Space Exploration Adventure is Coming July/August 2018.">
+    <img class="cloud9-item" src="<%= asset_path "aztec_final.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Navigate through the jungles of Mexico to an ancient Aztec tomb and discover what became of a missing team of explorers. Who knows what lies inside those forgotten walls...">
   </div>
 
   <!-- <p id="item-title">&nbsp;</p> -->
@@ -663,22 +637,22 @@ and (max-device-width: 1024px){
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
     <div class="mobile-rooms w3-padding">
-      <a href="/western" data-turbolinks="false"><img src="<%= asset_path "outlaw_color.jpg", alt: "Western Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <a href="/western" data-turbolinks="false"><img src="<%= asset_path "outlaw_final.jpg", alt: "Western Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="mobile-rooms w3-padding">
-      <a href="/tokyo" data-turbolinks="false"><img src="<%= asset_path "tokyo.jpg", alt: "Tokyo Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <a href="/tokyo" data-turbolinks="false"><img src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="mobile-rooms w3-padding">
-      <a href="/tomb" data-turbolinks="false"><img src="<%= asset_path "tomb_of_gods.jpg", alt: "Tomb Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <a href="/tomb" data-turbolinks="false"><img src="<%= asset_path "aztec_final.jpg", alt: "Tomb Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
       <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
     </div>
 
     <div class="mobile-rooms w3-padding noselect">
-      <img src="<%= asset_path "coming-soon.jpg", alt: "Voyager Coming Soon" %>" style="width:100%" class="w3-hover-opacity">
+      <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager Coming Soon" %>" style="width:100%" class="w3-hover-opacity">
       <a class="roomButton noselect">Coming Soon</a>
     </div>
   </div>
