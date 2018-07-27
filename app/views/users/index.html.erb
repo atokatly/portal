@@ -472,7 +472,7 @@ and (max-device-width: 1024px){
  background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
  background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
  background-image: linear-gradient(to bottom, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
- display: block !important;
+ display: block;
  cursor: pointer;
 }
 .xola-buttons-div {
@@ -492,12 +492,140 @@ and (max-device-width: 1024px){
     height: 50%;
     overflow: hidden;
     display: inline-block;
+    position: relative;
+    bottom: 0;
+    /* background: rgba(200, 200, 200, 0.5);*/ /* Black background with transparency */
+    background: rgba(200, 200, 200, 0); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-v {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    /* background: rgba(200, 200, 200, 0.5);*/ /* Black background with transparency */
+    background: rgba(118, 81, 126, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-voyager {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    background: rgba(118, 81, 126, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-o {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    /* background: rgba(200, 200, 200, 0.5);*/ /* Black background with transparency */
+    background: rgba(234, 71, 46, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-outlaw {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    background: rgba(234, 71, 46, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-t {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    /* background: rgba(200, 200, 200, 0.5);*/ /* Black background with transparency */
+    background: rgba(187, 105, 87, 0.5); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-tomb {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    background: rgba(187, 105, 87, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-to {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    /* background: rgba(200, 200, 200, 0.5);*/ /* Black background with transparency */
+    background: rgba(181, 34, 43, 0.5); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.escape-room-content-tokyo {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    background: rgba(181, 34, 43, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
 }
 
 .escape-room-content img {
     margin-right: 15px;
     height: 100%;
     float: left;
+}
+
+.w3-quarter{
+  width: 20%;
 }
 
 </style>
@@ -601,38 +729,144 @@ and (max-device-width: 1024px){
     <span class="w3-xxlarge w3-text-white w3-wide">Portal Escape Rooms</span>
   </div>
 </div>
-<!-- <div height="500"> -->
-<!-- New Design Area -->
-  <!-- <div class="escape-room-content">
-      <img src="<%= asset_path "outlaw_final.jpg", alt: "Tomb" %>" class="w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
-      <h3 style="text-align: center; font-size: 18px;">The Outlaw of El Paso</h3>
-      <p>The most dangerous outlaw in the country rode into town last night.
-    Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
-    nearby bank vault was recently robbed! I believe there’s a connection between these
-    events. Sheriff Dubell is out of town, so it’s up to you to track down the two men and the
-    missing gold. The law is in your hands now partner, saddle up and deliver some wild
-    west justice!</p>
-    <div style="float: left;" class="xola-checkout xola-custom" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
-  </div>​ -->
-<!-- </div> -->
-
 
 <div class="wrap escape-padding" id="escape-rooms">
-  <h3 class="w3-center hidden-xs" style="color: #0A5CAD;">Click the posters to learn about each room and book your reservation using the "Reserve Now" button below.</h3>
-  <h3 class="w3-center hidden-sm hidden-md hidden-lg" style="color: #0A5CAD;">Here are the current rooms in rotation.</h3>
+  <h3 class="w3-center hidden-xs" style="color: #0A5CAD;">Here are our current adventures in rotation.</h3>
+  <h3 class="w3-center hidden-sm hidden-md hidden-lg" style="color: #0A5CAD;">Here are the current adventures in rotation.</h3>
   <p class="w3-center"><em>
 
+<div class="hidden-xs" height="500">
+<!-- New Design Area -->
+  <div class="escape-room-content">
+    <div class="escape-room-content-tomb">
+        <img src="<%= asset_path "aztec_final.jpg", alt: "Tomb" %>" style="width: 17%;" class="w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
+        <h3 style="text-align: center; font-size: 24px;">The Tomb of the Gods</h3>
+        <p>An ancient Aztec temple has been discovered deep in the jungles of Mexico.
+      Nakamura Industries, a rapidly growing natural resource company, has contracted an
+      expedition to explore the site. Dr. Wolff, a world renowned and beloved
+      archaeologist is leading the mission. It’s been a week since our last communication from
+      the team. Something odd is going on in that jungle and we are sending you in to resolve
+      the mystery. Find Wolff, but be careful! Who knows what lies inside those ancient and
+      forgotten walls.</p>
+      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(187, 105, 87, 1);" class="w3-center w3-padding-8">
+         <div class="w3-quarter w3-section">
+           <span class="w3-large" style="padding-left: 5px;">Participants</span><br>
+           <span class="w3-large">3-10</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="w3-large">Difficulty</span><br>
+           <span class="w3-large">Intermediate</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="w3-large">Duration</span><br>
+           <span class="w3-large">1 Hour</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="w3-large">Rooms</span><br>
+           <span class="w3-large">3</span>
+         </div>
+       </div>
+      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 220px !important;"class="xola-checkout xola-custom" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
+      <a href="/tomb" data-turbolinks="false"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom">Learn More</button></a>
+    </div>​
+      <div class="escape-room-content-outlaw">
+        <img src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw" %>" style="width: 17%;" class="w3-round w3-image w3-hover-opacity-off" alt="Outlaw" >
+        <h3 style="text-align: center; font-size: 24px;">The Outlaw of El Paso</h3>
+        <p>The most dangerous outlaw in the country rode into town last night.
+      Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
+      nearby bank vault was recently robbed! I believe there’s a connection between these
+      events. Sheriff Dubell is out of town, so it’s up to you to track down the two men and the
+      missing gold. The law is in your hands now partner, saddle up and deliver some wild
+      west justice!</p>
+      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(234, 71, 46, 1);" class="w3-center w3-padding-8">
+         <div class="w3-quarter w3-section">
+           <span class="w3-large" style="padding-left: 5px;">Participants</span><br>
+           <span class="w3-large">3-10</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="w3-large">Difficulty</span><br>
+           <span class="w3-large">Intermediate</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="w3-large">Duration</span><br>
+           <span class="w3-large">1 Hour</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="w3-large">Rooms</span><br>
+           <span class="w3-large">3</span>
+         </div>
+       </div>
+      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 220px !important;" class="xola-checkout xola-custom" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
+    <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom">Learn More</button></a>
+    </div>
+    <div class="escape-room-content-tokyo">
+      <img src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo" %>" style="width: 17%;" class="w3-round w3-image w3-hover-opacity-off" alt="Tokyo" >
+      <h3 style="text-align: center; font-size: 24px;">Tokyo Heist</h3>
+      <p>Our target is Haruto Nakamura, one of the wealthiest company owners in the
+    city. His recent business dealings have disrupted our operations in the black market. It’s
+    nothing personal, but we can’t tolerate any more interferences. Boss has selected you
+    to handle this job, I’ll be on the line to help you through it. He wants this to be done
+    quickly and without error. I should remind you, Boss doesn’t accept failure. If this job
+    goes sour, it will be the end for all of us.</p>
+    <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 1);" class="w3-center w3-padding-8">
+       <div class="w3-quarter w3-section">
+         <span class="w3-large" style="padding-left: 5px;">Participants</span><br>
+         <span class="w3-large">3-8</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="w3-large">Difficulty</span><br>
+         <span class="w3-large">Advanced</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="w3-large">Duration</span><br>
+         <span class="w3-large">1 Hour</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="w3-large">Rooms</span><br>
+         <span class="w3-large">3</span>
+       </div>
+     </div>
+    <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 220px !important;"class="xola-checkout xola-custom" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
+    <a href="/tokyo" data-turbolinks="false"><button onclick="/tokyo" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom">Learn More</button></a>
+  </div>
+  <div class="escape-room-content-voyager">
+    <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
+    <h3 style="text-align: center; font-size: 24px;">Voyager</h3>
+    <p>13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration and malfunction. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space.</p>
+  <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(118, 81, 126, 0.75);" class="w3-center w3-padding-8">
+     <div class="w3-quarter w3-section">
+       <span class="w3-large" style="padding-left: 5px;">Participants</span><br>
+       <span class="w3-large">3-10</span>
+     </div>
+     <div class="w3-quarter w3-section">
+       <span class="w3-large">Difficulty</span><br>
+       <span class="w3-large">Intermediate</span>
+     </div>
+     <div class="w3-quarter w3-section">
+       <span class="w3-large">Duration</span><br>
+       <span class="w3-large">1 Hour</span>
+     </div>
+     <div class="w3-quarter w3-section">
+       <span class="w3-large">Rooms</span><br>
+       <span class="w3-large">3</span>
+     </div>
+   </div>
+  <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 220px !important;" class="xola-checkout xola-custom">Coming Soon</div>
+  <a href="/#escape-rooms" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom noselect">August 2018</button></a>
+  </div>
+</div>
+</div>
 
-  <div id="showcase" class="noselect w3-center hidden-xs">
+  <!-- <div id="showcase" class="noselect w3-center hidden-xs">
     <img class="cloud9-item" src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
     <img class="cloud9-item" src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo Logo" %>" style="width:20%" link="/tokyo" alt="You've been hired to pull off a heist against one of your bosses competitors. Get in, get the money, and get out. Failure is not an option.">
     <img class="cloud9-item" src="<%= asset_path "voyager_final.jpg", alt: "Voyager Logo" %>" style="width:20%" link="" alt="The Voyager Space Exploration Adventure is Coming July/August 2018.">
     <img class="cloud9-item" src="<%= asset_path "aztec_final.jpg", alt: "Tomb Logo" %>" style="width:20%" link="/tomb" alt="Navigate through the jungles of Mexico to an ancient Aztec tomb and discover what became of a missing team of explorers. Who knows what lies inside those forgotten walls...">
-  </div>
+  </div> -->
 
   <!-- <p id="item-title">&nbsp;</p> -->
-  <p id="item-title" class="hidden-xs"href="">&nbsp;</p>
-  <a style="vertical-align: center; width: 200px; height: 35px; color: black; background-color: #ff1744;" class="roomButton hidden-xs" href="/western" data-turbolinks="false">Reserve Now</a>
+  <!-- <p id="item-title" class="hidden-xs"href="">&nbsp;</p>
+  <a style="vertical-align: center; width: 200px; height: 35px; color: black; background-color: #ff1744;" class="roomButton hidden-xs" href="/western" data-turbolinks="false">Reserve Now</a> -->
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
@@ -656,14 +890,14 @@ and (max-device-width: 1024px){
       <a class="roomButton noselect">Coming Soon</a>
     </div>
   </div>
-  <div id="nav" class="noselect hidden-xs">
+  <!-- <div id="nav" class="noselect hidden-xs">
     <button class="left carousel-images">
       ←
     </button>
     <button class="right carousel-images">
       →
     </button>
-  </div>
+  </div> -->
 </div>
 
 <div id="" class="bgimg-5 w3-display-container">
