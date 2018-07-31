@@ -341,7 +341,7 @@ and (max-device-width: 1024px){
     font-size: 16px !important;
   }
   .center-xola{
-    top: 80%;
+    top: 45%;
     /* width: 65% !important; */
     font-size: 17px !important;
     left: 20%;
@@ -349,7 +349,22 @@ and (max-device-width: 1024px){
     display: block;
     width: 40%;
     text-align: center;
-    height: 9% !important;
+    height: 7% !important;
+  }
+  #myVideo {
+    /* position: fixed; */
+    height: 100px !important;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  #about {
+    padding-top: 115px !important;
+  }
+
+  .video-container {
+    height: 300px;
   }
 }
 .bgimg-1 {
@@ -985,6 +1000,10 @@ and (max-device-width: 1024px){
     width: 2530px;
   }
 
+  .escape-posters {
+    width: 15% !important;
+  }
+
   .escape-room-content-tomb{
     width: 2530px;
   }
@@ -1087,6 +1106,15 @@ and (max-device-width: 1024px){
 
 }
 
+#myVideo {
+    /* position: fixed; */
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
 </style>
 <body>
 
@@ -1142,9 +1170,14 @@ and (max-device-width: 1024px){
 
   <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
 </div>
+<div class="video-container" id="home">
+  <video preload="yes" poster="<%= asset_path "portal-preview.jpg", alt: "Tomb" %>" class="video" controls="true" autoplay muted loop id="myVideo">
+      <source src="<%= asset_path "portal-60.mp4", alt: "Tomb" %>" type="video/mp4">
+  </video>
+</div>
 <!-- First Parallax Image with Logo Text -->
-<a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background" id="home">
-  <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
+<!-- <a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background" id="home"> -->
+  <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola hidden-sm hidden-md hidden-lg" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
   <!-- <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div> -->
     <div class="w3-display-middle" style="white-space:nowrap;">
     </div>
@@ -1198,7 +1231,7 @@ and (max-device-width: 1024px){
 <!-- New Design Area -->
   <div class="escape-room-content">
     <div class="escape-room-content-tomb" style="min-width: 80%;">
-        <img src="<%= asset_path "aztec_final.jpg", alt: "Tomb" %>" style="width: 17%; display: inline-block;" class="w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
+        <img src="<%= asset_path "aztec_final.jpg", alt: "Tomb" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
       <div class="col2">
         <h3 class="room-header" style="text-align: left; font-size: 24px;">The Tomb of the Gods</h3>
         <p class="room-content" style="font-size: 16px;">An ancient Aztec temple has been discovered deep in the jungles of Mexico.
@@ -1230,7 +1263,7 @@ and (max-device-width: 1024px){
     </div>​
     </div>
         <div class="escape-room-content-outlaw">
-        <img src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw" %>" style="width: 17%; display: inline-block;" class="w3-round w3-image w3-hover-opacity-off" alt="Outlaw" >
+        <img src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Outlaw" >
         <div class="col2">
         <h3 class="room-header" style="text-align: left; font-size: 24px;">The Outlaw of El Paso</h3>
         <p class="room-content" style="font-size: 16px;">The most dangerous outlaw in the country rode into town last night.
@@ -1262,7 +1295,7 @@ and (max-device-width: 1024px){
   </div>
     </div>
     <div class="escape-room-content-tokyo w3-row">
-      <img src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo" %>" style="width: 17%;" class="w3-round w3-image w3-hover-opacity-off" alt="Tokyo" >
+      <img src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tokyo" >
       <div class="col2">
       <h3 class="room-header" style="height: 100%; width: 100%; text-align: left; font-size: 24px;">Tokyo Heist</h3>
       <p class="room-content" style="font-size: 16px; height: 100%; width: 100%;">Our target is Haruto Nakamura, one of the wealthiest company owners in the
@@ -1294,10 +1327,10 @@ and (max-device-width: 1024px){
   </div>
   </div>
   <div class="escape-room-content-voyager">
-    <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
+    <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
     <div class="col2">
     <h3 class="room-header" style="text-align: left; font-size: 24px;">Voyager</h3>
-    <p class="room-content">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration and malfunction. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space.</p>
+    <p class="room-content">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space.</p>
   <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(118, 81, 126, 0.75);" class="w3-center w3-padding-8 room-stats-container">
      <div class="w3-quarter w3-section">
        <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
