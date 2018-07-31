@@ -341,7 +341,7 @@ and (max-device-width: 1024px){
     font-size: 16px !important;
   }
   .center-xola{
-    top: 50%;
+    top: 80%;
     /* width: 65% !important; */
     font-size: 17px !important;
     left: 20%;
@@ -349,23 +349,22 @@ and (max-device-width: 1024px){
     display: block;
     width: 40%;
     text-align: center;
-    height: 7% !important;
+    height: 9% !important;
   }
-  #myVideo {
-    /* position: fixed; */
+  /* #myVideo {
     height: 100px !important;
     width: 100%;
     min-width: 100%;
     min-height: 100%;
-  }
+  } */
 
-  #about {
+  /* #about {
     padding-top: 155px !important;
   }
 
   .video-container {
     height: 300px;
-  }
+  } */
 }
 .bgimg-1 {
   min-height: 400px;
@@ -1170,13 +1169,13 @@ and (max-device-width: 1024px){
 
   <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
 </div>
-<div class="video-container" id="home">
+<div class="video-container hidden-xs" id="home">
   <video preload="yes" poster="<%= asset_path "portal-preview.jpg", alt: "Tomb" %>" class="video" controls="true" autoplay muted loop playsinline id="myVideo">
       <source src="<%= asset_path "portal-60.mp4", alt: "Tomb" %>" type="video/mp4">
   </video>
 </div>
 <!-- First Parallax Image with Logo Text -->
-<!-- <a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background" id="home"> -->
+<a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background hidden-sm hidden-md hidden-lg" id="home">
   <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola hidden-sm hidden-md hidden-lg" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
   <!-- <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div> -->
     <div class="w3-display-middle" style="white-space:nowrap;">
