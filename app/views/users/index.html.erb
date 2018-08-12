@@ -276,6 +276,41 @@ a.roomButton:hover {
   }
 }
 
+/* Tablet iPad 1 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .w3-bar-item{
+    font-size: 13px !important;
+    width: 12.4%;
+  }
+  .escape-posters{
+
+  }
+  .col2{
+    width: 79% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+}
+
+/* iPad Pro */
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+
+}
+
+/* Portrait*/
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+  .xola-custom{
+    width: 20% !important;
+  }
+
+  .room-buttons-loc{
+
+  }
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, #showcase {
@@ -335,7 +370,7 @@ and (max-device-width: 1024px){
     position: absolute;
   }
   .xola-custom{
-    width: 60% !important;
+    width: 60%;
     text-align: center;
     margin: 0 auto;
     font-size: 16px !important;
@@ -1114,6 +1149,28 @@ and (max-device-width: 1024px){
     min-height: 100%;
   }
 
+  .mobile-adventures{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .escape-stats-mobile{
+    width: 32%;
+    height: 10%;
+    display: inline-block;
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+
+  .western-mobile{
+    background: rgba(234, 71, 46, 0.75);
+    width: 100%;
+  }
+
+  .room-stats-container{
+    width: 100%;
+  }
+
 </style>
 <body>
 
@@ -1176,7 +1233,7 @@ and (max-device-width: 1024px){
 </div>
 <!-- First Parallax Image with Logo Text -->
 <a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background hidden-sm hidden-md hidden-lg" id="home">
-  <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola hidden-sm hidden-md hidden-lg" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
+  <div style="cursor: pointer; text-align: center; margin: 0 auto; width: 60% !important;" class="xola-checkout xola-custom center-xola hidden-sm hidden-md hidden-lg" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
   <!-- <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div> -->
     <div class="w3-display-middle" style="white-space:nowrap;">
     </div>
@@ -1210,7 +1267,7 @@ and (max-device-width: 1024px){
   <p class="about-title" style="text-align: center; font-size: 20px; color: #696969;"><strong>Who are we?</strong></p>
   <p class="about-content">We are three brothers, born and raised in Eugene Oregon. We’re on the adventure of a lifetime to create fully immersive, extravagantly styled escape rooms. Ingenuity combined with determination fuels our passion. Our goal will always be premier entertainment.</p>
   <div class="hidden-xs">
-    <div style="cursor: pointer; text-align: center; font-size: 20px; width:30%; margin: 0 auto;" class="xola-checkout xola-custom" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div>
+    <div style="cursor: pointer; text-align: center; font-size: 20px; width: 60% !important; margin: 0 auto;" class="xola-checkout xola-custom" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div>
   </div>
 </div>
 
@@ -1390,6 +1447,47 @@ and (max-device-width: 1024px){
       <a class="roomButton noselect">Coming Soon</a>
     </div>
   </div>
+
+<!-- New mobile layout -->
+  <!-- <div class="w3-center hidden-sm hidden-md hidden-lg">
+
+      <div class="mobile-adventures">
+        <div class="western-mobile">
+          <a href="/western" data-turbolinks="false"><img src="<%= asset_path "outlaw_final.jpg", alt: "Western Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+        </div>
+        <div class="room-stats-container w3-dark-grey">
+          <div class="escape-stats-mobile">
+            <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
+            <span class="room-stats w3-large">3-10</span>
+          </div>
+          <div class="escape-stats-mobile">
+            <span class="room-stats w3-large">Difficulty</span><br>
+            <span class="room-stats w3-large">Intermediate</span>
+          </div>
+          <div class="escape-stats-mobile">
+            <span class="room-stats w3-large">Duration</span><br>
+            <span class="room-stats w3-large">1 Hour</span>
+          </div>
+        </div>
+        <%=link_to "Reserve Now", western_path, class: "roomButton", data: { turbolinks: false } %>
+      </div>
+
+
+    <div class="mobile-adventures w3-padding">
+      <a href="/tokyo" data-turbolinks="false"><img src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <%=link_to "Reserve Now", tokyo_path, class: "roomButton", data: { turbolinks: false } %>
+    </div>
+
+    <div class="mobile-adventures w3-padding">
+      <a href="/tomb" data-turbolinks="false"><img src="<%= asset_path "aztec_final.jpg", alt: "Tomb Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
+      <%=link_to "Reserve Now", tomb_path, class: "roomButton", data: { turbolinks: false } %>
+    </div>
+
+    <div class="mobile-adventures w3-padding noselect">
+      <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager Coming Soon" %>" style="width:100%" class="w3-hover-opacity">
+      <a class="roomButton noselect">Coming Soon</a>
+    </div>
+  </div> -->
   <!-- <div id="nav" class="noselect hidden-xs">
     <button class="left carousel-images">
       ←
@@ -1398,7 +1496,7 @@ and (max-device-width: 1024px){
       →
     </button>
   </div> -->
-</div>
+<!-- </div> -->
 
 <div id="" class="bgimg-5 w3-display-container">
   <div class="w3-display-middle">
