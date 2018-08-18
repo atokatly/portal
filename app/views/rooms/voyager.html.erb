@@ -12,15 +12,16 @@
   ga('send', 'pageview');
 
 </script>
-<!-- <script type="application/ld+json">
+<script type="text/javascript"> (function() { var co=document.createElement("script"); co.type="text/javascript"; co.async=true; co.src="https://xola.com/checkout.js"; var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(co, s); })(); </script>
+<script type="application/ld+json">
 {
   "@context": "http://schema.org/",
   "@type": "Product",
-  "name": "The Tomb of the Gods",
+  "name": "Voyager",
    "image": [
-    "https://www.portalescaperooms.net/public/aztec1x1.jpg",
-    "https://www.portalescaperooms.net/public/aztec4x3.jpg",
-    "https://www.portalescaperooms.net/public/aztec16x9.jpg"
+    // "https://www.portalescaperooms.net/public/aztec1x1.jpg",
+    // "https://www.portalescaperooms.net/public/aztec4x3.jpg",
+    // "https://www.portalescaperooms.net/public/aztec16x9.jpg"
    ],
   "description": "An ancient Aztec temple has been discovered deep in the jungles of Mexico. Find out what became of the lost team of explorers",
   "aggregateRating": {
@@ -29,13 +30,13 @@
     "reviewCount": "25"
   }
 }
-</script> -->
-<title>Portal Escape Rooms - Project Voyager</title>
+</script>
+<title>Portal Escape Rooms - Voyager</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="escape rooms, eugene escape rooms, springfield escape rooms, eugene entertainment, springfield entertainment, escape room eugene oregon, escape room springfield oregon, escape games, oregon escape rooms, escape room oregon, escape rooms eugene, escape rooms springfield, escape rooms oregon, eugene escape games, springfield escape games">
-<meta name="description" content="Ready to book with Portal Escape Rooms? Project Voyager is a space exploration adventure escape room in Eugene and Springfield! Check it out today!">
-<link rel="canonical" href="https://www.portalescaperooms.net/voyager">
+<meta name="description" content="Ready to book with Portal Escape Rooms? Voyager is a astronaut spacecraft themed escape room in Eugene and Springfield! Check it out today!">
+<link rel="canonical" href="https://www.portalescaperooms.net/tomb">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -79,8 +80,8 @@ footer {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "coming-soon.jpg", alt: "Voyager Logo" %>);
-    min-height: 100%;
+    background-image: url(<%= asset_path "voyager_final.jpg", alt: "Voyager Logo" %>);
+    min-height: 80%;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -116,12 +117,17 @@ and (max-device-width: 1024px){
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
   .bgimg-1{
-    background-image: url(<%= asset_path "voyager-thats-no-moon-01.jpg", alt: "Voyager Logo" %>);
+    background-image: url(<%= asset_path "voyager_final.jpg", alt: "Voyager Logo" %>);
     background-position: center;
     min-height: 400px;
   }
   body{
     height: 40%;
+  }
+  .xola-custom{
+    width: 75% !important;
+    margin: 0 auto;
+    height: 8% !important;
   }
 }
 /* div#bookeo_position {
@@ -164,6 +170,21 @@ and (max-device-width: 1024px){
        .navBar {
          z-index: 101;
        }
+       .xola-custom{
+        border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+        background-color: #3093c7; background-image: -webkit-gradient(linear, left top, left bottom, from(#3093c7), to(#1c5a85));
+        background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+        background-image: linear-gradient(to bottom, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        font-size: 20px;
+        width:30%;
+        margin: 0 auto;
+       }
 </style>
 <body>
 
@@ -176,8 +197,8 @@ and (max-device-width: 1024px){
       <a href="/" class="w3-hide-small w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-home"></i>Home</a>
       <a href="/#escape-rooms" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
       <a href="/#reviews" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-star"></i> Reviews</a>
-      <a href="/#teams" class="w3-bar-item w3-button" style="width:20.15%" data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
-      <a href="/#contact" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
+      <a href="/#teams" class="w3-bar-item w3-button" style="width:20.15%" data-turbolinks="false"><i class="fa fa-users"></i> Team Building - Large Groups</a>
+      <a href="/voucher" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-gift"></i> Gift Cards</a>
       <a href="/faq" class="word w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign">FAQ</i></a>
       <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width:13.15%" data-turbolinks="false">
         <i class="fa fa-book"></i> Book Now
@@ -205,6 +226,7 @@ and (max-device-width: 1024px){
   </div>
 
 <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large">
+  <a href="/voyager" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Voyager</a>
   <a href="/tomb" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tomb of the Gods</a>
   <a href="/tokyo" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tokyo Heist</a>
   <a href="/western" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">The Outlaw of El Paso</a>
@@ -233,10 +255,10 @@ and (max-device-width: 1024px){
 </div>
 
 <!-- Container (About Section) -->
-<!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
    <div class="w3-quarter w3-section">
      <span class="w3-large" style="padding-left: 5px;">Participants</span><br>
-     <span class="w3-large">6-10</span>
+     <span class="w3-large">5-10</span>
    </div>
    <div class="w3-quarter w3-section">
      <span class="w3-large">Difficulty</span><br>
@@ -250,13 +272,17 @@ and (max-device-width: 1024px){
      <span class="w3-large">Rooms</span><br>
      <span class="w3-large">3</span>
    </div>
- </div> -->
+ </div>
 <div class="w3-content w3-container w3-padding-16" id="about">
-  <!-- <h3 class="w3-center">Project Voyager</h3> -->
+  <div class="xola-checkout xola-custom" data-button-id="5b786610c581e1621c8b4591">Reserve Now - Pricing</div>
+  <h3 class="w3-center">Voyager</h3>
+  <p><strong style="color: #0A5CAD;">Details:</strong> This is an immersive escape room that takes place in the farthest reaches of outer space. You and your crew are aboard the spaceship Voyager! It will include full audio and video immersion throughout the experience. <strong style="color: #000000";>There will be no traditional locks (Combos, letters, etc), only automation</strong>. This will be a multi-room adventure, meaning you will have to solve puzzles in each room in order to unlock doors to advance to the next room in the adventure. <strong style="color: #000000";>Click the button above to schedule your adventure.</strong></p><p><strong style="color: #0A5CAD;">Price:</strong> <strong style="color: #000000";>All reservations for this adventure are private.</strong> Groups of 5-7 are $30/person. Teams of 8-10 players are $25/person.</p>
+  <!-- <p class="w3-center"><em>A notorious outlaw on the run... Can you and your team track him down?</em></p> -->
+  <h3 class="w3-center">The Story</h3>
   <!-- <p class="w3-center"><em>Can you solve the ancient puzzle left by the gods!</em></p> -->
-  <!-- <p>Project Voyager has been drifting through space but a malfunction has caused the shuttle to drift off course. Find the cause of the malfunction and relay your findings back to mission control.</p> -->
-<p class="w3-center">Good luck,</p>
-<!-- <p class="w3-center">-Mission Control</p> -->
+  <p>13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space.</p>
+<p class="w3-center">Good luck!</p>
+<!-- <p class="w3-center">-Anna Robin</p> -->
 <!-- <p style="text-align: center;">If you're ready to book, use our interface below. Be sure to select the amount of participants in your party for a room.</p>
 <p style="text-align: center;">We also serve walk-in customers if slots are availabile.</p>
 <a href="/voucher" data-turbolinks="false"><button>Buy E-Gift Cards</button></a>
@@ -265,7 +291,6 @@ and (max-device-width: 1024px){
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br> -->
       <!-- <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333"> -->
-      	<!-- <script type="text/javascript" src="https://bookeo.com/widget.js?a=41563HH4CYJ15D380D51FF&type=41563CM69MA15DC96E89F7&waitMobile=true"></script> -->
     </div>
 
     <!-- Hide this text on small devices -->
