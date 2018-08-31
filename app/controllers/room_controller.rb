@@ -43,4 +43,9 @@ class RoomController < ApplicationController
     p 'This is the gallery route'
     render "/rooms/gallery"
   end
+
+  def teams 
+    p 'This is the teams route'
+    render "/rooms/teams"
+  end
 end
