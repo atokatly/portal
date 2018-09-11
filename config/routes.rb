@@ -15,5 +15,4 @@ Rails.application.routes.draw do
    get '/redeem' => 'room#redeem'
    get '/gallery' => 'room#gallery'
    get '/teams' => 'room#teams'
-   get '/h/541291.html' => redirect("https://www.mirageescaperoom.com/")
  end
