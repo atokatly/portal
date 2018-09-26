@@ -580,6 +580,35 @@ and (max-device-width: 1024px){
     padding: 10px;
 }
 
+.escape-room-content-haunt {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+}
+
+.escape-room-content-h {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    /* background: rgba(200, 200, 200, 0.5);*/ /* Black background with transparency */
+    background: rgba(0, 0, 0, 0.75); /* Black background with transparency */
+    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
 .escape-room-content-o {
     width: 100%;
     height: 50%;
@@ -729,6 +758,10 @@ and (max-device-width: 1024px){
   }
 
   .escape-room-content-voyager{
+    width: 1570px;
+  }
+
+  .escape-room-content-haunt{
     width: 1570px;
   }
 
@@ -942,6 +975,10 @@ and (max-device-width: 1024px){
     width: 1870px;
   }
 
+  .escape-room-content-haunt{
+    width: 1870px;
+  }
+
   .room-buttons-loc{
     font-size: 28px !important;
   }
@@ -1051,6 +1088,10 @@ and (max-device-width: 1024px){
   }
 
   .escape-room-content-voyager{
+    width: 2530px;
+  }
+
+  .escape-room-content-haunt{
     width: 2530px;
   }
 
@@ -1286,6 +1327,36 @@ and (max-device-width: 1024px){
 <div class="escape-room-containter hidden-xs" height="400">
 <!-- New Design Area -->
   <div class="escape-room-content">
+    <div class="escape-room-content-haunt">
+      <img src="<%= asset_path "haunted-tomb-poster.jpg", alt: "Haunted Tomb" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Haunted Tomb" >
+      <div class="col2">
+      <h3 class="room-header" style="text-align: left; font-size: 24px; color: orange;">The Haunted Tomb - Available Oct 3 - Nov 4</h3>
+      <p class="room-content" style="color: orange;">Brand new puzzles and spooktacular frights await your team on this dark and dreary night… Bring costumes (Not required), your bravest friends (Also not required), and an undying spirit… For you will be facing spooky challenges and creepy puzzles on this October night. You will need your wits, your courage, and a fantastic team! This is a haunted escape room adventure. It’s not a haunted house. You will be solving all new puzzles and following a brand new storyline that takes place in a haunted tomb. Recommended Age: 14+</p>
+    <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(0, 0, 0, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large" style="padding-left: 5px; color: orange;">Participants</span><br>
+         <span class="room-stats w3-large" style="color: orange;">4-10</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large" style="color: orange;">Difficulty</span><br>
+         <span class="room-stats w3-large" style="color: orange;">Intermediate</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large" style="color: orange;">Duration</span><br>
+         <span class="room-stats w3-large" style="color: orange;">1 Hour</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large" style="color: orange;">Rooms</span><br>
+         <span class="room-stats w3-large" style="color: orange;">3</span>
+       </div>
+     </div>
+     <div class="button-container">
+    <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5baaf736332e7503578b457b">Book Now</div>
+    <!-- <a href="javascript:void(0)" data-turbolinks="false"><button onclick="noclick" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom room-buttons-loc">Learn More</button></a> -->
+    </div>
+  </div>
+  </div>
+    <!-- orginal code -->
     <div class="escape-room-content-voyager">
       <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
       <div class="col2">
@@ -1427,6 +1498,12 @@ and (max-device-width: 1024px){
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center hidden-sm hidden-md hidden-lg">
+
+    <div class="mobile-rooms w3-padding noselect">
+      <a href="javascript:void(0);" data-turbolinks="false"><img src="<%= asset_path "haunted-tomb-poster.jpg", alt: "Haunted Tomb escape game" %>" style="width:100%" class="w3-hover-opacity" data-button-id="5baaf736332e7503578b457b"></a>
+      <!-- <%=link_to "Reserve Now", voyager_path, class: "roomButton", data: { turbolinks: false } %> -->
+      <div data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 100%; padding-top: 5px; margin-top: 10px;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5baaf736332e7503578b457b">Book Now</div>
+    </div>
 
     <div class="mobile-rooms w3-padding noselect">
       <a href="/voyager" data-turbolinks="false"><img src="<%= asset_path "voyager_final.jpg", alt: "Voyager Logo escape game" %>" style="width:100%" class="w3-hover-opacity"></a>
