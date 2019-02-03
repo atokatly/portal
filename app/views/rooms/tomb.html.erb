@@ -113,6 +113,11 @@ and (max-device-width: 1024px){
   .w3-bar-item{
     width: 24%;
   }
+  .difficulty{
+    margin-top: -30px !important;
+    width: 100% !important;
+    margin-right: 55px !important;
+  }
 }
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
@@ -128,6 +133,11 @@ and (max-device-width: 1024px){
     width: 75% !important;
     margin: 0 auto;
     height: 8% !important;
+  }
+  .difficulty{
+    margin-top: -5px !important;
+    width: 100% !important;
+    margin-right: 55px !important;
   }
 }
 /* div#bookeo_position {
@@ -185,6 +195,61 @@ and (max-device-width: 1024px){
         width:30%;
         margin: 0 auto;
        }
+
+       /* 50% width 2560px */
+       @media screen and (min-width: 2560px) {
+           .difficulty {
+            margin-top: -30px !important;
+            margin-left: 10px !important;
+            width: 45% !important;
+           }
+           .w3-large {
+             font-size: 40px !important;
+           }
+         }
+       /* 67% */
+       @media screen and (min-width: 1900px) {
+         .difficulty {
+           width: 50% !important;
+           margin-top: -25px !important;
+           margin-left: 10px !important;
+         }
+         .w3-large {
+           font-size: 35px !important;
+         }
+         .w3-bar-item{
+           font-size: 24px;
+         }
+       }
+       /* 70% */
+       @media screen and (min-width: 1707px) {
+         .difficulty {
+           width: 45% !important;
+           margin-top: -25px !important;
+           margin-left: 10px !important;
+         }
+         .w3-large {
+           font-size: 35px !important;
+         }
+         .w3-bar-item{
+           font-size: 24px;
+         }
+       }
+
+       /* 80% */
+       @media screen and (min-width: 1600px) {
+         .difficulty {
+          margin-top: -30px !important;
+        }
+        .w3-large {
+          font-size: 45px !important;
+        }
+        .w3-bar-item{
+          font-size: 24px;
+        }
+
+       }
+
 </style>
 <body>
 
@@ -257,14 +322,14 @@ and (max-device-width: 1024px){
 </div> -->
 
 <!-- Container (About Section) -->
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<div class="w3-row w3-center w3-dark-grey w3-padding-16" style="background: rgba(187, 105, 87, 1) !important;">
    <div class="w3-quarter w3-section">
      <span class="w3-large" style="padding-left: 5px;">Participants</span><br>
      <span class="w3-large">3-10</span>
    </div>
    <div class="w3-quarter w3-section">
      <span class="w3-large">Difficulty</span><br>
-     <span class="w3-large">Intermediate</span>
+     <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 5px; display: inline-block; margin-top:-35px;" class="difficulty" alt="Difficulty" ></span>
    </div>
    <div class="w3-quarter w3-section">
      <span class="w3-large">Duration</span><br>
