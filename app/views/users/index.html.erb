@@ -378,6 +378,22 @@ and (max-device-width: 1024px){
     width: 50%;
     margin: 0 auto;
   }
+  .quarter{
+    width: 24% !important;
+  }
+  .room-stats{
+    padding-left: 95px !important;
+    font-size: 14px !important;
+  }
+  .center-xola{
+    padding-right: 45px !important;
+    width: 30% !important;
+    margin-right: -30px !important;
+    float: center !important;
+  }
+  .xola-special{
+    margin-right: -30px !important;
+  }
 }
 
 /*styles for landscape mode on mobile devices*/
@@ -415,6 +431,9 @@ and (max-device-width: 1024px){
     text-align: center;
     height: 9% !important;
   }
+  /* .xola-special {
+    width: 65% !important;
+  } */
   /* #myVideo {
     height: 100px !important;
     width: 100%;
@@ -438,7 +457,7 @@ and (max-device-width: 1024px){
 
   .w3-quarter{
     display: block !important;
-    width: 19% !important;
+    width: 24% !important;
     text-align: center;
     /* background: rgba(118, 81, 126, 0.75); */
     padding: -50px; !important;
@@ -1560,7 +1579,7 @@ and (max-device-width: 1024px){
 </div>
 <!-- First Parallax Image with Logo Text -->
 <a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background hidden-sm hidden-md hidden-lg" id="home">
-  <div style="cursor: pointer; text-align: center; margin: 0 auto; width: 65% !important;" class="xola-checkout xola-custom center-xola hidden-sm hidden-md hidden-lg" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
+  <div style="cursor: pointer; text-align: center; margin: 0 auto; width: 62% !important;" class="xola-checkout xola-custom center-xola xola-special hidden-sm hidden-md hidden-lg" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
   <!-- <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div> -->
     <div class="w3-display-middle" style="white-space:nowrap;">
     </div>
@@ -1796,21 +1815,32 @@ and (max-device-width: 1024px){
       <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(118, 81, 126, 0.75);" class="w3-center w3-padding-8 room-stats-container">
          <div class="w3-quarter w3-section">
            <span class="room-stats" style="padding-left: 5px;">Players</span><br>
-           <span class="room-stats">5-10</span>
+           <span class="room-stats" style="padding-left: 5px;">5-10</span>
          </div>
-         <div class="w3-quarter w3-section">
-           <span class="room-stats">Difficulty</span><br>
-           <span class="room-stats" style="font-size: 11px; padding-right: 5px !important;">Advanced</span>
-         </div>
+         <!-- <div class="w3-quarter w3-section">
+           <span class="room-stats">Difficulty</span><br> -->
+           <!-- <span class="room-stats" style="font-size: 11px; padding-right: 5px !important;">Advanced</span> -->
+           <!-- <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
+         </div> -->
          <div class="w3-quarter w3-section">
            <span class="room-stats" style="padding-left: 5px;">Length</span><br>
-           <span class="room-stats" style="padding-left: 5px;" style="font-size: 11px;">1 hrs</span>
+           <span class="room-stats" style="padding-left: 5px;" style="font-size: 12px;">1 hrs</span>
          </div>
          <div class="w3-quarter w3-section">
-           <span class="room-stats">Rooms</span><br>
-           <span class="room-stats">3</span>
+           <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+           <span class="room-stats" style="padding-left: 15px;">3</span>
          </div>
        </div>
+       <!-- Test Area -->
+       <!-- <div style=" margin-bottom: 15px; background: rgba(118, 81, 126, 0.75); width: 100%;" class="w3-center w3-padding-8 room-stats-container"> -->
+        <div style="float: center;">
+          <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+        </div>
+        <div style="float: right;">
+          <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
+        </div>
+       <!-- </div> -->
+       <!-- Test Area -->
        <div class="button-container">
       <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5b786610c581e1621c8b4591">Book Now</div>
       <a href="/voyager" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 16px !important; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right;" class="xola-checkout xola-custom room-buttons-loc">Learn More</button></a>
@@ -1832,20 +1862,26 @@ and (max-device-width: 1024px){
         <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(187, 105, 87, 1);" class="w3-center w3-padding-8 room-stats-container">
            <div class="w3-quarter w3-section">
              <span class="room-stats" style="padding-left: 5px;">Players</span><br>
-             <span class="room-stats">3-10</span>
+             <span class="room-stats" style="padding-left: 5px;">3-10</span>
            </div>
-           <div class="w3-quarter w3-section">
+           <!-- <div class="w3-quarter w3-section">
              <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
              <span class="room-stats" style="font-size: 11px;">Intermediate</span>
+           </div> -->
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 12px; padding-left: 5px;">Length</span><br>
+             <span class="room-stats" style="font-size: 12px; padding-left: 3px;">1 hrs</span>
            </div>
            <div class="w3-quarter w3-section">
-             <span class="room-stats" style="font-size: 11px; padding-left: 5px;">Length</span><br>
-             <span class="room-stats" style="font-size: 11px; padding-left: 3px;">1 hrs</span>
+             <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+             <span class="room-stats" style="padding-left: 15px;">3</span>
            </div>
-           <div class="w3-quarter w3-section">
-             <span class="room-stats">Rooms</span><br>
-             <span class="room-stats">3</span>
-           </div>
+         </div>
+         <div style="float: center;">
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+         </div>
+         <div style="float: right;">
+           <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
          </div>
         <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
         <a href="/tomb"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right;" class="xola-checkout xola-custom room-buttons-loc">Learn More</button></a>
@@ -1866,20 +1902,26 @@ and (max-device-width: 1024px){
         <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(234, 71, 46, 1);" class="w3-center w3-padding-8 room-stats-container">
            <div class="w3-quarter w3-section">
              <span class="room-stats" style="padding-left: 5px;">Players</span><br>
-             <span class="room-stats">3-10</span>
+             <span class="room-stats" style="padding-left: 5px;">3-10</span>
            </div>
-           <div class="w3-quarter w3-section">
+           <!-- <div class="w3-quarter w3-section">
              <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
              <span class="room-stats" style="font-size: 11px;">Intermediate</span>
+           </div> -->
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 12px; padding-left: 5px;">Length</span><br>
+             <span class="room-stats" style="padding-left: 5px; font-size: 12px;">1 hrs</span>
            </div>
            <div class="w3-quarter w3-section">
-             <span class="room-stats" style="font-size: 11px; padding-left: 5px;">Length</span><br>
-             <span class="room-stats" style="padding-left: 5px; font-size: 11px;">1 hrs</span>
+             <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+             <span class="room-stats" style="padding-left: 15px;">3</span>
            </div>
-           <div class="w3-quarter w3-section">
-             <span class="room-stats">Rooms</span><br>
-             <span class="room-stats">3</span>
-           </div>
+         </div>
+         <div style="float: center;">
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+         </div>
+         <div style="float: right;">
+           <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
          </div>
         <div style="margin-left: 15px !important; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
       <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; float: right; margin-right: 15px !important;" class="xola-checkout xola-custom room-buttons-loc">Learn More</button></a>
@@ -1900,20 +1942,26 @@ and (max-device-width: 1024px){
       <div style="height: 100%; width: 100%; padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 1);" class="w3-center w3-padding-8 room-stats-container">
          <div class="w3-quarter w3-section">
            <span class="room-stats" style="padding-left: 5px;">Players</span><br>
-           <span class="room-stats">3-8</span>
+           <span class="room-stats" style="padding-left: 5px;">3-8</span>
          </div>
-         <div class="w3-quarter w3-section">
+         <!-- <div class="w3-quarter w3-section">
            <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
            <span class="room-stats" style="font-size: 11px;">Intermediate</span>
+         </div> -->
+         <div class="w3-quarter w3-section">
+           <span class="room-stats" style="font-size: 12px; padding-left: 5px;">Length</span><br>
+           <span class="room-stats" style="font-size: 12px; padding-left: 3px;">1 hrs</span>
          </div>
          <div class="w3-quarter w3-section">
-           <span class="room-stats" style="font-size: 11px; padding-left: 5px;">Length</span><br>
-           <span class="room-stats" style="font-size: 11px; padding-left: 3px;">1 hrs</span>
+           <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+           <span class="room-stats" style="padding-left: 15px;">3</span>
          </div>
-         <div class="w3-quarter w3-section">
-           <span class="room-stats">Rooms</span><br>
-           <span class="room-stats">3</span>
-         </div>
+     </div>
+     <div style="float: center;">
+       <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+     </div>
+     <div style="float: right;">
+       <img src="<%= asset_path "3.5-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
      </div>
       <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important;"class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
       <a href="/tokyo" data-turbolinks="false"><button onclick="/tokyo" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right;" class="xola-checkout xola-custom room-buttons-loc">Learn More</button></a>
