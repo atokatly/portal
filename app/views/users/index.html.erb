@@ -962,12 +962,33 @@ and (max-device-width: 1024px){
   .w3-bar-item{
     font-size: 16px;
   }
+
+  .difficulty {
+    width: 60% !important;
+    padding-left: 5px !important;
+    margin-left: 60px !important;
+    margin-bottom: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .room-buttons-loc {
+
+  }
+
+  .room-stats-contianer {
+    margin-bottom: 45px !important;
+    height: 105%;
+  }
   /* .escape-room-content-tomb{
     width: 1370px;
   } */
 }
 /* 80% */
 @media screen and (min-width: 1600px) {
+  .difficulty {
+   margin-top: -30px !important;
+ }
+
   .escape-room-content {
     width: 1570px;
   }
@@ -1083,6 +1104,9 @@ and (max-device-width: 1024px){
 }
 /* 75% creating issues */
 @media screen and (min-width: 1707px) {
+  /* .difficulty {
+   margin-top: -45px !important;
+ } */
   /* .escape-room-content {
     width: 1690px;
   } */
@@ -1190,6 +1214,11 @@ and (max-device-width: 1024px){
 
 /* 67% */
 @media screen and (min-width: 1900px) {
+  .difficulty {
+   margin-top: -34px !important;
+   margin-left: 75px !important;
+  }
+
   .escape-room-content {
     width: 1870px;
   }
@@ -1306,6 +1335,12 @@ and (max-device-width: 1024px){
 
 /* 50% width 2560px */
 @media screen and (min-width: 2560px) {
+  .difficulty {
+   margin-top: -40px !important;
+   margin-left: 140px !important;
+   width: 45% !important;
+  }
+
   .escape-room-content {
     width: 2530px;
   }
@@ -1613,7 +1648,7 @@ and (max-device-width: 1024px){
       <a href="/voyager" data-turbolinks="false"><img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity" alt="Voyager" ></a>
       <div class="col2">
       <h3 class="room-header" style="text-align: left; font-size: 24px;">Voyager</h3>
-      <p class="room-content">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space. Recommended Age: 15+</p>
+      <p class="room-content">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space. ------ Recommended Age: 15+</p>
     <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(118, 81, 126, 0.75);" class="w3-center w3-padding-8 room-stats-container">
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
@@ -1621,7 +1656,7 @@ and (max-device-width: 1024px){
        </div>
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large">Difficulty</span><br>
-         <span class="room-stats w3-large">Advanced</span>
+         <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
        </div>
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large">Duration</span><br>
@@ -1632,9 +1667,11 @@ and (max-device-width: 1024px){
          <span class="room-stats w3-large">3</span>
        </div>
      </div>
+     </br>
      <div class="button-container">
     <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5b786610c581e1621c8b4591">Book Now</div>
     <a href="/voyager" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
+    <!-- <div style="display: inline-block !important; width: 20%; margin-left: 150px !important;" ><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 100%; float: right;" alt="Difficulty" ></div> -->
     </div>
   </div>
   </div>
@@ -1655,7 +1692,7 @@ and (max-device-width: 1024px){
          </div>
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large">Difficulty</span><br>
-           <span class="room-stats w3-large">Intermediate</span>
+           <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
          </div>
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large">Duration</span><br>
@@ -1666,6 +1703,7 @@ and (max-device-width: 1024px){
            <span class="room-stats w3-large">3</span>
          </div>
        </div>
+       </br>
       <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
       <a href="/tomb" data-turbolinks="false"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 5%;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
     </div>​
@@ -1687,7 +1725,7 @@ and (max-device-width: 1024px){
          </div>
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large">Difficulty</span><br>
-           <span class="room-stats w3-large">Intermediate</span>
+           <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
          </div>
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large">Duration</span><br>
@@ -1698,6 +1736,7 @@ and (max-device-width: 1024px){
            <span class="room-stats w3-large">3</span>
          </div>
        </div>
+       </br>
       <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
     <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
   </div>
@@ -1719,7 +1758,7 @@ and (max-device-width: 1024px){
        </div>
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large">Difficulty</span><br>
-         <span class="room-stats w3-large">Intermediate</span>
+         <span><img src="<%= asset_path "3.5-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
        </div>
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large">Duration</span><br>
@@ -1730,6 +1769,7 @@ and (max-device-width: 1024px){
          <span class="room-stats w3-large">3</span>
        </div>
    </div>
+   </br>
     <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;"class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
     <a href="/tokyo" data-turbolinks="false"><button onclick="/tokyo" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
   </div>
