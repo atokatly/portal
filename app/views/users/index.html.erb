@@ -1635,14 +1635,14 @@ and (max-device-width: 1024px){
   <p class="w3-center"><em>
 
 <div class="escape-room-containter hidden-xs" height="400">
+
 <!-- New Design Area -->
-  <div class="escape-room-content">
   <!--- Test Code--->
-  <!-- <div class="escape-room-content"> -->
-    <!-- <div class="escape-room-content-haunt">
+  <div class="escape-room-content">
+    <div class="escape-room-content-haunt">
       <img src="<%= asset_path "haunted-tomb-poster.jpg", alt: "Haunted Tomb" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Haunted Tomb" >
       <div class="col2">
-      <h3 class="room-header" style="text-align: left; font-size: 24px; color: orange;">The Haunted Tomb - Available Oct 3 - Nov 21</h3>
+      <h3 class="room-header" style="text-align: left; font-size: 24px; color: orange;">The Haunted Tomb - Available Oct 4 - Nov 3</h3>
       <p class="room-content" style="color: orange;">Brand new puzzles and spooktacular frights await your team on this dark and dreary night… Bring costumes (Not required), your bravest friends (Also not required), and an undying spirit… For you will be facing spooky challenges and creepy puzzles on this October night. You will need your wits, your courage, and a fantastic team! This is a haunted escape room adventure. It’s not a haunted house. You will be solving all new puzzles and following a brand new storyline that takes place in a haunted tomb. Recommended Age: 14+</p>
     <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(0, 0, 0, 0.75);" class="w3-center w3-padding-8 room-stats-container">
        <div class="w3-quarter w3-section">
@@ -1651,7 +1651,7 @@ and (max-device-width: 1024px){
        </div>
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large" style="color: orange;">Difficulty</span><br>
-         <span class="room-stats w3-large" style="color: orange;">Intermediate</span>
+         <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
        </div>
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large" style="color: orange;">Duration</span><br>
@@ -1662,11 +1662,12 @@ and (max-device-width: 1024px){
          <span class="room-stats w3-large" style="color: orange;">3</span>
        </div>
      </div>
+     </br>
      <div class="button-container">
-    <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5baaf736332e7503578b457b">Book Now</div>
+    <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; float: left !important;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5baaf736332e7503578b457b">Book Now</div>
     </div>
   </div>
-  </div> -->
+  </div>
     <!-- orginal code -->
     <div class="escape-room-content-voyager">
       <a href="/voyager" data-turbolinks="false"><img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity" alt="Voyager" ></a>
@@ -1800,13 +1801,47 @@ and (max-device-width: 1024px){
   </div>
 </div>
 </div>
-
 <!-- Test New Mobile Area -->
 <!-- This is the mobile version -->
   <div class="escape-room-containter hidden-sm hidden-md hidden-lg" height="400" style="padding-top: 30px;">
   <!-- New Design Area -->
     <div class="escape-room-content">
       <!--Test Mobile-->
+      <div class="escape-room-content-haunt" style="min-width: 80%;">
+        <div class="tomb-image">
+          <a href="/tomb" data-turbolinks="false"><img src="<%= asset_path "haunted-tomb-poster.jpg", alt: "Tomb" %>" style="width: 100%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" ></a>
+        </div>
+        <div class="col2">
+          <h3 class="room-header" style="text-align: center; font-size: 24px; color: orange;">The Haunted Tomb - Available Oct 4 - Nov 3</h3>
+          <p class="room-content" style="font-size: 14px; color: orange;">Brand new puzzles and spooktacular frights await your team on this dark and dreary night… Bring costumes (Not required), your bravest friends (Also not required), and an undying spirit… For you will be facing spooky challenges and creepy puzzles on this October night. You will need your wits, your courage, and a fantastic team! This is a haunted escape room adventure. It’s not a haunted house. You will be solving all new puzzles and following a brand new storyline that takes place in a haunted tomb. Recommended Age: 14+</p>
+        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(0, 0, 0, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 5px; color: orange;">Players</span><br>
+             <span class="room-stats" style="padding-left: 5px; color: orange;">4-10</span>
+           </div>
+           <!-- <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
+             <span class="room-stats" style="font-size: 11px;">Intermediate</span>
+           </div> -->
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 12px; padding-left: 5px; color: orange;">Length</span><br>
+             <span class="room-stats" style="font-size: 12px; padding-left: 3px; color: orange;">1 hour</span>
+           </div>
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 15px; color: orange;">Rooms</span><br>
+             <span class="room-stats" style="padding-left: 15px; color: orange;">3</span>
+           </div>
+         </div>
+         <div style="float: center;">
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; color: orange;">Adventure Difficulty</p>
+         </div>
+         <div style="float: right;">
+           <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
+         </div>
+        <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 31% !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5baaf736332e7503578b457b">Book Now</div>
+
+      </div>​
+      </div>
       <!--Test-->
       <div class="escape-room-content-voyager">
         <div class="voyager-image">
@@ -1975,6 +2010,7 @@ and (max-device-width: 1024px){
   </div>
   </div>
 <!-- Test Mobile Area End -->
+
 
   <!-- <div id="showcase" class="noselect w3-center hidden-xs">
     <img class="cloud9-item" src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw Logo"%>" style="width:20%" link="/western" alt="A notorious outlaw rode into town last night and robbed the local bank of its gold. Track the outlaw down and bring him to justice!">
