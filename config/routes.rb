@@ -15,4 +15,5 @@ Rails.application.routes.draw do
    get '/redeem' => 'room#redeem'
    get '/gallery' => 'room#gallery'
    get '/teams' => 'room#teams'
+   get '/mansion' => 'room#mansion'
  end

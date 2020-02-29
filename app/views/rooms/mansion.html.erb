@@ -1160,6 +1160,203 @@ and (max-device-width: 1024px){
       width: 100%;
     }
 
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: fixed;
+        background-position: 5% 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .left {
+      background-position: left;
+    }
+
+    .right {
+      background-position: right;
+    }
+
+    .center {
+      background-position: center;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        min-height: 80%;
+        margin-top: 3% !important;
+    }
+
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            background-attachment: scroll;
+        }
+        .w3-third {
+          width: 32%;
+        }
+
+        .w3-quarter {
+          width: 24.75%;
+        }
+
+        .w3-large {
+          font-size: 15px !important;
+        }
+    }
+    /*styles for landscape mode on mobile devices*/
+    @media only screen and (orientation:landscape)
+    and (max-device-width: 1024px){
+      .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
+          background-attachment: scroll;
+      }
+      .w3-bar-item{
+        width: 24%;
+      }
+      .difficulty{
+        margin-top: -30px !important;
+        width: 100% !important;
+        margin-right: 55px !important;
+      }
+    }
+    @media only screen and (orientation:portrait)
+    and (max-device-width: 1024px){
+      .bgimg-1{
+        background-image: url(<%= asset_path "voyager_final.jpg", alt: "Voyager Logo" %>);
+        background-position: center;
+        min-height: 400px;
+      }
+      body{
+        height: 40%;
+      }
+      .xola-custom{
+        width: 75% !important;
+        margin: 0 auto;
+        height: 8% !important;
+      }
+      .difficulty{
+        margin-top: -5px !important;
+        width: 100% !important;
+        margin-right: 55px !important;
+      }
+    }
+    /* div#bookeo_position {
+      background-color: #777;
+      margin: 0 auto;
+      display: block;
+      text-align: center !important;;
+      font-family: "Lato", sans-serif;
+      border: solid 2px rgba(0, 0, 0, 0.4);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+      background-color: Transparent;
+      background-repeat:no-repeat;
+      border: none;
+      cursor:pointer;
+      overflow: hidden;
+      outline:none;
+      min-width: 10%;
+      width: auto !important;;
+      margin-top: 10px;
+      height: auto !important;;
+
+           } */
+            /* div#bookeoStartMobile{
+             width: auto !important;
+             padding-bottom: 35px !important;
+           }
+           div#bookeo:hover{
+             background-color: #FF2600 !important;
+           } */
+           .w3-show{
+             position: fixed;
+             z-index: 100;
+             /*border: 1px solid black;*/
+           }
+           .navBar {
+             z-index: 101;
+           }
+           .xola-custom{
+            border:1px solid #25729a; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+            background-color: #3093c7; background-image: -webkit-gradient(linear, left top, left bottom, from(#3093c7), to(#1c5a85));
+            background-image: -webkit-linear-gradient(top, #3093c7, #1c5a85);
+            background-image: -moz-linear-gradient(top, #3093c7, #1c5a85);
+            background-image: -ms-linear-gradient(top, #3093c7, #1c5a85);
+            background-image: -o-linear-gradient(top, #3093c7, #1c5a85);
+            background-image: linear-gradient(to bottom, #3093c7, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3093c7, endColorstr=#1c5a85);
+            display: block;
+            cursor: pointer;
+            text-align: center;
+            font-size: 20px;
+            width:30%;
+            margin: 0 auto;
+           }
+
+    /* 50% width 2560px */
+    @media screen and (min-width: 2560px) {
+        .difficulty {
+         margin-top: -30px !important;
+         margin-left: 10px !important;
+         width: 45% !important;
+        }
+        .w3-large {
+          font-size: 40px !important;
+        }
+      }
+    /* 67% */
+    @media screen and (min-width: 1900px) {
+      .difficulty {
+        width: 75% !important;
+        margin-top: -25px !important;
+        margin-left: 10px !important;
+      }
+      .w3-large {
+        font-size: 35px !important;
+      }
+      .w3-bar-item{
+        font-size: 24px;
+      }
+    }
+    /* 70% */
+    @media screen and (min-width: 1707px) {
+      .difficulty {
+        width: 45% !important;
+        margin-top: -25px !important;
+        margin-left: 10px !important;
+      }
+      .w3-large {
+        font-size: 35px !important;
+      }
+      .w3-bar-item{
+        font-size: 24px;
+      }
+    }
+
+    /* 80% */
+    @media screen and (min-width: 1600px) {
+      .difficulty {
+       margin-top: -30px !important;
+     }
+     .w3-large {
+       font-size: 45px !important;
+     }
+     .w3-bar-item{
+       font-size: 24px;
+     }
+
+    }
+
+    body, html {
+        height: 92.5%;
+        color: #777;
+        line-height: 1.8;
+    }
+
 </style>
 <body>
 
@@ -1213,11 +1410,13 @@ and (max-device-width: 1024px){
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container" id="home">
+<!-- <div class="bgimg-1 w3-display-container" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
   </div>
-</div>
+</div> -->
 
+<iframe class="bgimg-1" width="100%;" src="https://www.youtube.com/embed/GkIlF69lefg?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<h3 class="room-headline w3-center hidden-xs" style="color: #0A5CAD;">The Portal Mansion Adventures</h3>
   <!-- <div class="wrap">
     <div class="w3-center">
       <div class="room-posters">
@@ -1285,9 +1484,6 @@ and (max-device-width: 1024px){
     <p class="w3-center hidden name" link="/tokyo">David Grey</p>
     <p class="w3-center hidden name" link="/tomb">Anna Robin</p>
   </div> -->
-  <br><br>
-  <div class="xola-embedded-checkout" data-button-id="5aa1b9cecf8b9ce12f8b45f7"></div>
-  <h3 class="room-headline w3-center" style="color: #0A5CAD;"><strong>Learn more about each adventure below</strong></h3>
   <div class="escape-room-containter hidden-xs" height="400" style="padding-top: 30px;">
   <!-- New Design Area -->
     <div class="escape-room-content">
@@ -1323,9 +1519,9 @@ and (max-device-width: 1024px){
     </div> -->
       <!-- Test-->
       <div class="escape-room-content-voyager">
-        <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
+        <img src="<%= asset_path "rag-doll.jpg", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
         <div class="col2">
-        <h3 class="room-header" style="text-align: left; font-size: 24px;">Voyager</h3>
+        <h3 class="room-header" style="text-align: left; font-size: 24px;">Rag Doll</h3>
         <p class="room-content">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space. Recommended Age: 15+.  All bookings are Private, no other groups will be a part of your adventure!</p>
       <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(118, 81, 126, 0.75);" class="w3-center w3-padding-8 room-stats-container">
          <div class="w3-quarter w3-section">
@@ -1353,9 +1549,9 @@ and (max-device-width: 1024px){
     </div>
     </div>
       <div class="escape-room-content-tomb" style="min-width: 80%;">
-          <img src="<%= asset_path "aztec_final.jpg", alt: "Tomb" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
+          <img src="<%= asset_path "lost-woods.jpg", alt: "Tomb" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
         <div class="col2">
-          <h3 class="room-header" style="text-align: left; font-size: 24px;">The Tomb of the Gods</h3>
+          <h3 class="room-header" style="text-align: left; font-size: 24px;">Lost Woods</h3>
           <p class="room-content" style="font-size: 16px;">An ancient Aztec temple has been discovered deep in the jungles of Mexico.
         Dr. Wolff, a world renowned and beloved
         archaeologist is leading an expedition to explore the dig site. It’s been a week since our last communication from
@@ -1386,9 +1582,9 @@ and (max-device-width: 1024px){
       </div>​
       </div>
           <div class="escape-room-content-outlaw">
-          <img src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Outlaw" >
+          <img src="<%= asset_path "showtime.jpg", alt: "Outlaw" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Outlaw" >
           <div class="col2">
-          <h3 class="room-header" style="text-align: left; font-size: 24px;">The Outlaw of El Paso</h3>
+          <h3 class="room-header" style="text-align: left; font-size: 24px;">Showtime</h3>
           <p class="room-content" style="font-size: 16px;">The most dangerous outlaw in the country rode into town last night.
         Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
         nearby bank vault was recently robbed! I believe there’s a connection between these
