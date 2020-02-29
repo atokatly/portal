@@ -44,8 +44,13 @@ class RoomController < ApplicationController
     render "/rooms/gallery"
   end
 
-  def teams 
+  def teams
     p 'This is the teams route'
     render "/rooms/teams"
+  end
+
+  def mansion
+    p 'This is the mansion route'
+    render "/rooms/mansion"
   end
 end
