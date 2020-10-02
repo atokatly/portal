@@ -23,6 +23,11 @@ class RoomController < ApplicationController
     render "/rooms/voyager"
   end
 
+  def scare
+    p 'This is the Project Voyager route'
+    render "/rooms/scare"
+  end
+
   def book
     p 'This is the collective booking route'
     render "/rooms/book"
