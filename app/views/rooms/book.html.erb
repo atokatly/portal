@@ -1160,6 +1160,40 @@ and (max-device-width: 1024px){
       width: 100%;
     }
 
+    .pulse {
+      animation: pulse 3s infinite;
+      margin: 0 auto;
+      display: table;
+      /* margin-top: 50px; */
+      animation-direction: alternate;
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+    }
+
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-transform: scale(1);
+      }
+      50% {
+        -webkit-transform: scale(1.1);
+      }
+      100% {
+        -webkit-transform: scale(1);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
 </style>
 <body>
 
@@ -1365,6 +1399,34 @@ and (max-device-width: 1024px){
      </div>
    </div>
    </div>
+   <div class="escape-room-content-tokyo w3-row">
+     <a href="/scare" data-turbolinks="false"><img src="<%= asset_path "red-scare.jpg", alt: "Scare" %>" style="width: 17%;" class="escape-posters w3-round w3-image" alt="Scare" ></a>
+     <div class="col2">
+     <h3 class="room-header" style="height: 100%; width: 100%; text-align: left; font-size: 24px;">Red Scare - Available October 9th</h3>
+     <p class="room-content" style="font-size: 16px; height: 100%; width: 100%;">The Red Scare is our first suspense/thriller adventure, so we recommend it for players over the age of 15 (parental discretion advised). This is also Portal’s first escape room that features live actors. The story revolves around players attempting to escape a Soviet BioTech facility during an ensuing zombie outbreak. <br> All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+   <div style="height: 100%; width: 100%; padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 1);" class="w3-center w3-padding-8 room-stats-container">
+      <div class="w3-quarter w3-section">
+        <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
+        <span class="room-stats w3-large">3-8</span>
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="room-stats w3-large">Difficulty</span><br>
+        <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="room-stats w3-large">Duration</span><br>
+        <span class="room-stats w3-large">1 Hour</span>
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="room-stats w3-large">Rooms</span><br>
+        <span class="room-stats w3-large">3</span>
+      </div>
+  </div>
+  </br>
+   <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;"class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
+   <!-- <a href="/tokyo" data-turbolinks="false"><button onclick="/tokyo" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-custom room-buttons-loc">Learn More</button></a> -->
+ </div>
+ </div>
       <div class="escape-room-content-voyager">
         <a href="/voyager" data-turbolinks="false"><img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity" alt="Voyager" ></a>
         <div class="col2">
@@ -1377,7 +1439,7 @@ and (max-device-width: 1024px){
          </div>
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large">Difficulty</span><br>
-           <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
+           <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
          </div>
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large">Duration</span><br>
@@ -1412,7 +1474,7 @@ and (max-device-width: 1024px){
            </div>
            <div class="w3-quarter w3-section">
              <span class="room-stats w3-large">Difficulty</span><br>
-             <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
+             <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
            </div>
            <div class="w3-quarter w3-section">
              <span class="room-stats w3-large">Duration</span><br>
@@ -1445,7 +1507,7 @@ and (max-device-width: 1024px){
            </div>
            <div class="w3-quarter w3-section">
              <span class="room-stats w3-large">Difficulty</span><br>
-             <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
+             <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
            </div>
            <div class="w3-quarter w3-section">
              <span class="room-stats w3-large">Duration</span><br>
@@ -1461,34 +1523,6 @@ and (max-device-width: 1024px){
       <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-custom room-buttons-loc">Learn More</button></a>
     </div>
       </div>
-      <div class="escape-room-content-tokyo w3-row">
-        <a href="/scare" data-turbolinks="false"><img src="<%= asset_path "red-scare.jpg", alt: "Scare" %>" style="width: 17%;" class="escape-posters w3-round w3-image" alt="Scare" ></a>
-        <div class="col2">
-        <h3 class="room-header" style="height: 100%; width: 100%; text-align: left; font-size: 24px;">Red Scare - Available October 9th</h3>
-        <p class="room-content" style="font-size: 16px; height: 100%; width: 100%;">The Red Scare is our first horror-themed adventure, so we recommend it for players over the age of 15 (parental discretion advised). This is also Portal’s first escape room that features live actors. The story revolves around players attempting to escape a Soviet BioTech facility during an ensuing zombie outbreak. <br> All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
-      <div style="height: 100%; width: 100%; padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 1);" class="w3-center w3-padding-8 room-stats-container">
-         <div class="w3-quarter w3-section">
-           <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
-           <span class="room-stats w3-large">3-8</span>
-         </div>
-         <div class="w3-quarter w3-section">
-           <span class="room-stats w3-large">Difficulty</span><br>
-           <span><img src="<%= asset_path "3.5-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty" alt="Difficulty" ></span>
-         </div>
-         <div class="w3-quarter w3-section">
-           <span class="room-stats w3-large">Duration</span><br>
-           <span class="room-stats w3-large">1 Hour</span>
-         </div>
-         <div class="w3-quarter w3-section">
-           <span class="room-stats w3-large">Rooms</span><br>
-           <span class="room-stats w3-large">3</span>
-         </div>
-     </div>
-     </br>
-      <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;"class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
-      <!-- <a href="/tokyo" data-turbolinks="false"><button onclick="/tokyo" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-custom room-buttons-loc">Learn More</button></a> -->
-    </div>
-    </div> -->
   </div>
   </div>
 <!-- This is the mobile version -->
@@ -1579,6 +1613,38 @@ and (max-device-width: 1024px){
     background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc">Learn More</button></a>
       </div>​
       </div>
+      <div class="escape-room-content-tokyo w3-row">
+        <div class="tokyo-image">
+          <img src="<%= asset_path "red-scare.jpg", alt: "scare" %>" style="width: 100%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="scare" >
+        </div>
+        <div class="col2">
+        <h3 class="room-header" style="height: 100%; width: 100%; text-align: center; font-size: 24px;">Red Scare - Available Oct. 9th</h3>
+        <p class="room-content" style="font-size: 16px; height: 100%; width: 100%;">The Red Scare is our first suspense/thriller adventure, so we recommend it for players over the age of 15 (parental discretion advised). This is also Portal’s first escape room that features live actors. The story revolves around players attempting to escape a Soviet BioTech facility during an ensuing zombie outbreak.<br><b></b><br>All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+      <div style="height: 100%; width: 100%; padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 1);" class="w3-center w3-padding-8 room-stats-container">
+         <div class="w3-quarter w3-section">
+           <span class="room-stats" style="padding-left: 5px;">Players</span><br>
+           <span class="room-stats" style="padding-left: 5px;">3-8</span>
+         </div>
+
+         <div class="w3-quarter w3-section">
+           <span class="room-stats" style="padding-left: 5px;">Duration</span><br>
+           <span class="room-stats" style="padding-left: 5px;">1 Hour</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+           <span class="room-stats" style="padding-left: 15px;">3</span>
+         </div>
+     </div>
+     <div style="float: center;">
+       <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+     </div>
+     <div style="float: right;">
+       <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="pulse difficulty" alt="Difficulty" >
+     </div>
+      <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 29% !important;"class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
+      <!-- <a href="/scare" data-turbolinks="false"><button onclick="/scare" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-right: 15px !important; float: right;" class="xola-custom room-buttons-loc">Learn More</button></a> -->
+    </div>
+    </div>
       <div class="escape-room-content-voyager">
         <div class="voyager-image">
           <img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 100%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
@@ -1607,7 +1673,7 @@ and (max-device-width: 1024px){
          <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
        </div>
        <div style="float: right;">
-         <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
+         <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="pulse difficulty" alt="Difficulty" >
        </div>
        <div class="button-container">
       <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5b786610c581e1621c8b4591">Book Now</div>
@@ -1646,7 +1712,7 @@ and (max-device-width: 1024px){
            <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
          </div>
          <div style="float: right;">
-           <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
+           <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="pulse difficulty" alt="Difficulty" >
          </div>
         <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
         <a href="/tomb" data-turbolinks="false"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-right: 15px !important; float: right;" class="xola-custom room-buttons-loc">Learn More</button></a>
@@ -1683,44 +1749,12 @@ and (max-device-width: 1024px){
            <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
          </div>
          <div style="float: right;">
-           <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
+           <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="pulse difficulty" alt="Difficulty" >
          </div>
         <div style="margin-left: 15px !important; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
       <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; float: right; margin-right: 15px !important;" class="xola-custom room-buttons-loc">Learn More</button></a>
     </div>
       </div>
-      <div class="escape-room-content-tokyo w3-row">
-        <div class="tokyo-image">
-          <img src="<%= asset_path "red-scare.jpg", alt: "scare" %>" style="width: 100%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="scare" >
-        </div>
-        <div class="col2">
-        <h3 class="room-header" style="height: 100%; width: 100%; text-align: center; font-size: 24px;">Red Scare - Available Oct. 9th</h3>
-        <p class="room-content" style="font-size: 16px; height: 100%; width: 100%;">The Red Scare is our first horror-themed adventure, so we recommend it for players over the age of 15 (parental discretion advised). This is also Portal’s first escape room that features live actors. The story revolves around players attempting to escape a Soviet BioTech facility during an ensuing zombie outbreak.<br><b></b><br>All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
-      <div style="height: 100%; width: 100%; padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 1);" class="w3-center w3-padding-8 room-stats-container">
-         <div class="w3-quarter w3-section">
-           <span class="room-stats" style="padding-left: 5px;">Players</span><br>
-           <span class="room-stats" style="padding-left: 5px;">3-8</span>
-         </div>
-
-         <div class="w3-quarter w3-section">
-           <span class="room-stats" style="padding-left: 5px;">Duration</span><br>
-           <span class="room-stats" style="padding-left: 5px;">1 Hour</span>
-         </div>
-         <div class="w3-quarter w3-section">
-           <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
-           <span class="room-stats" style="padding-left: 15px;">3</span>
-         </div>
-     </div>
-     <div style="float: center;">
-       <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
-     </div>
-     <div style="float: right;">
-       <img src="<%= asset_path "3.5-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty" alt="Difficulty" >
-     </div>
-      <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 29% !important;"class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
-      <!-- <a href="/scare" data-turbolinks="false"><button onclick="/scare" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-right: 15px !important; float: right;" class="xola-custom room-buttons-loc">Learn More</button></a> -->
-    </div>
-    </div>
   </div>
   </div>
   <footer style="padding-top: 16px;" class="w3-center w3-padding-32  ">
