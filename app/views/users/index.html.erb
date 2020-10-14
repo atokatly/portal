@@ -121,7 +121,7 @@ a.roomButton:hover {
 
 }
 
-.bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+.bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -165,6 +165,12 @@ a.roomButton:hover {
 .bgimg-5 {
   background-image: url(<%= asset_path "voyager-sneak-peek.jpg", alt: "Voyager Sneak Peek" %>);
   min-height: 400px;
+}
+
+.bgimg-6 {
+  background-image: url(<%= asset_path "mansion-foyer2.jpg", alt: "Mansion Sneak Peek" %>);
+  min-height: 400px;
+  /* width: 100%; */
 }
 
 .book-now {
@@ -519,7 +525,7 @@ a.roomButton:hover {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, #showcase {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, #showcase {
         background-attachment: scroll;
     }
 
@@ -531,7 +537,7 @@ a.roomButton:hover {
 /*styles for landscape mode on mobile devices*/
 @media only screen and (orientation:landscape)
 and (max-device-width: 1024px){
-  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-5, #showcase {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-5, .bgimg-6, #showcase {
       background-attachment: scroll;
   }
   .bgimg-1 {
@@ -598,7 +604,7 @@ and (max-device-width: 1024px){
 /*styles for landscape mode on mobile devices*/
 @media only screen and (orientation:portrait)
 and (max-device-width: 1024px){
-  .bgimg-4, .bgimg-5{
+  .bgimg-4, .bgimg-5, .bgimg-6 {
     background-position: center;
   }
   .image {
@@ -1005,10 +1011,68 @@ and (max-device-width: 1024px){
     position: relative;
     bottom: 0;
     background: rgba(118, 81, 126, 0.75); /* Black background with transparency */
-    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    background-image: url(<%= asset_path "voyager-sneak-peek.jpg", alt: "Voyager Sneak Peek" %>);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #f1f1f1;
     width: 100%;
     padding: 10px;
+}
+
+.escape-room-content-doll {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  background: rgba(118, 81, 126, 0.75); /* Black background with transparency */
+  background-image: url(<%= asset_path "mansion-hedge.jpg", alt: "Ragdoll Sneak Peek" %>);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+
+.escape-room-content-woods {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  background: rgba(118, 81, 126, 0.75); /* Black background with transparency */
+  background-image: url(<%= asset_path "mansion-courtyard.jpg", alt: "LostWoods Sneak Peek" %>);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+
+.escape-room-content-bride {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  background: rgba(118, 81, 126, 0.75); /* Black background with transparency */
+  background-image: url(<%= asset_path "mansion-foyer.jpg", alt: "BridesGame Sneak Peek" %>);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
 }
 
 .escape-room-content-haunt {
@@ -1032,8 +1096,13 @@ and (max-device-width: 1024px){
     display: inline-block;
     position: relative;
     bottom: 0; /* 53, 104, 26 .... 8, 37, 84...249, 187, 120*/
-    background: rgba(37, 115, 153, 1); /* Black background with transparency */
-    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    /* background: rgba(37, 115, 153, 1); /* Black background with transparency */
+    background-image: url(<%= asset_path "mansion-foyer2.jpg", alt: "Mansion Sneak Peek" %>);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 0% 0%; */
     color: #f1f1f1;
     width: 100%;
     padding: 10px;
@@ -1077,7 +1146,11 @@ and (max-device-width: 1024px){
     position: relative;
     bottom: 0;
     background: rgba(234, 71, 46, 0.75); /* Black background with transparency */
-    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    background-image: url(<%= asset_path "sneak-peek-western-2.jpg", alt: "Outlaw Sneak Peek" %>);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #f1f1f1;
     width: 100%;
     padding: 10px;
@@ -1106,7 +1179,11 @@ and (max-device-width: 1024px){
     position: relative;
     bottom: 0;
     background: rgba(187, 105, 87, 0.75); /* Black background with transparency */
-    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #f1f1f1;
     width: 100%;
     padding: 10px;
@@ -1135,7 +1212,11 @@ and (max-device-width: 1024px){
     position: relative;
     bottom: 0;
     background: rgba(181, 34, 43, 0.75); /* Black background with transparency */
-    /* background-image: url(<%= asset_path "sneak-peek-aztec.jpg", alt: "Aztec Sneak Peek" %>) 50; */
+    background-image: url(<%= asset_path "redscare-sneak-peek.jpg", alt: "Red Scare Sneak Peek" %>);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #f1f1f1;
     width: 100%;
     padding: 10px;
@@ -1272,6 +1353,18 @@ and (max-device-width: 1024px){
   }
 
   .escape-room-content-cowboy{
+    width: 1570px;
+  }
+
+  .escape-room-content-doll {
+    width: 1570px;
+  }
+
+  .escape-room-content-woods {
+    width: 1570px;
+  }
+
+  .escape-room-content-bride {
     width: 1570px;
   }
 
@@ -1587,6 +1680,18 @@ and (max-device-width: 1024px){
     width: 1870px;
   }
 
+  .escape-room-content-doll {
+    width: 1870px;
+  }
+
+  .escape-room-content-woods {
+    width: 1870px;
+  }
+
+  .escape-room-content-bride {
+    width: 1870px;
+  }
+
   .room-buttons-loc{
     font-size: 28px !important;
   }
@@ -1758,6 +1863,18 @@ and (max-device-width: 1024px){
   }
 
   .escape-room-content-cowboy{
+    width: 2530px;
+  }
+
+  .escape-room-content-doll {
+    width: 2530px;
+  }
+
+  .escape-room-content-woods {
+    width: 2530px;
+  }
+
+  .escape-room-content-bride {
     width: 2530px;
   }
 
@@ -1945,7 +2062,7 @@ and (max-device-width: 1024px){
 </div>
 <!-- First Parallax Image with Logo Text -->
 <a href="#about" data-turbolinks="false"><div class="bgimg-1 w3-display-container home-background hidden-sm hidden-md hidden-lg" id="home">
-  <div style="cursor: pointer; text-align: center; margin: 0 auto; width: 62% !important;" class="xola-checkout xola-custom center-xola xola-special hidden-sm hidden-md hidden-lg" data-button-id="5aa89fa66864ea267e8b45f6">Book Your Adventure</div>
+  <div style="cursor: pointer; text-align: center; margin: 0 auto; width: 62% !important;" class="xola-checkout xola-custom center-xola xola-special hidden-sm hidden-md hidden-lg" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div>
   <!-- <div style="cursor: pointer; text-align: center; margin: 0 auto;" class="xola-checkout xola-custom center-xola" data-button-id="5aa1b9cecf8b9ce12f8b45f7">Book Your Adventure</div> -->
     <div class="w3-display-middle" style="white-space:nowrap;">
     </div>
@@ -1998,19 +2115,198 @@ and (max-device-width: 1024px){
   <h3 class="room-headline w3-center hidden-xs" style="color: #0A5CAD;">Here are our current adventures in rotation.</h3>
   <h3 class="room-headline w3-center hidden-sm hidden-md hidden-lg" style="color: #0A5CAD;">Here are the current adventures in rotation.</h3>
   <p class="w3-center"><em>
-    <div class="xola-embedded-checkout" data-button-id="5aa1b9cecf8b9ce12f8b45f7"></div>
+    <!-- <div class="xola-embedded-checkout" data-button-id="5aa1b9cecf8b9ce12f8b45f7"></div> -->
     <h3 class="room-headline w3-center" style="color: #0A5CAD;"><strong>Learn more about each adventure below</strong></h3>
 
 <div class="escape-room-containter hidden-xs" height="400">
 <!-- New Design Area -->
   <!--- Test Code--->
   <div class="escape-room-content">
-     <div class="escape-room-content-cowboy">
-      <a href="/mansion" data-turbolinks="false"><img src="<%= asset_path "portalmansionfinal.png", alt: "Portal Mansion" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity" alt="Portal Mansion"></a>
-      <!-- <img src="<%= asset_path "vine.jpg", alt: "Portal Mansion" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off pulse" alt="Portal Mansion" > -->
+    <div class="escape-room-content-tokyo">
+      <a href="/scare" data-turbolinks="false"><img src="<%= asset_path "red-scare.jpg", alt: "Scare" %>" style="width: 17%;" class="escape-posters w3-round w3-image" alt="Scare" ></a>
       <div class="col2">
+      <h3 class="room-header" style="height: 100%; width: 100%; text-align: left; font-size: 24px;">Red Scare - Available Oct. 9th</h3>
+      <p class="room-content" style="font-size: 16px; height: 100%; width: 100%; background: rgba(181, 34, 43, 0.75);"><br>The Red Scare is our first suspense/thriller adventure, so we recommend it for players over the age of 15 (parental discretion advised). This is also Portal’s first escape room that features live actors. The story revolves around players attempting to escape a Soviet BioTech facility during an ensuing zombie outbreak. All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure! This adventure is only available Friday-Sunday</p>
+    <div style="height: 100%; width: 100%; padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
+         <span class="room-stats w3-large">3-8</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large">Difficulty</span><br>
+         <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large">Duration</span><br>
+         <span class="room-stats w3-large">1 Hour</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large">Rooms</span><br>
+         <span class="room-stats w3-large">3</span>
+       </div>
+   </div>
+   </br>
+    <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; border:1px solid #9A2526; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#9A2526), to(#B5222C));
+ background-image: -webkit-linear-gradient(top, #9A2526, #B5222C);
+ background-image: -moz-linear-gradient(top, #9A2526, #B5222C);
+ background-image: -ms-linear-gradient(top, #9A2526, #B5222C);
+ background-image: -o-linear-gradient(top, #9A2526, #B5222C);
+ background-image: linear-gradient(to bottom, #9A2526, #B5222C);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#9A2526, endColorstr=#B5222C);"class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
+    <!-- <a href="/scare" data-turbolinks="false"><button onclick="/scare" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a> -->
+  </div>
+  </div>
+    <div class="escape-room-content-doll">
+      <img src="<%= asset_path "ragdoll.png", alt: "Voyager" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Voyager" >
+      <div class="col2">
+      <h3 class="room-header" style="text-align: left; font-size: 24px;">Rag Doll</h3>
+      <p class="room-content" style="font-size: 15px; background: rgba(15, 24, 49, 0.75);">The walls of the Rag Doll wing of Portal Mansion howl and creak. The only clues that remain are a trail of mysterious dolls scattered throughout the rooms. This spooky adventure will see your group exploring locations in the mansion like the hedgerow maze, the abandoned toolshed, and a number of hidden passages that have been long forgotten. Search the mansion and find out what became of the missing girl. <br><br>Portal Mansion Notes: Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! This adventure is part of the Portal Mansion trilogy. Each adventure in the trilogy is 60 minutes in length and can be done in any order. All bookings are Private to ensure that we adhere to social distancing best practices. This adventure only explores the first floor of the mansion and is wheelchair accessible.</p>
+    <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(15, 24, 49, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
+         <span class="room-stats w3-large">4-10</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large">Difficulty</span><br>
+         <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large">Duration</span><br>
+         <span class="room-stats w3-large">1 Hour</span>
+       </div>
+       <div class="w3-quarter w3-section">
+         <span class="room-stats w3-large">Rooms</span><br>
+         <span class="room-stats w3-large">?</span>
+       </div>
+     </div>
+     </br>
+     <div class="button-container">
+    <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; float: left !important; border:1px solid #05102E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E263E), to(#05102E));
+ background-image: -webkit-linear-gradient(top, #1E263E, #05102E);
+ background-image: -moz-linear-gradient(top, #1E263E, #05102E);
+ background-image: -ms-linear-gradient(top, #1E263E, #05102E);
+ background-image: -o-linear-gradient(top, #1E263E, #05102E);
+ background-image: linear-gradient(to bottom, #1E263E, #05102E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5edd6ba47e4a0a272e4d22d6">Book Now</div>
+ <a href="/mansion" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #05102E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E263E), to(#05102E));
+background-image: -webkit-linear-gradient(top, #1E263E, #05102E);
+background-image: -moz-linear-gradient(top, #1E263E, #05102E);
+background-image: -ms-linear-gradient(top, #1E263E, #05102E);
+background-image: -o-linear-gradient(top, #1E263E, #05102E);
+background-image: linear-gradient(to bottom, #1E263E, #05102E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
+    <!-- <a href="/mansion" data-turbolinks="false"><button onclick="/mansion" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #1E263E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #35681A; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E263E), to(#05102E));
+   background-image: -webkit-linear-gradient(top, #1E263E, #05102E);
+   background-image: -moz-linear-gradient(top, #1E263E, #05102E);
+   background-image: -ms-linear-gradient(top, #1E263E, #05102E);
+   background-image: -o-linear-gradient(top, #1E263E, #05102E);
+   background-image: linear-gradient(to bottom, #1E263E, #05102E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a> -->
+    </div>
+  </div>
+  </div>
+    <div class="escape-room-content-woods" style="min-width: 80%;">
+        <img src="<%= asset_path "lostwoods.png", alt: "Tomb" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" >
+      <div class="col2">
+        <h3 class="room-header" style="text-align: left; font-size: 24px;">Lost Woods</h3>
+        <p class="room-content" style="font-size: 15px; background: rgba(30, 51, 39, 0.75);">Roots and vines of unknown origin have begun spreading through the Lost Woods wing of Portal Mansion. You and your team must uncover the source of the overgrowth and prevent it from spreading further. Together with your team you will explore the wine cellar, the
+moonlit courtyard, and the chambers beyond the hidden wardrobe. Tread carefully through the forest and don’t wander too far off the path. <br><br>Portal Mansion Notes: Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! This adventure is part of the Portal Mansion trilogy. Each adventure in the trilogy is 60 minutes in length and can be done in any order. All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(30, 51, 39, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
+           <span class="room-stats w3-large">4-10</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large">Difficulty</span><br>
+           <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large">Duration</span><br>
+           <span class="room-stats w3-large">1 Hour</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large">Rooms</span><br>
+           <span class="room-stats w3-large">?</span>
+         </div>
+       </div>
+       </br>
+      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; float: left !important; border:1px solid #57665E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E3327), to(#1E3327));
+   background-image: -webkit-linear-gradient(top, #1E3327, #1E3327);
+   background-image: -moz-linear-gradient(top, #1E3327, #1E3327);
+   background-image: -ms-linear-gradient(top, #1E3327, #1E3327);
+   background-image: -o-linear-gradient(top, #1E3327, #1E3327);
+   background-image: linear-gradient(to bottom, #1E3327, #1E3327);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5edd6b9b7330bb3a9c6f5970">Book Now</div>
+   <a href="/mansion" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #57665E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E3327), to(#1E3327));
+background-image: -webkit-linear-gradient(top, #1E3327, #1E3327);
+background-image: -moz-linear-gradient(top, #1E3327, #1E3327);
+background-image: -ms-linear-gradient(top, #1E3327, #1E3327);
+background-image: -o-linear-gradient(top, #1E3327, #1E3327);
+background-image: linear-gradient(to bottom, #1E3327, #1E3327);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
+      <!-- <a href="/mansion" data-turbolinks="false"><button onclick="/mansion" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #57665E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #35681A; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E3327), to(#1E3327));
+     background-image: -webkit-linear-gradient(top, #1E3327, #1E3327);
+     background-image: -moz-linear-gradient(top, #1E3327, #1E3327);
+     background-image: -ms-linear-gradient(top, #1E3327, #1E3327);
+     background-image: -o-linear-gradient(top, #1E3327, #1E3327);
+     background-image: linear-gradient(to bottom, #1E3327, #1E3327);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a> -->
+    </div>​
+    </div>
+        <div class="escape-room-content-bride">
+        <a href="/mansion" data-turbolinks="false"><img src="<%= asset_path "bridesgame.png", alt: "Outlaw" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity" alt="Outlaw" ></a>
+        <div class="col2">
+        <h3 class="room-header" style="text-align: left; font-size: 24px;">The Bride's Game</h3>
+        <p class="room-content" style="font-size: 15px; background: rgba(125, 31, 30, 0.75);">Lights, Camera, Action! It’s showtime and you’re the star in the Bride’s Game wing of Portal Mansion. You and your team will be stepping into the spotlight as you complete a series of artistic challenges and navigate through some of the most glamourous parts of the mansion. Together you will explore the theater, the bakery, and the mirrored ballroom. Every actor has a part to play, give them a show they aren’t soon to forget! <br><br>Portal Mansion Notes: Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! This adventure is part of the Portal Mansion trilogy. Each adventure in the trilogy is 60 minutes in length and can be done in any order. All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(125, 31, 30, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
+           <span class="room-stats w3-large">4-10</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large">Difficulty</span><br>
+           <span><img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large">Duration</span><br>
+           <span class="room-stats w3-large">1 Hour</span>
+         </div>
+         <div class="w3-quarter w3-section">
+           <span class="room-stats w3-large">Rooms</span><br>
+           <span class="room-stats w3-large">?</span>
+         </div>
+       </div>
+       </br>
+      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; float: left !important; border:1px solid #7D1F1E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#7D1F1E), to(#7D1F1E));
+   background-image: -webkit-linear-gradient(top, #7D1F1E, #7D1F1E);
+   background-image: -moz-linear-gradient(top, #7D1F1E, #7D1F1E);
+   background-image: -ms-linear-gradient(top, #7D1F1E, #7D1F1E);
+   background-image: -o-linear-gradient(top, #7D1F1E, #7D1F1E);
+   background-image: linear-gradient(to bottom, #7D1F1E, #7D1F1E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5edd6bb223a34817a61aece4">Book Now</div>
+   <a href="/mansion" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #7D1F1E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#7D1F1E), to(#7D1F1E));
+background-image: -webkit-linear-gradient(top, #7D1F1E, #7D1F1E);
+background-image: -moz-linear-gradient(top, #7D1F1E, #7D1F1E);
+background-image: -ms-linear-gradient(top, #7D1F1E, #7D1F1E);
+background-image: -o-linear-gradient(top, #7D1F1E, #7D1F1E);
+background-image: linear-gradient(to bottom, #7D1F1E, #7D1F1E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
+      <!-- <a href="/mansion" data-turbolinks="false"><button onclick="/mansion" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #7D1F1E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #35681A; background-image: -webkit-gradient(linear, left top, left bottom, from(#7D1F1E), to(#7D1F1E));
+     background-image: -webkit-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: -moz-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: -ms-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: -o-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: linear-gradient(to bottom, #7D1F1E, #7D1F1E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a> -->
+  </div>
+    </div>
+    <!-- <div class="bgimg-6"> -->
+     <!-- <div class="escape-room-content-cowboy">
+      <a href="/mansion" data-turbolinks="false"><img src="<%= asset_path "portalmansionfinal.png", alt: "Portal Mansion" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity" alt="Portal Mansion"></a> -->
+      <!-- <img src="<%= asset_path "vine.jpg", alt: "Portal Mansion" %>" style="width: 17%;" class="escape-posters w3-round w3-image w3-hover-opacity-off pulse" alt="Portal Mansion" > -->
+      <!-- <div class="col2">
       <h3 class="room-header" style="text-align: left; font-size: 24px; color: #FDCF81;">Portal Mansion</h3>
-      <p class="room-content" style="color: #FDCF81;">Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! Inside the Mansion you will be retracing the steps of 3 different family members that called this mansion home. This adventure will be comprised of 3 different adventures, each 60 minutes in length. It can be booked as individual adventure for up to 10 players, or as a giant teambuilding adventure for up to 30 players. All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
+      <p class="room-content" style="color: #FDCF81; background: rgba(53, 104, 26, 0.75);">Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! Inside the Mansion you will be retracing the steps of 3 different family members that called this mansion home. This adventure will be comprised of 3 different adventures, each 60 minutes in length. It can be booked as individual adventure for up to 10 players, or as a giant teambuilding adventure for up to 30 players. All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
     <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(53, 104, 26, 0.75);" class="w3-center w3-padding-8 room-stats-container">
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large" style="padding-left: 5px; color: #FDCF81;">Participants</span><br>
@@ -2047,37 +2343,9 @@ background-image: -o-linear-gradient(top, #35681A, #008c00);
 background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
     </div>
   </div>
-  </div>
+  </div> -->
+  <!-- </div> -->
     <!-- orginal code -->
-    <div class="escape-room-content-tokyo w3-row">
-      <a href="/scare" data-turbolinks="false"><img src="<%= asset_path "red-scare.jpg", alt: "Scare" %>" style="width: 17%;" class="escape-posters w3-round w3-image" alt="Scare" ></a>
-      <div class="col2">
-      <h3 class="room-header" style="height: 100%; width: 100%; text-align: left; font-size: 24px;">Red Scare - Available Oct. 9th</h3>
-      <p class="room-content" style="font-size: 16px; height: 100%; width: 100%;">The Red Scare is our first suspense/thriller adventure, so we recommend it for players over the age of 15 (parental discretion advised). This is also Portal’s first escape room that features live actors. The story revolves around players attempting to escape a Soviet BioTech facility during an ensuing zombie outbreak. All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure! This adventure is only available Friday-Sunday</p>
-    <div style="height: 100%; width: 100%; padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(181, 34, 43, 1);" class="w3-center w3-padding-8 room-stats-container">
-       <div class="w3-quarter w3-section">
-         <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
-         <span class="room-stats w3-large">3-8</span>
-       </div>
-       <div class="w3-quarter w3-section">
-         <span class="room-stats w3-large">Difficulty</span><br>
-         <span><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 65%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-top:-18px;" class="difficulty pulse" alt="Difficulty" ></span>
-       </div>
-       <div class="w3-quarter w3-section">
-         <span class="room-stats w3-large">Duration</span><br>
-         <span class="room-stats w3-large">1 Hour</span>
-       </div>
-       <div class="w3-quarter w3-section">
-         <span class="room-stats w3-large">Rooms</span><br>
-         <span class="room-stats w3-large">3</span>
-       </div>
-   </div>
-   </br>
-    <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;"class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
-    <!-- <a href="/scare" data-turbolinks="false"><button onclick="/scare" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a> -->
-  </div>
-  </div>
-
     <div class="escape-room-content-voyager">
       <!-- <div class="moon">
         <div>
@@ -2090,7 +2358,7 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
       </div>
       <div class="col2">
       <h3 class="room-header" style="text-align: left; font-size: 24px;">Voyager</h3>
-      <p class="room-content">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space. ------ Recommended Age: 15+.  All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
+      <p class="room-content" style="background: rgba(118, 81, 126, 0.75);">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space. <br><br>All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure! Recommended Age: 15+</p>
     <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(118, 81, 126, 0.75);" class="w3-center w3-padding-8 room-stats-container">
        <div class="w3-quarter w3-section">
          <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
@@ -2111,8 +2379,20 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
      </div>
      </br>
      <div class="button-container">
-    <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5b786610c581e1621c8b4591">Book Now</div>
-    <a href="/voyager" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
+    <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; border:1px solid #8B6584; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8B6584), to(#76507D));
+ background-image: -webkit-linear-gradient(top, #8B6584, #76507D);
+ background-image: -moz-linear-gradient(top, #8B6584, #76507D);
+ background-image: -ms-linear-gradient(top, #8B6584, #76507D);
+ background-image: -o-linear-gradient(top, #8B6584, #76507D);
+ background-image: linear-gradient(to bottom, #8B6584, #76507D);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8B6584, endColorstr=#76507D);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5b786610c581e1621c8b4591">Book Now</div>
+    <a href="/voyager" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #8B6584; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8B6584), to(#76507D));
+ background-image: -webkit-linear-gradient(top, #8B6584, #76507D);
+ background-image: -moz-linear-gradient(top, #8B6584, #76507D);
+ background-image: -ms-linear-gradient(top, #8B6584, #76507D);
+ background-image: -o-linear-gradient(top, #8B6584, #76507D);
+ background-image: linear-gradient(to bottom, #8B6584, #76507D);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8B6584, endColorstr=#76507D);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
     <!-- <div style="display: inline-block !important; width: 20%; margin-left: 150px !important;" ><img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 100%; float: right;" alt="Difficulty" ></div> -->
     </div>
   </div>
@@ -2125,13 +2405,13 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
       </div>
       <div class="col2" style="top: 300px !important; max-height: 100% !important; height: 100% !important; ">
         <h3 class="room-header" style="text-align: left; font-size: 24px; bottom: 50px;">The Tomb of the Gods</h3>
-        <p class="room-content" style="font-size: 16px;">An ancient Aztec temple has been discovered deep in the jungles of Mexico.
+        <p class="room-content" style="font-size: 16px; background: rgba(187, 105, 87, 0.75);">An ancient Aztec temple has been discovered deep in the jungles of Mexico.
       Dr. Wolff, a world renowned and beloved
       archaeologist is leading an expedition to explore the dig site. It’s been a week since our last communication from
       the team. Something odd is going on in that jungle and we are sending you in to solve
       the mystery. Find Wolff, but be careful! Who knows what lies inside those ancient and
-      forgotten walls.  All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
-      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(187, 105, 87, 1);" class="w3-center w3-padding-8 room-stats-container">
+      forgotten walls. <br><br>All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(187, 105, 87, 0.75);" class="w3-center w3-padding-8 room-stats-container">
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
            <span class="room-stats w3-large">3-10</span>
@@ -2150,8 +2430,20 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
          </div>
        </div>
        </br>
-      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
-      <a href="/tomb" data-turbolinks="false"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 5%;" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
+      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; border:1px solid #8E5142; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8E5142), to(#BC6958));
+   background-image: -webkit-linear-gradient(top, #8E5142, #BC6958);
+   background-image: -moz-linear-gradient(top, #8E5142, #BC6958);
+   background-image: -ms-linear-gradient(top, #8E5142, #BC6958);
+   background-image: -o-linear-gradient(top, #8E5142, #BC6958);
+   background-image: linear-gradient(to bottom, #8E5142, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8E5142, endColorstr=#BC6958);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
+      <a href="/tomb" data-turbolinks="false"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 5%; border:1px solid #8B6584; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8E5142), to(#BC6958));
+   background-image: -webkit-linear-gradient(top, #8E5142, #BC6958);
+   background-image: -moz-linear-gradient(top, #8E5142, #BC6958);
+   background-image: -ms-linear-gradient(top, #8E5142, #BC6958);
+   background-image: -o-linear-gradient(top, #8E5142, #BC6958);
+   background-image: linear-gradient(to bottom, #8E5142, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8E5142, endColorstr=#BC6958);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
     </div>​
     </div>
         <div class="escape-room-content-outlaw">
@@ -2165,13 +2457,13 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
         <a href="/western" data-turbolinks="false"><img src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw" %>" style="width: 17%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity" alt="Outlaw" ></a>
         <div class="col2">
         <h3 class="room-header" style="text-align: left; font-size: 24px;">The Outlaw of El Paso</h3>
-        <p class="room-content" style="font-size: 16px;">The most dangerous outlaw in the country rode into town last night.
+        <p class="room-content" style="font-size: 16px; background: rgba(234, 71, 46, 0.75)">The most dangerous outlaw in the country rode into town last night.
       Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
       nearby bank vault was recently robbed! I believe there’s a connection between these
       events. Sheriff Dubell is out of town, so it’s up to you to track down the two men and the
       missing gold. The law is in your hands now partner, saddle up and deliver some wild
-      west justice!  All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
-      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(234, 71, 46, 1);" class="w3-center w3-padding-8 room-stats-container">
+      west justice!  <br><br>All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+      <div style="padding-bottom: 100px !important; margin-bottom: 15px; background: rgba(234, 71, 46, 0.75);" class="w3-center w3-padding-8 room-stats-container">
          <div class="w3-quarter w3-section">
            <span class="room-stats w3-large" style="padding-left: 5px;">Participants</span><br>
            <span class="room-stats w3-large">3-10</span>
@@ -2190,8 +2482,20 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
          </div>
        </div>
        </br>
-      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important;" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
-    <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px;" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
+      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 0 auto !important; border:1px solid #B93A26; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#B93A26), to(#BC6958));
+   background-image: -webkit-linear-gradient(top, #B93A26, #BC6958);
+   background-image: -moz-linear-gradient(top, #B93A26, #BC6958);
+   background-image: -ms-linear-gradient(top, #B93A26, #BC6958);
+   background-image: -o-linear-gradient(top, #B93A26, #BC6958);
+   background-image: linear-gradient(to bottom, #B93A26, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#B93A26, endColorstr=#BC6958);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
+    <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 20%; margin-left: 50px; border:1px solid #B93A26; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#B93A26), to(#BC6958));
+ background-image: -webkit-linear-gradient(top, #B93A26, #BC6958);
+ background-image: -moz-linear-gradient(top, #B93A26, #BC6958);
+ background-image: -ms-linear-gradient(top, #B93A26, #BC6958);
+ background-image: -o-linear-gradient(top, #B93A26, #BC6958);
+ background-image: linear-gradient(to bottom, #B93A26, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#B93A26, endColorstr=#BC6958);" class="xola-custom room-buttons-loc w3-hover-opacity">Learn More</button></a>
   </div>
     </div>
     <!-- <div class="escape-room-content-tokyo w3-row">
@@ -2230,54 +2534,6 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
   <!-- New Design Area -->
     <div class="escape-room-content">
       <!--Test Mobile-->
-      <div class="escape-room-content-cowboy" style="min-width: 80%;">
-        <div class="tomb-image">
-          <a href="/mansion" data-turbolinks="false"><img src="<%= asset_path "portalmansionfinal.png", alt: "Tomb" %>" style="width: 100%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" ></a>
-        </div>
-        <div class="col2">
-          <h3 class="room-header" style="text-align: center; font-size: 24px; color: #FDCF81;">Portal Mansion <br> Available June 21st!</h3>
-          <p class="room-content" style="font-size: 14px; color: #FDCF81;">Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! Inside the Mansion you will be retracing the steps of 3 different family members that called this mansion home. This adventure will be comprised of 3 different adventures, each 60 minutes in length. It can be booked as individual adventure for up to 10 players, or as a giant teambuilding adventure for up to 30 players. <br><b></b><br>All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
-        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(53, 104, 26, 0.75);" class="w3-center w3-padding-8 room-stats-container">
-           <div class="w3-quarter w3-section">
-             <span class="room-stats" style="padding-left: 5px; color: #FDCF81;">Players</span><br>
-             <span class="room-stats" style="padding-left: 5px; color: #FDCF81;">4-30</span>
-           </div>
-           <!-- <div class="w3-quarter w3-section">
-             <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
-             <span class="room-stats" style="font-size: 11px;">Intermediate</span>
-           </div> -->
-           <div class="w3-quarter w3-section">
-             <span class="room-stats" style="font-size: 15px; padding-left: 5px; color: #FDCF81;">Length</span><br>
-             <span class="room-stats" style="font-size: 15px; padding-left: 3px; color: #FDCF81;">1 hour</span>
-           </div>
-           <div class="w3-quarter w3-section">
-             <span class="room-stats" style="padding-left: 15px; color: #FDCF81;">Rooms</span><br>
-             <span class="room-stats" style="padding-left: 15px; color: #FDCF81;">?</span>
-           </div>
-         </div>
-         <div style="float: center;">
-           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; color: #FDCF81;">Adventure Difficulty</p>
-         </div>
-         <div style="float: right;">
-           <img src="<%= asset_path "3.5-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
-         </div>
-        <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important; float: left !important; border:1px solid #34740e; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
-     background-color: #35681A; background-image: -webkit-gradient(linear, left top, left bottom, from(#35681A), to(#008c00));
-     background-image: -webkit-linear-gradient(top, #35681A, #008c00);
-     background-image: -moz-linear-gradient(top, #35681A, #008c00);
-     background-image: -ms-linear-gradient(top, #35681A, #008c00);
-     background-image: -o-linear-gradient(top, #35681A, #008c00);
-     background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5edd75526f654427430bdf2c">Book Now</div>
-     <a href="/mansion" data-turbolinks="false"><button onclick="/mansion" data-turbolinks="false" style="font-size: 16px !important; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right; border:1px solid #34740e; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
-    background-color: #35681A; background-image: -webkit-gradient(linear, left top, left bottom, from(#35681A), to(#008c00));
-    background-image: -webkit-linear-gradient(top, #35681A, #008c00);
-    background-image: -moz-linear-gradient(top, #35681A, #008c00);
-    background-image: -ms-linear-gradient(top, #35681A, #008c00);
-    background-image: -o-linear-gradient(top, #35681A, #008c00);
-    background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc">Learn More</button></a>
-      </div>​
-      </div>
-      <!--Test-->
       <div class="escape-room-content-tokyo w3-row">
       <div class="tokyo-image">
         <a href="/scare" data-turbolinks="false"><img src="<%= asset_path "red-scare.jpg", alt: "Scare" %>" style="width: 100%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Scare" ></a>
@@ -2309,18 +2565,170 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
    <div style="float: right;">
      <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
    </div>
-    <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 29%; !important;"class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
+    <div style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 29%; !important; border:1px solid #9A2526; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#9A2526), to(#B5222C));
+ background-image: -webkit-linear-gradient(top, #9A2526, #B5222C);
+ background-image: -moz-linear-gradient(top, #9A2526, #B5222C);
+ background-image: -ms-linear-gradient(top, #9A2526, #B5222C);
+ background-image: -o-linear-gradient(top, #9A2526, #B5222C);
+ background-image: linear-gradient(to bottom, #9A2526, #B5222C);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#9A2526, endColorstr=#B5222C);"class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f362e0179876388b45e8">Book Now</div>
     <!-- <a href="/scare" data-turbolinks="false"><button onclick="/scare" data-turbolinks="false" style="height: 100%; font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right;" class="xola-custom room-buttons-loc">Learn More</button></a> -->
   </div>
   </div>
+
+      <div class="escape-room-content-doll" style="min-width: 80%;">
+        <div class="tomb-image">
+          <a href="/mansion" data-turbolinks="false"><img src="<%= asset_path "ragdoll.png", alt: "RagDoll" %>" style="width: 100%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" ></a>
+        </div>
+        <div class="col2">
+          <!-- <h3 class="room-header" style="text-align: center; font-size: 24px; color: #FDCF81;">Portal Mansion <br> Available June 21st!</h3> -->
+          <p class="room-content" style="font-size: 14px; background: rgba(15, 24, 49, 0.75);"><br>The walls of the Rag Doll wing of Portal Mansion howl and creak. The only clues that remain are a trail of mysterious dolls scattered throughout the rooms. This spooky adventure will see your group exploring locations in the mansion like the hedgerow maze, the abandoned toolshed, and a number of hidden passages that have been long forgotten. Search the mansion and find out what became of the missing girl. <br><br>Portal Mansion Notes: Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! This adventure is part of the Portal Mansion trilogy. Each adventure in the trilogy is 60 minutes in length and can be done in any order. All bookings are Private to ensure that we adhere to social distancing best practices. This adventure only explores the first floor of the mansion and is wheelchair accessible.</p>
+        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(15, 24, 49, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 5px;">Players</span><br>
+             <span class="room-stats" style="padding-left: 5px;">4-10</span>
+           </div>
+           <!-- <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
+             <span class="room-stats" style="font-size: 11px;">Intermediate</span>
+           </div> -->
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 15px; padding-left: 5px;">Length</span><br>
+             <span class="room-stats" style="font-size: 15px; padding-left: 3px;">1 hour</span>
+           </div>
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+             <span class="room-stats" style="padding-left: 15px;">?</span>
+           </div>
+         </div>
+         <div style="float: center;">
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; background: rgba(15, 24, 49, 0.75);">Adventure Difficulty</p>
+         </div>
+         <div style="float: right;">
+           <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
+         </div>
+        <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important; float: left !important; border:1px solid #1E263E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #1E263E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E263E), to(#05102E));
+     background-image: -webkit-linear-gradient(top, #1E263E, #05102E);
+     background-image: -moz-linear-gradient(top, #1E263E, #05102E);
+     background-image: -ms-linear-gradient(top, #1E263E, #05102E);
+     background-image: -o-linear-gradient(top, #1E263E, #05102E);
+     background-image: linear-gradient(to bottom, #1E263E, #05102E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#1E263E, endColorstr=#05102E);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5edd6ba47e4a0a272e4d22d6">Book Now</div>
+     <a href="/mansion" data-turbolinks="false"><button onclick="/mansion" data-turbolinks="false" style="font-size: 16px !important; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right; border:1px solid #1E263E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+  background-color: #1E263E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E263E), to(#05102E));
+  background-image: -webkit-linear-gradient(top, #1E263E, #05102E);
+  background-image: -moz-linear-gradient(top, #1E263E, #05102E);
+  background-image: -ms-linear-gradient(top, #1E263E, #05102E);
+  background-image: -o-linear-gradient(top, #1E263E, #05102E);
+  background-image: linear-gradient(to bottom, #1E263E, #05102E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#1E263E, endColorstr=#05102E);" class="xola-custom room-buttons-loc">Learn More</button></a>
+      </div>​
+      </div>
+
+      <div class="escape-room-content-woods" style="min-width: 80%;">
+        <div class="tomb-image">
+          <a href="/mansion" data-turbolinks="false"><img src="<%= asset_path "lostwoods.png", alt: "RagDoll" %>" style="width: 100%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" ></a>
+        </div>
+        <div class="col2">
+          <!-- <h3 class="room-header" style="text-align: center; font-size: 24px; color: #FDCF81;">Portal Mansion <br> Available June 21st!</h3> -->
+          <p class="room-content" style="font-size: 14px; background: rgba(30, 51, 39, 0.75);"><br>Roots and vines of unknown origin have begun spreading through the Lost Woods wing of Portal Mansion. You and your team must uncover the source of the overgrowth and prevent it from spreading further. Together with your team you will explore the wine cellar, the
+  moonlit courtyard, and the chambers beyond the hidden wardrobe. Tread carefully through the forest and don’t wander too far off the path. <br><br>Portal Mansion Notes: Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! This adventure is part of the Portal Mansion trilogy. Each adventure in the trilogy is 60 minutes in length and can be done in any order. All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(30, 51, 39, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 5px;">Players</span><br>
+             <span class="room-stats" style="padding-left: 5px;">4-10</span>
+           </div>
+           <!-- <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
+             <span class="room-stats" style="font-size: 11px;">Intermediate</span>
+           </div> -->
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 15px; padding-left: 5px;">Length</span><br>
+             <span class="room-stats" style="font-size: 15px; padding-left: 3px;">1 hour</span>
+           </div>
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+             <span class="room-stats" style="padding-left: 15px;">?</span>
+           </div>
+         </div>
+         <div style="float: center;">
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; background: rgba(30, 51, 39, 0.75);">Adventure Difficulty</p>
+         </div>
+         <div style="float: right;">
+           <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
+         </div>
+        <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important; float: left !important; border:1px solid #57665E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E3327), to(#1E3327));
+     background-image: -webkit-linear-gradient(top, #1E3327, #1E3327);
+     background-image: -moz-linear-gradient(top, #1E3327, #1E3327);
+     background-image: -ms-linear-gradient(top, #1E3327, #1E3327);
+     background-image: -o-linear-gradient(top, #1E3327, #1E3327);
+     background-image: linear-gradient(to bottom, #1E3327, #1E3327);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5edd6b9b7330bb3a9c6f5970">Book Now</div>
+     <a href="/mansion" data-turbolinks="false"><button onclick="/mansion" data-turbolinks="false" style="font-size: 16px !important; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right; border:1px solid #57665E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+  background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#1E3327), to(#1E3327));
+  background-image: -webkit-linear-gradient(top, #1E3327, #1E3327);
+  background-image: -moz-linear-gradient(top, #1E3327, #1E3327);
+  background-image: -ms-linear-gradient(top, #1E3327, #1E3327);
+  background-image: -o-linear-gradient(top, #1E3327, #1E3327);
+  background-image: linear-gradient(to bottom, #1E3327, #1E3327);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc">Learn More</button></a>
+      </div>​
+      </div>
+
+      <div class="escape-room-content-bride" style="min-width: 80%;">
+        <div class="tomb-image">
+          <a href="/mansion" data-turbolinks="false"><img src="<%= asset_path "bridesgame.png", alt: "RagDoll" %>" style="width: 100%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" ></a>
+        </div>
+        <div class="col2">
+          <!-- <h3 class="room-header" style="text-align: center; font-size: 24px; color: #FDCF81;">Portal Mansion <br> Available June 21st!</h3> -->
+          <p class="room-content" style="font-size: 14px; background: rgba(125, 31, 30, 0.75);"><br>Lights, Camera, Action! It’s showtime and you’re the star in the Bride’s Game wing of Portal Mansion. You and your team will be stepping into the spotlight as you complete a series of artistic challenges and navigate through some of the most glamourous parts of the mansion. Together you will explore the theater, the bakery, and the mirrored ballroom. Every actor has a part to play, give them a show they aren’t soon to forget! <br><br>Portal Mansion Notes: Brand new puzzles and surprises await your team in this massive multi-room/multi-floor adventure! This adventure is part of the Portal Mansion trilogy. Each adventure in the trilogy is 60 minutes in length and can be done in any order. All bookings are Private to ensure that we adhere to social distancing best practices. No other groups will be a part of your adventure!</p>
+        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(125, 31, 30, 0.75);" class="w3-center w3-padding-8 room-stats-container">
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 5px;">Players</span><br>
+             <span class="room-stats" style="padding-left: 5px;">4-10</span>
+           </div>
+           <!-- <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 11px;">Difficulty</span><br>
+             <span class="room-stats" style="font-size: 11px;">Intermediate</span>
+           </div> -->
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="font-size: 15px; padding-left: 5px;">Length</span><br>
+             <span class="room-stats" style="font-size: 15px; padding-left: 3px;">1 hour</span>
+           </div>
+           <div class="w3-quarter w3-section">
+             <span class="room-stats" style="padding-left: 15px;">Rooms</span><br>
+             <span class="room-stats" style="padding-left: 15px;">?</span>
+           </div>
+         </div>
+         <div style="float: center;">
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; background: rgba(125, 31, 30, 0.75);">Adventure Difficulty</p>
+         </div>
+         <div style="float: right;">
+           <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
+         </div>
+        <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important; float: left !important; border:1px solid #7D1F1E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#7D1F1E), to(#7D1F1E));
+     background-image: -webkit-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: -moz-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: -ms-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: -o-linear-gradient(top, #7D1F1E, #7D1F1E);
+     background-image: linear-gradient(to bottom, #7D1F1E, #7D1F1E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-checkout xola-custom room-buttons-loc w3-hover-opacity" data-button-id="5edd6bb223a34817a61aece4">Book Now</div>
+     <a href="/mansion" data-turbolinks="false"><button onclick="/mansion" data-turbolinks="false" style="font-size: 16px !important; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right; border:1px solid #7D1F1E; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+  background-color: #05102E; background-image: -webkit-gradient(linear, left top, left bottom, from(#7D1F1E), to(#7D1F1E));
+  background-image: -webkit-linear-gradient(top, #7D1F1E, #7D1F1E);
+  background-image: -moz-linear-gradient(top, #7D1F1E, #7D1F1E);
+  background-image: -ms-linear-gradient(top, #7D1F1E, #7D1F1E);
+  background-image: -o-linear-gradient(top, #7D1F1E, #7D1F1E);
+  background-image: linear-gradient(to bottom, #7D1F1E, #7D1F1E);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);" class="xola-custom room-buttons-loc">Learn More</button></a>
+      </div>​
+      </div>
+      <!--Test-->
 
       <div class="escape-room-content-voyager">
         <div class="voyager-image">
           <a href="/voyager" data-turbolinks="false"><img src="<%= asset_path "voyager_final.jpg", alt: "Voyager" %>" style="width: 100%;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Voyager" ></a>
         </div>
         <div class="col2">
-        <h3 class="room-header" style="text-align: center; font-size: 24px;">Voyager</h3>
-        <p class="room-content">13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space.<br><b></b><br>All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
+        <!-- <h3 class="room-header" style="text-align: center; font-size: 24px;">Voyager</h3> -->
+        <p class="room-content" style="background: rgba(118, 81, 126, 0.75);"><br>13 billion miles away from earth drifts a spacecraft known as Voyager One. You and your crew awaken from an extended cryosleep with a serious case of amnesia and no contact with mission control. With little knowledge of what to do, you and your crew must rely on a number of artificial superintelligent robots for guidance. Like all systems aboard the Voyager, these AIs are showing signs of deterioration. You must work together as a team to survive and track mysterious signals coming from the deepest reaches of interstellar space.<br><b></b><br>All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
       </div>
       <div class="col3">
       <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(118, 81, 126, 0.75);" class="w3-center w3-padding-8 room-stats-container">
@@ -2345,7 +2753,7 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
        <!-- Test Area -->
        <!-- <div style=" margin-bottom: 15px; background: rgba(118, 81, 126, 0.75); width: 100%;" class="w3-center w3-padding-8 room-stats-container"> -->
         <div style="float: center;">
-          <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+          <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; background: rgba(118, 81, 126, 0.75);">Adventure Difficulty</p>
         </div>
         <div style="float: right;">
           <img src="<%= asset_path "4-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
@@ -2353,8 +2761,20 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
        <!-- </div> -->
        <!-- Test Area -->
        <div class="button-container">
-      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5b786610c581e1621c8b4591">Book Now</div>
-      <a href="/voyager" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 16px !important; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right;" class="xola-custom room-buttons-loc">Learn More</button></a>
+      <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important; border:1px solid #8B6584; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8B6584), to(#76507D));
+   background-image: -webkit-linear-gradient(top, #8B6584, #76507D);
+   background-image: -moz-linear-gradient(top, #8B6584, #76507D);
+   background-image: -ms-linear-gradient(top, #8B6584, #76507D);
+   background-image: -o-linear-gradient(top, #8B6584, #76507D);
+   background-image: linear-gradient(to bottom, #8B6584, #76507D);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8B6584, endColorstr=#76507D);" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5b786610c581e1621c8b4591">Book Now</div>
+      <a href="/voyager" data-turbolinks="false"><button onclick="/voyager" data-turbolinks="false" style="font-size: 16px !important; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right; border:1px solid #8B6584; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8B6584), to(#76507D));
+   background-image: -webkit-linear-gradient(top, #8B6584, #76507D);
+   background-image: -moz-linear-gradient(top, #8B6584, #76507D);
+   background-image: -ms-linear-gradient(top, #8B6584, #76507D);
+   background-image: -o-linear-gradient(top, #8B6584, #76507D);
+   background-image: linear-gradient(to bottom, #8B6584, #76507D);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8B6584, endColorstr=#76507D);" class="xola-custom room-buttons-loc">Learn More</button></a>
       </div>
     </div>
     </div>
@@ -2363,14 +2783,14 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
           <a href="/tomb" data-turbolinks="false"><img src="<%= asset_path "aztec_final.jpg", alt: "Tomb" %>" style="width: 100%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Tomb" ></a>
         </div>
         <div class="col2">
-          <h3 class="room-header" style="text-align: center; font-size: 24px;">The Tomb of the Gods</h3>
-          <p class="room-content" style="font-size: 16px;">An ancient Aztec temple has been discovered deep in the jungles of Mexico.
+          <!-- <h3 class="room-header" style="text-align: center; font-size: 24px;">The Tomb of the Gods</h3> -->
+          <p class="room-content" style="font-size: 16px; background: rgba(187, 105, 87, 0.75);"><br>An ancient Aztec temple has been discovered deep in the jungles of Mexico.
         Dr. Wolff, a world renowned and beloved
         archaeologist is leading an expedition to explore the dig site. It’s been a week since our last communication from
         the team. Something odd is going on in that jungle and we are sending you in to solve
         the mystery. Find Wolff, but be careful! Who knows what lies inside those ancient and
         forgotten walls.<br><b></b><br>All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
-        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(187, 105, 87, 1);" class="w3-center w3-padding-8 room-stats-container">
+        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(187, 105, 87, 0.75);" class="w3-center w3-padding-8 room-stats-container">
            <div class="w3-quarter w3-section">
              <span class="room-stats" style="padding-left: 5px;">Players</span><br>
              <span class="room-stats" style="padding-left: 5px;">3-10</span>
@@ -2389,13 +2809,25 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
            </div>
          </div>
          <div style="float: center;">
-           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; background: rgba(187, 105, 87, 0.75);">Adventure Difficulty</p>
          </div>
          <div style="float: right;">
            <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
          </div>
-        <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
-        <a href="/tomb"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right;" class="xola-custom room-buttons-loc">Learn More</button></a>
+        <div style="font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; margin-left: 15px !important; border:1px solid #8E5142; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8E5142), to(#BC6958));
+     background-image: -webkit-linear-gradient(top, #8E5142, #BC6958);
+     background-image: -moz-linear-gradient(top, #8E5142, #BC6958);
+     background-image: -ms-linear-gradient(top, #8E5142, #BC6958);
+     background-image: -o-linear-gradient(top, #8E5142, #BC6958);
+     background-image: linear-gradient(to bottom, #8E5142, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8E5142, endColorstr=#BC6958);" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa1f3546864eab6128b45a8">Book Now</div>
+        <a href="/tomb"><button onclick="/tomb" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; margin-right: 15px !important; float: right; border:1px solid #8E5142; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#8E5142), to(#BC6958));
+     background-image: -webkit-linear-gradient(top, #8E5142, #BC6958);
+     background-image: -moz-linear-gradient(top, #8E5142, #BC6958);
+     background-image: -ms-linear-gradient(top, #8E5142, #BC6958);
+     background-image: -o-linear-gradient(top, #8E5142, #BC6958);
+     background-image: linear-gradient(to bottom, #8E5142, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8E5142, endColorstr=#BC6958);" class="xola-custom room-buttons-loc">Learn More</button></a>
       </div>​
       </div>
           <div class="escape-room-content-outlaw">
@@ -2403,14 +2835,14 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
             <a href="/western" data-turbolinks="false"><img src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw" %>" style="width: 100%; display: inline-block;" class="escape-posters w3-round w3-image w3-hover-opacity-off" alt="Outlaw" ></a>
           </div>
           <div class="col2">
-          <h3 class="room-header" style="text-align: center; font-size: 24px;">The Outlaw of El Paso</h3>
-          <p class="room-content" style="font-size: 16px;">The most dangerous outlaw in the country rode into town last night.
+          <!-- <h3 class="room-header" style="text-align: center; font-size: 24px;">The Outlaw of El Paso</h3> -->
+          <p class="room-content" style="font-size: 16px; background: rgba(234, 71, 46, 0.5);"><br>The most dangerous outlaw in the country rode into town last night.
         Coincidentally, the local saloon owner disappeared around the same time. Moreover, a
         nearby bank vault was recently robbed! I believe there’s a connection between these
         events. Sheriff Dubell is out of town, so it’s up to you to track down the two men and the
         missing gold. The law is in your hands now partner, saddle up and deliver some wild
         west justice!<br><b></b><br>All bookings are Private to ensure that we adhere to physical distancing best practices. No other groups will be a part of your adventure!</p>
-        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(234, 71, 46, 1);" class="w3-center w3-padding-8 room-stats-container">
+        <div style="padding-bottom: 75px !important; margin-bottom: 15px; background: rgba(234, 71, 46, 0.50);" class="w3-center w3-padding-8 room-stats-container">
            <div class="w3-quarter w3-section">
              <span class="room-stats" style="padding-left: 5px;">Players</span><br>
              <span class="room-stats" style="padding-left: 5px;">3-10</span>
@@ -2429,17 +2861,34 @@ background-image: linear-gradient(to bottom, #35681A, #008c00);filter:progid:DXI
            </div>
          </div>
          <div style="float: center;">
-           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px;">Adventure Difficulty</p>
+           <p style="font-size: 18px; text-align: center; margin: 0 auto; float: center; margin-bottom: -25px; background: rgba(234, 71, 46, 0.5);">Adventure Difficulty</p>
          </div>
          <div style="float: right;">
            <img src="<%= asset_path "3.0-portals.png", alt: "Difficulty" %>" style="width: 70%; padding-left: 10px; margin-left: 45px; display: inline-block; margin-bottom: -23px;" class="difficulty pulse" alt="Difficulty" >
          </div>
-        <div style="margin-left: 15px !important; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important;" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
-      <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; float: right; margin-right: 15px !important;" class="xola-custom room-buttons-loc">Learn More</button></a>
+        <div style="margin-left: 15px !important; font-size: 18px; display: inline-block !important; text-align: center; width: 40% !important; border:1px solid #B93A26; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+     background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#B93A26), to(#BC6958));
+     background-image: -webkit-linear-gradient(top, #B93A26, #BC6958);
+     background-image: -moz-linear-gradient(top, #B93A26, #BC6958);
+     background-image: -ms-linear-gradient(top, #B93A26, #BC6958);
+     background-image: -o-linear-gradient(top, #B93A26, #BC6958);
+     background-image: linear-gradient(to bottom, #B93A26, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#B93A26, endColorstr=#BC6958);" class="xola-checkout xola-custom room-buttons-loc" data-button-id="5aa05154cf8b9ca80e8b45e0">Book Now</div>
+      <a href="/western" data-turbolinks="false"><button onclick="/western" data-turbolinks="false" style="font-size: 18px; display: inline-block !important; text-align: center; width: 43% !important; float: right; margin-right: 15px !important; border:1px solid #B93A26; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+   background-color: #0f1831; background-image: -webkit-gradient(linear, left top, left bottom, from(#B93A26), to(#BC6958));
+   background-image: -webkit-linear-gradient(top, #B93A26, #BC6958);
+   background-image: -moz-linear-gradient(top, #B93A26, #BC6958);
+   background-image: -ms-linear-gradient(top, #B93A26, #BC6958);
+   background-image: -o-linear-gradient(top, #B93A26, #BC6958);
+   background-image: linear-gradient(to bottom, #B93A26, #BC6958);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#B93A26, endColorstr=#BC6958);" class="xola-custom room-buttons-loc">Learn More</button></a>
     </div>
       </div>
   </div>
   </div>
+  <!-- <div id="" class="bgimg-6 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">Reviews</span>
+    </div>
+  </div> -->
 <!-- Test Mobile Area End -->
 
 
@@ -2683,7 +3132,7 @@ function showSlides(n) {
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container">
+<div class="bgimg-6 w3-display-container">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
