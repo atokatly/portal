@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -52,6 +53,26 @@ body, html {
     height: 96%;
     color: #777;
     line-height: 1.8;
+}
+#modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.modalconent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 80%;
+    padding: 20px;
+    font-size: 15px;
 }
 
 footer {
@@ -1258,6 +1279,27 @@ and (max-device-width: 1024px){
     width: 1400px;
   }
 
+  #modal {
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 99999;
+      height: 100%;
+      width: 100%;
+  }
+  .modalconent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 80%;
+      padding: 20px;
+      font-size: 20px !important;
+  }
+
   .w3-bar-item{
     font-size: 16px;
   }
@@ -1286,6 +1328,27 @@ and (max-device-width: 1024px){
 @media screen and (min-width: 1600px) {
   .difficulty {
    margin-top: -30px !important;
+ }
+
+ #modal {
+     position: fixed;
+     font-family: Arial, Helvetica, sans-serif;
+     top: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.8);
+     z-index: 99999;
+     height: 100%;
+     width: 100%;
+ }
+ .modalconent {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background: #fff;
+     width: 80%;
+     padding: 20px;
+     font-size: 23px !important;
  }
 
  @keyframes moon {
@@ -1456,6 +1519,27 @@ and (max-device-width: 1024px){
 /* 75% creating issues */
 @media screen and (min-width: 1707px) {
 
+  #modal {
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 99999;
+      height: 100%;
+      width: 100%;
+  }
+  .modalconent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 80%;
+      padding: 20px;
+      font-size: 25px !important;
+  }
+
   @keyframes moon {
   	from {
   		transform: rotate(0deg)
@@ -1608,6 +1692,27 @@ and (max-device-width: 1024px){
   .difficulty {
    margin-top: -34px !important;
    margin-left: 75px !important;
+  }
+
+  #modal {
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 99999;
+      height: 100%;
+      width: 100%;
+  }
+  .modalconent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 80%;
+      padding: 20px;
+      font-size: 25px !important;
   }
 
   @keyframes moon {
@@ -1784,6 +1889,27 @@ and (max-device-width: 1024px){
    margin-top: -40px !important;
    margin-left: 140px !important;
    width: 45% !important;
+  }
+
+  #modal {
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 99999;
+      height: 100%;
+      width: 100%;
+  }
+  .modalconent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 80%;
+      padding: 20px;
+      font-size: 30px !important;
   }
 
   @keyframes moon {
@@ -2069,6 +2195,20 @@ and (max-device-width: 1024px){
 </div></a>
 <!-- <a href="/book" class="w3-bar-item w3-button book-now" data-turbolinks="false"><button>Book now</button></a> -->
 <!-- Container (About Section) -->
+<div id="modal">
+  <div class="modalconent">
+       <h1></h1>
+        <p>Portal Escape Rooms is closed until further notice due to the pandemic. <strong>You can still support Portal Escape Rooms by buying <a href="/voucher" data-turbolinks="false">online gift cards</a> to redeem when we reopen!</strong> We appreciate all your support and look forward to continuing to provide the best Escape Room experience in the Pacific Northwest. <br>We wish you and your familes a very Merry Christmas and a Happy New Year! <br>-The Portal Escape Rooms Team</p>
+      <button id="button">Close</button>
+  </div>
+</div>
+<script>
+window.onload = function () {
+  document.getElementById('button').onclick = function () {
+      document.getElementById('modal').style.display = "none"
+  };
+};
+</script>
 <div class="about-container w3-content w3-container w3-padding-32" id="about">
   <h3 class="company-about w3-center" style="color: #0A5CAD;"><strong>About Portal Escape Rooms</strong></h3>
   <div class="w3-row">
