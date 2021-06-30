@@ -162,8 +162,10 @@ a.roomButton:hover {
    }
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>);
-    min-height: 95% !important;
+    /* background-image: url(<%= asset_path "logo-animated.gif", alt: "Portal Logo"%>); */
+    background-image: url(<%= asset_path "portal-adventures-logo.png", alt: "Portal Logo"%>);
+    min-height: 100% !important;
+    /* width: 100% !important; */
 }
 
 /* Second image (Portfolio) */
@@ -551,7 +553,7 @@ a.roomButton:hover {
     }
 
     .bgimg-1 {
-      background-size: 130%;
+      background-size: 90%;
     }
 }
 
@@ -2274,7 +2276,7 @@ and (max-device-width: 1024px){
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="/" class="w3-hide-small w3-bar-item w3-button" style="width:10%" data-turbolinks="false"><img src="<%= asset_path "favicon.ico", alt: "Portal Logo" %>" style="width: 32%;" class="escape-posters w3-round w3-image portal-bar-logo" alt="Portal Logo" ></a>
+    <a href="/" class="w3-hide-small w3-bar-item w3-button" style="width:10%" data-turbolinks="false"><img src="<%= asset_path "portal-adventures-logo.png", alt: "Portal Logo" %>" style="width: 32%;" class="escape-posters w3-round w3-image portal-bar-logo" alt="Portal Logo" ></a>
     <a href="#escape-rooms" class="w3-bar-item w3-button" style="width:11.15%" data-turbolinks="false"><i class="fa fa-puzzle-piece"></i> Escape Rooms</a>
     <a href="/#reviews" class="w3-bar-item w3-button" style="width:8.15%" data-turbolinks="false"><i class="fa fa-star"></i> Reviews</a>
     <a href="/teams" class="w3-bar-item w3-button" style="width:20%" data-turbolinks="false"><i class="fa fa-users"></i> Team Building - Large Groups</a>
@@ -2335,7 +2337,7 @@ and (max-device-width: 1024px){
 </div></a>
 <!-- <a href="/book" class="w3-bar-item w3-button book-now" data-turbolinks="false"><button>Book now</button></a> -->
 <!-- Container (About Section) -->
-<div id="modal">
+<!-- <div id="modal">
   <div class="modalconent">
        <h1></h1>
         <p>Portal Escape Rooms is currently open for Private Bookings! You can book your adventure now at <a href="/book" data-turbolinks="false">portalescaperooms.net/book</a>. To arrange a custom booking outside our regularly scheduled timeslots, please call us at <element style="color: #0A5CAD;">541-780-6180</element>. <br>We appreciate all your support and look forward to continuing to provide the best Escape Room experience in the Pacific Northwest. <br>-The Portal Escape Rooms Team</p>
@@ -2348,7 +2350,7 @@ window.onload = function () {
       document.getElementById('modal').style.display = "none"
   };
 };
-</script>
+</script> -->
 <div class="about-container w3-content w3-container w3-padding-32" id="about">
   <h3 class="company-about w3-center" style="color: #0A5CAD;"><strong>About Portal Escape Rooms</strong></h3>
   <div class="w3-row">
