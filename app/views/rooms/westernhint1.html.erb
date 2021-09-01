@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-107071906-1', 'auto', {'allowLinker': true});
+	  ga('require', 'linker');
+	  ga('linker:autoLink', ['bookeo.com']);
+	  ga('send', 'pageview');
+
+	</script>
+	<meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="keywords" content="escape rooms, escape room eugene, eugene escape rooms, springfield escape rooms, eugene entertainment, springfield entertainment, escape room eugene oregon, escape room springfield oregon, escape games, oregon escape rooms, escape room oregon, escape rooms eugene, escape rooms springfield, escape rooms oregon, eugene escape games, springfield escape games"> -->
+	<!-- <meta name="description" content="Team Building page for Portal Escape Rooms!"> -->
+	<!-- <link rel="canonical" href="https://www.portalescaperooms.net/faq"> -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<title>Portal Escape Rooms - Outlaw Hints</title>
+	<link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" />
+  </head>
+  <style>
+    *, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  *::after, *::before {
+    content: '';
+  }
+.fa {
+	font-size: 15px;
+}
+.w3-button-item{
+	font-size: 15px;
+}
+  body {
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+  	line-height: 1.8;
+    background-color: #f3f3f5;
+  }
+  body::after {
+    /* overlay layer visible on small devices when the right panel slides in */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 83, 89, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+  }
+  body.cd-overlay::after {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+
+  .bgimg-4 {
+    background-image: url(<%= asset_path "sneak-peek-western-2.jpg", alt: "Western Sneak Peek" %>);
+    min-height: 400px;
+  }
+
+	#myNavbar {
+		padding: 8px 16px;
+    float: center;
+		margin: 0 auto;
+    width: auto;
+    border: none;
+    outline: none;
+    display: block;
+	}
+
+	#myNavbar:hover {
+		color: #000!important;
+    background-color: #ccc!important;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+  @media only screen and (min-width: 768px) {
+    body::after {
+      display: none;
+    }
+  }
+
+  a {
+    color: #0A5CAD;
+    text-decoration: none;
+  }
+
+  /* --------------------------------
+
+  Main components
+
+  -------------------------------- */
+  header {
+    position: relative;
+    height: 150px;
+    line-height: 180px;
+    text-align: center;
+    background-color: #0A5CAD;
+  }
+  header h1 {
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  @media only screen and (min-width: 1024px) {
+    header {
+      height: 240px;
+      line-height: 240px;
+    }
+    header h1 {
+      font-size: 36px;
+      font-size: 2.25rem;
+      font-weight: 300;
+    }
+  }
+
+  .cd-faq {
+    width: 90%;
+    max-width: 1024px;
+    margin: 2em auto;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+		padding-top: 50px;
+  }
+  .cd-faq:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-faq {
+      position: relative;
+      margin: 4em auto;
+      box-shadow: none;
+    }
+  }
+
+  .cd-faq-categories a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 28px 0 16px;
+    background-color: #4e5359;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #ffffff;
+    white-space: nowrap;
+    border-bottom: 1px solid #555b61;
+    text-overflow: ellipsis;
+  }
+  .cd-faq-categories a::before, .cd-faq-categories a::after {
+    /* plus icon on the right */
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    display: inline-block;
+    height: 1px;
+    width: 10px;
+    background-color: #7f868e;
+  }
+  .cd-faq-categories a::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .cd-faq-categories li:last-child a {
+    border-bottom: none;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-faq-categories {
+      width: 20%;
+      float: left;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .cd-faq-categories a {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding-left: 24px;
+      padding: 0 24px;
+      -webkit-transition: background 0.2s, padding 0.2s;
+      -moz-transition: background 0.2s, padding 0.2s;
+      transition: background 0.2s, padding 0.2s;
+    }
+    .cd-faq-categories a::before, .cd-faq-categories a::after {
+      display: none;
+    }
+    .no-touch .cd-faq-categories a:hover {
+      background: #555b61;
+    }
+    .no-js .cd-faq-categories {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .cd-faq-categories {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      z-index: 2;
+    }
+    .cd-faq-categories a::before {
+      /* decorative rectangle on the left visible for the selected item */
+      display: block;
+      top: 0;
+      right: auto;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: #a9c056;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+    .cd-faq-categories .selected {
+      background: #42464b !important;
+    }
+    .cd-faq-categories .selected::before {
+      opacity: 1;
+    }
+    .cd-faq-categories.is-fixed {
+      /* top and left value assigned in jQuery */
+      position: fixed;
+    }
+    .no-js .cd-faq-categories {
+      position: relative;
+    }
+  }
+
+  .cd-faq-items {
+    position: fixed;
+    height: 100%;
+    width: 90%;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 0 5% 1em;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0) translateX(100%);
+    -moz-transform: translateZ(0) translateX(100%);
+    -ms-transform: translateZ(0) translateX(100%);
+    -o-transform: translateZ(0) translateX(100%);
+    transform: translateZ(0) translateX(100%);
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    transition: transform .3s;
+  }
+  .cd-faq-items.slide-in {
+    -webkit-transform: translateZ(0) translateX(0%);
+    -moz-transform: translateZ(0) translateX(0%);
+    -ms-transform: translateZ(0) translateX(0%);
+    -o-transform: translateZ(0) translateX(0%);
+    transform: translateZ(0) translateX(0%);
+  }
+  .no-js .cd-faq-items {
+    position: static;
+    height: auto;
+    width: 100%;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-faq-items {
+      position: static;
+      height: auto;
+      width: 78%;
+      float: right;
+      overflow: visible;
+      -webkit-transform: translateZ(0) translateX(0);
+      -moz-transform: translateZ(0) translateX(0);
+      -ms-transform: translateZ(0) translateX(0);
+      -o-transform: translateZ(0) translateX(0);
+      transform: translateZ(0) translateX(0);
+      padding: 0;
+      background: transparent;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .cd-faq-items {
+      float: none;
+      width: 100%;
+      padding-left: 220px;
+    }
+    .no-js .cd-faq-items {
+      padding-left: 0;
+    }
+  }
+
+  .cd-close-panel {
+    position: fixed;
+    top: 5px;
+    right: -100%;
+    display: block;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    z-index: 2;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: right 0.4s;
+    -moz-transition: right 0.4s;
+    transition: right 0.4s;
+  }
+  .cd-close-panel::before, .cd-close-panel::after {
+    /* close icon in CSS */
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    display: inline-block;
+    height: 3px;
+    width: 18px;
+    background: #6c7d8e;
+  }
+  .cd-close-panel::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .cd-close-panel::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .cd-close-panel.move-left {
+    right: 2%;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-close-panel {
+      display: none;
+    }
+  }
+
+  .cd-faq-group {
+    /* hide group not selected */
+    display: none;
+  }
+  .cd-faq-group.selected {
+    display: block;
+  }
+  .cd-faq-group .cd-faq-title {
+    background: transparent;
+    box-shadow: none;
+    margin: 1em 0;
+  }
+  .no-touch .cd-faq-group .cd-faq-title:hover {
+    box-shadow: none;
+  }
+  .cd-faq-group .cd-faq-title h2 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #bbbbc7;
+  }
+  .no-js .cd-faq-group {
+    display: block;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-faq-group {
+      /* all groups visible */
+      display: block;
+    }
+    .cd-faq-group > li {
+      background: #ffffff;
+      margin-bottom: 6px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      -webkit-transition: box-shadow 0.2s;
+      -moz-transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s;
+    }
+    .no-touch .cd-faq-group > li:hover {
+      box-shadow: 0 1px 10px rgba(108, 125, 142, 0.3);
+    }
+    .cd-faq-group .cd-faq-title {
+      margin: 2em 0 1em;
+    }
+    .cd-faq-group:first-child .cd-faq-title {
+      margin-top: 0;
+    }
+  }
+
+  .cd-faq-trigger {
+    position: relative;
+    display: block;
+    margin: 1.6em 0 .4em;
+    line-height: 1.2;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-faq-trigger {
+      font-size: 24px;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin: 0;
+      padding: 24px 72px 24px 24px;
+    }
+    .cd-faq-trigger::before, .cd-faq-trigger::after {
+      /* arrow icon on the right */
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      height: 2px;
+      width: 13px;
+      background: #0A5CAD;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+    }
+    .cd-faq-trigger::before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      right: 32px;
+    }
+    .cd-faq-trigger::after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    .content-visible .cd-faq-trigger::before {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    .content-visible .cd-faq-trigger::after {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  .cd-faq-content p {
+    font-size: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #6c7d8e;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-faq-content {
+      display: none;
+      padding: 0 24px 30px;
+    }
+    .cd-faq-content p {
+      line-height: 1.6;
+    }
+    .no-js .cd-faq-content {
+      display: block;
+    }
+  }
+
+	.logo{
+		display: block;
+ 		text-align: center;
+		margin: auto;
+	}
+
+	.cd-faq {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	/* Create a Parallax Effect */
+	.bgimg-1{
+	    background-attachment: fixed;
+	    background-position: 5% 30%;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.left {
+	  background-position: left;
+	}
+
+	.right {
+	  background-position: right;
+	}
+
+	.center {
+	  background-position: center;
+	}
+
+	/* First image (Logo. Full height) */
+	.bgimg-1 {
+	    background-image: url(<%= asset_path "outlaw-no-text.jpg", alt: "Outlaw Logo" %>);
+	    min-height: 100%;
+	}
+
+	.w3-wide {letter-spacing: 10px;}
+	.w3-hover-opacity {cursor: pointer;}
+
+	/* Turn off parallax scrolling for tablets and phones */
+	@media only screen and (max-device-width: 1024px) {
+	    .bgimg-1 {
+	        background-attachment: scroll;
+	    }
+	    .w3-third {
+	      width: 32%;
+	    }
+
+	    .w3-large {
+	      font-size: 15px !important;
+	    }
+	}
+
+	/*styles for landscape mode on mobile devices*/
+	@media only screen and (orientation:landscape)
+	and (max-device-width: 1024px){
+	  .bgimg-1, .bgimg-2, .bgimg-3, #showcase {
+	      background-attachment: scroll;
+	  }
+		.w3-bar-item{
+      width: 27%;
+    }
+	}
+	div#bookeo_position {
+	  background-color: #777;
+	  margin: 0 auto;
+	  display: block;
+	  text-align: center !important;;
+	  font-family: "Lato", sans-serif;
+	  border: solid 2px rgba(0, 0, 0, 0.4);
+	  -webkit-border-radius: 5px;
+	  -moz-border-radius: 5px;
+	  border-radius: 5px;
+	  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+	  -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+	  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+	  background-color: Transparent;
+	  background-repeat:no-repeat;
+	  border: none;
+	  cursor:pointer;
+	  overflow: hidden;
+	  outline:none;
+	  min-width: 10%;
+	  width: auto !important;;
+	  margin-top: 10px;
+	  height: auto !important;;
+
+	       }
+	        div#bookeoStartMobile{
+	         width: auto !important;
+	         padding-bottom: 35px !important;
+	       }
+	       div#bookeo:hover{
+	         background-color: #FF2600 !important;
+	       }
+
+				 .w3-show{
+				   position: fixed;
+				   z-index: 100;
+				   /*border: 1px solid black;*/
+				 }
+				 .navBar {
+				   z-index: 101;
+				 }
+</style>
+</head>
+<body>
+	<!-- Navbar on large desktop screens -->
+  <!-- <div class="w3-top navBar w3-white hidden-xs">
+    <div class="w3-bar w3-card-2 w3-white">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="/" class="w3-hide-small w3-bar-item w3-button" style="width:11.15%" data-turbolinks="false"><i class="fa fa-home"></i>Home</a>
+      <a href="/#about" class="w3-bar-item w3-button" style="width:11.15%" data-turbolinks="false"><i class="fa fa-user"></i> About</a>
+      <a href="/#escape-rooms" class="w3-bar-item w3-button" style="width:13.15%" data-turbolinks="false"><i class="fa fa-th"></i> Escape Rooms</a>
+      <a href="/teams" class="w3-bar-item w3-button" style="width:20.15%" data-turbolinks="false"><i class="fa fa-users"></i> Team Building - Large Groups</a>
+			<a href="/voucher" class="w3-bar-item w3-button" style="width:10%" data-turbolinks="false"><i class="fa fa-gift"></i> Gift Cards</a>
+      <a href="/#contact" class="w3-bar-item w3-button" style="width:11.15%" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a>
+      <a href="/#reviews" class="word w3-bar-item w3-button" style="width:11.15%" data-turbolinks="false"><i class="fa fa-star"></i> Reviews</a>
+      <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width:11.15%" data-turbolinks="false">
+        <i class="fa fa-book"></i> Book Now
+      </a>
+    </div>
+  </div> -->
+  <!-- Navbar on small desktop and mobile -->
+  <!-- <div class="w3-top navBar w3-white hidden-sm hidden-md hidden-lg">
+    <div class="w3-top navBar w3-white">
+      <div class="w3-bar w3-card-2 w3-white">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" style="width: 15%" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a> -->
+        <!-- <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">Home</a> -->
+        <!-- <a href="#about" class="w3-bar-item w3-button w3-hide-small"  data-turbolinks="false"><i class="fa fa-user"></i> About</a> -->
+        <!-- <a href="/" class="w3-bar-item w3-button" style="width: 26%" data-turbolinks="false"><i class="fa fa-home"></i>Home</a>
+        <a href="/teams" class="w3-bar-item w3-button w3-hide-small w3-hide-medium"  data-turbolinks="false"><i class="fa fa-users"></i> Teams - Large Groups</a>
+        <a href="/#contact" class="w3-bar-item w3-button"  style="width: 31%" data-turbolinks="false"><i class="fa fa-envelope"></i> Contact</a> -->
+        <!-- <a href="/faq" class="word w3-bar-item w3-button" style="width: 18%" data-turbolinks="false"><i class="glyphicon glyphicon-question-sign"></i>FAQ</a> -->
+        <!-- <a href="/book" class="w3-bar-item w3-button w3-hover-red" style="width: 27%" data-turbolinks="false">
+          <i class="fa fa-book"></i> Book
+        </a>
+      </div>
+    </div>
+  </div> -->
+
+<!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large">
+  <a href="/western" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">The Outlaw of El Paso</a>
+  <a href="/tokyo" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tokyo Heist</a>
+  <a href="/tomb" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Tomb of the Gods</a>
+	<a href="/#about" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">About</a>
+  <a href="/voucher" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Gift Cards</a>
+	<a href="/#reviews" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Reviews</a>
+  <a href="/teams" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Team Building - Large Groups</a>
+	<a href="/gallery" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Gallery</a>
+</div> -->
+  <!-- <a href="/#contact" class="w3-bar-item w3-button" data-turbolinks="false" onclick="toggleFunction()">Contact</a> -->
+
+<!-- <header>
+	<h1>Portal FAQs</h1>
+</header>
+<div class="w3-top navBar">
+  <div class="w3-bar" id="myNavbar" style="width:180px;" > -->
+    <!-- <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a> -->
+		<!-- <a href="/" class="w3-bar-item w3-button logo" data-turbolinks="false"><img src="<%= asset_path "final-logo.png"%>" style="width:100%" alt="Portal Logo">Home</a> -->
+    <!-- <a href="/" class="w3-bar-item w3-button">Home</a> -->
+  <!--</div>-->
+
+  <!-- Navbar on small screens -->
+  <!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+
+  </div>
+</div> -->
+<div class="bgimg-4 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">This is the Outlaw Hint 1 page!</span>
+  </div>
+  </div>
+  <br>
+  <p class="about-title" style="text-align: center; font-size: 20px; color: #0A5CAD !important;"><strong>Not sure how to solve the puzzle to acquire the Bronze Skull?</strong></p>
+  <p class="about-content" style="padding: 30px; font-size: 18px; text-align: center;">Hint: You may have found a cloth drawing of a dog in a wooden box. Have you seen a similar illustration painted on a surface nearby? What mysteries can be revealed through the eyes of a dog?</p>
+  <div class="hidden-xs">
+<section class="cd-faq">
+	<div class="cd-faq-items">
+		<!-- <ul id="basics" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Basics</h2></li> -->
+			<ul class="cd-faq-group">
+				<li>
+					<a class="cd-faq-trigger" href="#0">Still not sure how to solve the puzzle?</a>
+					<div class="cd-faq-content">
+						<p class="">Go peer through the eyeholes of the dog in the fence and you will find something to help you acquire the Bronze Skull!</p>
+					</div> <!-- cd-faq-content -->
+				</li>
+
+		<!-- <ul class="cd-faq-group"> -->
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">You have 7 adventures available... Which should I start with?</a>
+				<div class="cd-faq-content">
+					<p class="">We have designed all of our adventures to be immersive and entertaining for escape room enthusiasts of all levels. Even if you've never done an escape room it's possible to tackle any of our 7 adventures and still complete all the puzzles in the time limit. If we had to make a recommendation, we would suggest you start with either our Tomb of the Gods or Outlaw of El Paso adventures. Both of these adventures give you a great feel for how we design our puzzles and build our theatric sets. After completing one of our adventures you will be fully prepared to tackle any of our adventures.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Can I take my phone into the room?</a>
+				<div class="cd-faq-content">
+					<p class="">We don’t allow any electronics inside the escape rooms. This allows you and your teammates to immerse yourselves into the experience without distractions. Furthermore electronics are not allowed to avoid conflict with our electronic puzzles. We provide lockers for you to store your personal possessions free of charge.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Is there an age requirement?</a>
+				<div class="cd-faq-content">
+					<p class="">We’ve designed our rooms to be fun for all ages. However, the puzzles can be quite sophisticated, so a spectrum of ages may be helpful. There is no age requirement, but persons under the age of 14 must be accompanied by an adult.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Are the rooms scary?</a>
+				<div class="cd-faq-content">
+					<p class="">We’ve designed our rooms to be immersive and have a family friendly atmosphere. There won't be anything scary jumping out at you. The only exception to this is in our Red Scare adventure where we have a paid actor that pursues players from room to room. Its more of a thriller than a jump scare adventure though.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Can I have more than 10 people in a room?</a>
+				<div class="cd-faq-content">
+					<p class="">We designed our adventures to be played by groups of 4-10 players. Many of our adventures can hold up to 12 players because they are larger than a typical escape room. If you have more than 12 players we recommend you book multiple adventures at the same time. This allows your groups to compete against each other and see who finishes their adventure first. The Portal Mansion adventures are also a great option for large groups since the mansion can hold up to 30 players. You can also book a team building event for very large groups and team building events (11-70+Players) <a href="/teams" data-turbolinks="false">here on our website</a>. Please email us at <strong>info@portalescaperooms.net</strong> or call us at <strong>541-780-6180</strong> for any other special arrangements you may need.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Will I be partnered with people I don’t know in my escape room?</a>
+				<div class="cd-faq-content">
+					<p class="">No! We want you and your team to experience your adventure together without any additional players or distractions. So you will never be partnered with players you don't know. Groups are also kept private so that we adhere to social distancing best practices during the COVID-19 pandemic.</p>
+				</div>
+			</li> -->
+		 <!-- cd-faq-group -->
+
+		<!-- <ul id="mobile" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Mobile</h2></li> -->
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">What happens if my team gets stuck on a puzzle?</a>
+				<div class="cd-faq-content">
+					<p class="">Don’t panic! We are standing by and able to help guide you with hints to keep the process moving!</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Can I schedule a private team building event?</a>
+				<div class="cd-faq-content">
+					<p class="">Yes! You can book a team building event <a href="/teams" data-turbolinks="false">here on our website</a>. You can also give us a call at <strong>541-780-6180</strong> or email us at <strong>info@portalescaperooms.net</strong>  if you have a special request or date in mind! We are happy to block out individual space for your team.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Is there a Refund Policy?</a>
+				<div class="cd-faq-content">
+					<p class="">While we do not offer refunds, you can change to any open date and time on our schedule if you need to reschedule your booking. After making a booking you will be able edit your reservation (Change date, time, amount of players) via a confirmation email sent to your account. You can also call us at 541-780-6180 for any other changes that you might need help making regarding your booking.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">What is the duration for the entire experience?</a>
+				<div class="cd-faq-content">
+					<p class="">The full challenge is 1 hour in length. We also include 15 minutes of orientation and up to an additional 15 minutes of debriefing following the experience.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">What happens if I show up late?</a>
+				<div class="cd-faq-content">
+					<p class="">Please show up at your reserved time. Your reservation begins with or without you. If you show up late you will cut into your challenge time and reduce your chance to successfully complete the challenges.</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Are your adventures wheelchair accessible?</a>
+				<div class="cd-faq-content">
+					<p class="">Our facility is wheelchair accessible. Our Red Scare, Voyager, and Rag Doll adventures are currently the only adventures that are wheelchair accessible and available on our ground floor.</p>
+				</div>
+			</li> -->
+		 <!-- cd-faq-group -->
+
+		<!-- <ul id="account" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Account</h2></li> -->
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">Can I tell other people about the puzzles in the rooms?</a>
+				<div class="cd-faq-content">
+					<p class="">No! You’re sworn to secrecy! Feel free to share your enthusiasm about the challenges, but don’t give away the intricacies of the puzzles! We believe your friends and family will want to experience them for themselves!</p>
+				</div>
+			</li> -->
+
+			<!-- <li>
+				<a class="cd-faq-trigger" href="#0">I have an idea for a room! Can you build it?</a>
+				<div class="cd-faq-content">
+					<p class="">Yes! We are always looking for new concepts and would enjoy hearing your suggestions! Tell us about your idea at the facility or send us an email at <strong>info@portalescaperooms.net</strong></p>
+				</div>
+			</li> -->
+		</ul>
+	</div>
+	<a href="#0" class="cd-close-panel">Close</a>
+</section>
+
+  <div class="w3-bar" id="myNavbar" style="width:180px;" >
+		<!-- <a href="/public/waiver.pdf" class="w3-bar-item w3-button logo" data-turbolinks="false" ><img src="<%= asset_path "final-logo.png"%>" style="width:100%" alt="Portal Logo">View Waiver</a> -->
+    <!-- <a href="/" class="w3-bar-item w3-button">Home</a> -->
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+
+  </div> <!-- cd-faq -->
+</body>
+</html>

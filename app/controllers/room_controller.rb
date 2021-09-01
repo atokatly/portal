@@ -58,4 +58,10 @@ class RoomController < ApplicationController
     p 'This is the mansion route'
     render "/rooms/mansion"
   end
+
+  def westernhint1
+    p 'This is the Outlaw Hint 1 route'
+    render "/rooms/westernhint1"
+  end 
+
 end
